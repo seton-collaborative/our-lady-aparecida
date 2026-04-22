@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Lady of Aparecida Parish | Paróquia Nossa Senhora Aparecida — Bethel, CT</title>
+<meta name="description" content="The first official Brazilian parish in the US named after Brazil's patron saint. A Catholic Community of Faith in the Diocese of Bridgeport.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --gold-50: #FDF8EF;
+  --gold-100: #F9EDCF;
+  --gold-200: #F0D48E;
+  --gold-300: #E4B94E;
+  --gold-400: #D4A024;
+  --gold-500: #B8891E;
+  --gold-600: #9A7019;
+  --gold-700: #7A5814;
+  --gold-800: #5C420F;
+
+  --blue-50: #EEF2F7;
+  --blue-100: #D5DEEB;
+  --blue-200: #A8BAD4;
+  --blue-300: #7B96BD;
+  --blue-400: #4E72A6;
+  --blue-500: #1E3A5F;
+  --blue-600: #1A3253;
+  --blue-700: #152947;
+  --blue-800: #0F1F36;
+  --blue-900: #0A1524;
+
+  --warm-50: #FAFAF8;
+  --warm-100: #F5F4F0;
+  --warm-200: #E8E6E1;
+  --warm-300: #D4D1CA;
+  --warm-400: #B5B1A8;
+  --warm-500: #8E897E;
+  --warm-600: #6B665C;
+  --warm-700: #4A4640;
+  --warm-800: #2D2B27;
+  --warm-900: #1A1917;
+
+  --green-400: #5A8C5A;
+  --green-500: #3D6B3D;
+  --terra-500: #A85A38;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--warm-900);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+.top-bar {
+  background: var(--blue-500);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: var(--gold-200);
+  transition: color 150ms;
+}
+.top-bar a:hover { color: var(--gold-300); }
+.top-bar-social { display: flex; gap: 16px; }
+
+/* ============================================
+   MAIN NAV
+   ============================================ */
+.main-nav {
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 22px; flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--warm-900);
+  line-height: 1.2;
+}
+.nav-brand-sub {
+  font-size: 0.72rem;
+  color: var(--warm-500);
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--warm-700);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 150ms;
+}
+.nav-link:hover { color: var(--gold-500); }
+.nav-link::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold-500);
+  transition: width 250ms var(--ease-out);
+}
+.nav-link:hover::after { width: 100%; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+/* Language Toggle */
+.lang-toggle {
+  display: inline-flex;
+  background: var(--warm-100);
+  border-radius: 100px;
+  padding: 3px; gap: 2px;
+}
+.lang-btn {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms;
+  background: transparent;
+  color: var(--warm-500);
+}
+.lang-btn.active {
+  background: var(--blue-500);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.lang-btn:not(.active):hover { color: var(--warm-800); background: var(--warm-200); }
+
+/* Mobile menu toggle */
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px;
+  flex-direction: column; justify-content: center; gap: 5px; align-items: center;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--warm-700);
+  transition: all 250ms;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 250ms var(--ease-out);
+}
+.btn-gold { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
+.btn-gold:hover { background: var(--gold-600); border-color: var(--gold-600); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,137,30,0.3); }
+.btn-blue { background: var(--blue-500); color: #fff; border-color: var(--blue-500); }
+.btn-blue:hover { background: var(--blue-600); transform: translateY(-1px); }
+.btn-outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+.btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+.btn-outline-gold { background: transparent; color: var(--gold-500); border: 2px solid var(--gold-500); }
+.btn-outline-gold:hover { background: var(--gold-500); color: #fff; }
+.btn-sm { padding: 8px 20px; font-size: 0.75rem; }
+.btn-nav { padding: 8px 18px; font-size: 0.75rem; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex; align-items: flex-end;
+  padding: 60px 0;
+  overflow: hidden;
+  background: var(--blue-800);
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,21,36,0.25) 0%, rgba(10,21,36,0.7) 100%),
+    url('images/hero.jpg') center/cover no-repeat;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(184,137,30,0.08), transparent 60%);
+}
+.hero .container { position: relative; z-index: 1; }
+.hero-content { max-width: 620px; color: #fff; }
+.hero-eyebrow {
+  font-size: 0.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--gold-300);
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3.2rem; font-weight: 400;
+  line-height: 1.08; margin-bottom: 16px;
+}
+.hero-subtitle {
+  font-size: 1.1rem; line-height: 1.6;
+  opacity: 0.88; margin-bottom: 28px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-note {
+  margin-top: 40px; padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.8rem; opacity: 0.6;
+  font-style: italic;
+}
+
+/* ============================================
+   QUICK INFO BAR
+   ============================================ */
+.quick-bar {
+  background: var(--gold-50);
+  border-bottom: 1px solid var(--gold-100);
+  padding: 20px 0;
+}
+.quick-bar .container {
+  display: flex; justify-content: center;
+  gap: 48px; flex-wrap: wrap;
+}
+.quick-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.9rem;
+}
+.quick-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--gold-100);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.quick-label { font-weight: 600; color: var(--warm-800); }
+.quick-sub { font-size: 0.8rem; color: var(--warm-500); }
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+.section { padding: 72px 0; }
+.section-light { background: #fff; }
+.section-alt { background: var(--warm-50); }
+.section-blue { background: var(--blue-500); color: #fff; }
+.section-gold-light { background: var(--gold-50); }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section-eyebrow {
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--gold-500);
+  margin-bottom: 8px;
+}
+.section-blue .section-eyebrow { color: var(--gold-300); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.4rem; font-weight: 500;
+  line-height: 1.15; margin-bottom: 12px;
+}
+.section-subtitle {
+  font-size: 1rem; color: var(--warm-500);
+  max-width: 560px; margin: 0 auto;
+}
+.section-blue .section-subtitle { color: rgba(255,255,255,0.7); }
+
+.gold-rule {
+  width: 60px; height: 2px;
+  background: var(--gold-400);
+  margin: 16px auto;
+}
+
+/* ============================================
+   FEATURE CARDS
+   ============================================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  transition: all 250ms var(--ease-out);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08), 0 16px 40px rgba(0,0,0,0.1);
+}
+.card-image {
+  width: 100%; height: 220px;
+  background: linear-gradient(135deg, var(--warm-200), var(--warm-300));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--warm-400); font-size: 0.85rem;
+  position: relative; overflow: hidden;
+}
+.card-image.img-sacraments {
+  background: linear-gradient(135deg, var(--gold-100), var(--gold-200));
+}
+.card-image.img-formation {
+  background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+}
+.card-image.img-ministries {
+  background: linear-gradient(135deg, var(--warm-100), var(--warm-200));
+}
+.card-image-icon {
+  font-size: 3rem; opacity: 0.5;
+}
+.card-body { padding: 24px; }
+.card-eyebrow {
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--gold-500); margin-bottom: 6px;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 600;
+  color: var(--warm-900); margin-bottom: 8px; line-height: 1.25;
+}
+.card-text {
+  font-size: 0.9rem; color: var(--warm-600);
+  line-height: 1.6; margin-bottom: 16px;
+}
+.card-link {
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--gold-500);
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 250ms var(--ease-out);
+}
+.card-link:hover { gap: 10px; }
+
+/* ============================================
+   MASS SCHEDULE
+   ============================================ */
+.schedule-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.schedule-header {
+  background: var(--blue-500);
+  color: #fff; padding: 20px 28px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.schedule-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 500;
+}
+.schedule-table { width: 100%; border-collapse: collapse; }
+.schedule-table th {
+  text-align: left; padding: 12px 20px;
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--warm-500);
+  border-bottom: 2px solid var(--warm-200);
+}
+.schedule-table td {
+  padding: 13px 20px;
+  border-bottom: 1px solid var(--warm-100);
+  font-size: 0.9rem;
+}
+.schedule-table tr:hover td { background: var(--gold-50); }
+.schedule-day { font-weight: 600; color: var(--warm-900); }
+.schedule-time { font-weight: 600; color: var(--blue-500); }
+.lang-badge {
+  display: inline-block; padding: 2px 10px;
+  border-radius: 100px; font-size: 0.7rem; font-weight: 600;
+}
+.lang-badge-pt { background: var(--green-500); color: #fff; }
+.lang-badge-en { background: var(--blue-400); color: #fff; }
+.schedule-note {
+  padding: 16px 28px;
+  background: var(--warm-50);
+  font-size: 0.82rem; color: var(--warm-600);
+  display: flex; gap: 8px; align-items: start;
+}
+
+/* ============================================
+   ABOUT / WELCOME
+   ============================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.about-image {
+  width: 100%; height: 400px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--warm-400); font-size: 0.85rem;
+}
+.about-text h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 500;
+  margin-bottom: 8px; line-height: 1.15;
+}
+.about-gold-rule {
+  width: 50px; height: 2px;
+  background: var(--gold-400);
+  margin: 16px 0;
+}
+.about-text p {
+  font-size: 1rem; line-height: 1.75;
+  color: var(--warm-600); margin-bottom: 16px;
+}
+.about-stats {
+  display: flex; gap: 32px; margin-top: 28px;
+  padding-top: 28px; border-top: 1px solid var(--warm-200);
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 600;
+  color: var(--gold-500); line-height: 1;
+}
+.stat-label {
+  font-size: 0.8rem; color: var(--warm-500); margin-top: 4px;
+}
+
+/* ============================================
+   MINISTRIES
+   ============================================ */
+.ministry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.ministry-card {
+  display: flex; gap: 16px; padding: 20px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--warm-200);
+  transition: all 250ms var(--ease-out);
+}
+.ministry-card:hover {
+  border-color: var(--gold-300);
+  box-shadow: 0 2px 8px rgba(184,137,30,0.12);
+  transform: translateY(-2px);
+}
+.ministry-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--gold-50);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.ministry-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem; font-weight: 600;
+  margin-bottom: 2px;
+}
+.ministry-coord {
+  font-size: 0.8rem; color: var(--warm-500);
+}
+.section-cta {
+  text-align: center; margin-top: 40px;
+}
+
+/* ============================================
+   CONFESSION / SACRAMENTS CALLOUT
+   ============================================ */
+.callout-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.callout-box {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.callout-blue {
+  background: var(--blue-500);
+  color: #fff;
+}
+.callout-gold {
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+  color: #fff;
+}
+.callout-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.callout-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem; font-weight: 500;
+  margin-bottom: 8px;
+}
+.callout-text {
+  font-size: 0.9rem; opacity: 0.85;
+  margin-bottom: 20px; line-height: 1.6;
+}
+
+/* ============================================
+   CONTACT / MAP
+   ============================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 600;
+  margin-bottom: 20px;
+}
+.contact-item {
+  display: flex; gap: 14px; margin-bottom: 20px;
+}
+.contact-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--gold-50);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.contact-label {
+  font-weight: 600; color: var(--warm-800);
+  font-size: 0.9rem;
+}
+.contact-value {
+  font-size: 0.85rem; color: var(--warm-500);
+  margin-top: 2px;
+}
+.map-placeholder {
+  width: 100%; height: 360px;
+  border-radius: var(--radius-lg);
+  background: var(--warm-200);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--warm-400); font-size: 0.85rem;
+  overflow: hidden;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer { background: var(--warm-900); color: rgba(255,255,255,0.7); }
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 64px 0;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600;
+  color: #fff; margin-bottom: 12px;
+}
+.footer-brand-text {
+  font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;
+}
+.footer-heading {
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--gold-400); margin-bottom: 16px;
+}
+.footer-link {
+  display: block; font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  padding: 3px 0; transition: color 150ms;
+}
+.footer-link:hover { color: var(--gold-300); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+  display: flex; justify-content: space-between;
+  font-size: 0.75rem; color: rgba(255,255,255,0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-title { font-size: 2.6rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image { height: 280px; }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .ministry-grid { grid-template-columns: 1fr; }
+  .callout-split { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .quick-bar .container { flex-direction: column; gap: 12px; }
+  .hero { min-height: 420px; }
+  .hero-title { font-size: 2.2rem; }
+  .section { padding: 48px 0; }
+  .section-title { font-size: 2rem; }
+  .about-stats { gap: 20px; }
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+@media (max-width: 640px) {
+  .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+  .top-bar-social { display: none; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; }
+}
+
+/* Language switching — default is Portuguese */
+[data-i18n="en"] { display: none; }
+body.english [data-i18n="pt"] { display: none; }
+body.english [data-i18n="en"] { display: inline; }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     TOP BAR
+     ============================================ -->
+<div class="top-bar">
+  <div class="container">
+    <div>
+      <span>42 Vail Road, Bethel, CT 06801</span>
+      <span style="margin: 0 8px; opacity: 0.4;">·</span>
+      <a href="tel:2037309071">(203) 730-9071</a>
+      <span style="margin: 0 8px; opacity: 0.4;">·</span>
+      <a href="mailto:office@ourladyofaparecida.org">office@ourladyofaparecida.org</a>
+    </div>
+    <div class="top-bar-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     MAIN NAVIGATION
+     ============================================ -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo">✝</div>
+      <div>
+        <div class="nav-brand-name">
+          <span data-i18n="pt">Nossa Senhora Aparecida</span>
+          <span data-i18n="en">Our Lady of Aparecida</span>
+        </div>
+        <div class="nav-brand-sub">Diocese of Bridgeport · Bethel, CT</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
+      <li><a href="about.html" class="nav-link"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
+      <li><a href="#ministries" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
+      <li><a href="#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
+      <li><a href="#contact" class="nav-link"><span data-i18n="pt">Contato</span><span data-i18n="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="#" class="btn btn-gold btn-nav">
+        <span data-i18n="pt">Dízimo</span>
+        <span data-i18n="en">Give</span>
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Diocese of Bridgeport · Bethel, Connecticut</p>
+      <h1 class="hero-title">
+        <span data-i18n="pt">Nossa Senhora da Imaculada Conceição Aparecida</span>
+        <span data-i18n="en">Our Lady of the Immaculate Conception of Aparecida</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-i18n="pt">A primeira paróquia brasileira oficial nos Estados Unidos em homenagem à padroeira do Brasil. Uma comunidade de fé vibrante com mais de 1.100 famílias registradas.</span>
+        <span data-i18n="en">The first official Brazilian parish in the United States named after Brazil's patron saint. A vibrant community of faith with over 1,100 registered families.</span>
+      </p>
+      <div class="hero-actions">
+        <a href="#schedule" class="btn btn-gold">
+          <span data-i18n="pt">Horário das Missas</span>
+          <span data-i18n="en">Mass Times</span>
+        </a>
+        <a href="about.html" class="btn btn-outline-white">
+          <span data-i18n="pt">Conheça a Paróquia</span>
+          <span data-i18n="en">About Our Parish</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     QUICK INFO BAR
+     ============================================ -->
+<div class="quick-bar">
+  <div class="container">
+    <div class="quick-item">
+      <div class="quick-icon">⛪</div>
+      <div>
+        <div class="quick-label">
+          <span data-i18n="pt">Próxima Missa</span>
+          <span data-i18n="en">Next Mass</span>
+        </div>
+        <div class="quick-sub">
+          <span data-i18n="pt">Sábado 5:00 PM (Português)</span>
+          <span data-i18n="en">Saturday 5:00 PM (Portuguese)</span>
+        </div>
+      </div>
+    </div>
+    <div class="quick-item">
+      <div class="quick-icon">🕊️</div>
+      <div>
+        <div class="quick-label">
+          <span data-i18n="pt">Confissões</span>
+          <span data-i18n="en">Confessions</span>
+        </div>
+        <div class="quick-sub">
+          <span data-i18n="pt">Sábado 3:30 – 4:30 PM</span>
+          <span data-i18n="en">Saturday 3:30 – 4:30 PM</span>
+        </div>
+      </div>
+    </div>
+    <div class="quick-item">
+      <div class="quick-icon">📍</div>
+      <div>
+        <div class="quick-label">42 Vail Road, Bethel CT</div>
+        <div class="quick-sub">(203) 730-9071</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     FEATURE CARDS
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Vida Paroquial</span>
+        <span data-i18n="en">Parish Life</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Cresça na Fé Conosco</span>
+        <span data-i18n="en">Grow in Faith With Us</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-image img-sacraments" style="background: url('images/eucharist.jpg') center/cover no-repeat;"></div>
+        <div class="card-body">
+          <p class="card-eyebrow">Sacramento</p>
+          <h3 class="card-title">
+            <span data-i18n="pt">Sacramentos</span>
+            <span data-i18n="en">Sacraments</span>
+          </h3>
+          <p class="card-text">
+            <span data-i18n="pt">Batismo, Primeira Comunhão, Crisma, Matrimônio e Unção dos Enfermos. Preparação sacramental disponível durante todo o ano.</span>
+            <span data-i18n="en">Baptism, First Communion, Confirmation, Marriage, and Anointing of the Sick. Sacramental preparation available year-round.</span>
+          </p>
+          <a href="#" class="card-link">
+            <span data-i18n="pt">Saiba mais</span>
+            <span data-i18n="en">Learn more</span> →
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image img-formation" style="background: url('images/font.jpg') center/cover no-repeat;"></div>
+        <div class="card-body">
+          <p class="card-eyebrow">Catequese</p>
+          <h3 class="card-title">
+            <span data-i18n="pt">Formação na Fé</span>
+            <span data-i18n="en">Faith Formation</span>
+          </h3>
+          <p class="card-text">
+            <span data-i18n="pt">Catequese para crianças, jovens e adultos. Mais de 200 crianças e 40 adultos em RCIA. Crescendo na fé por meio da oração.</span>
+            <span data-i18n="en">Religious education for children, youth, and adults. Over 200 children and 40 adults in RCIA. Growing in faith through prayer.</span>
+          </p>
+          <a href="#" class="card-link">
+            <span data-i18n="pt">Saiba mais</span>
+            <span data-i18n="en">Learn more</span> →
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image img-ministries" style="background: url('images/youth.jpg') center/cover no-repeat;"></div>
+        <div class="card-body">
+          <p class="card-eyebrow">
+            <span data-i18n="pt">Ministérios</span>
+            <span data-i18n="en">Ministries</span>
+          </p>
+          <h3 class="card-title">
+            <span data-i18n="pt">28 Ministérios Ativos</span>
+            <span data-i18n="en">28 Active Ministries</span>
+          </h3>
+          <p class="card-text">
+            <span data-i18n="pt">Oportunidades para servir, participar e crescer na comunidade paroquial. Desde jovens até idosos, há lugar para todos.</span>
+            <span data-i18n="en">Opportunities to serve, participate, and grow in the parish community. From youth to seniors, there is a place for everyone.</span>
+          </p>
+          <a href="#" class="card-link">
+            <span data-i18n="pt">Ver todos</span>
+            <span data-i18n="en">View all</span> →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT / WELCOME
+     ============================================ -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image" style="background: url('images/altar.jpg') center/cover no-repeat;">
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow" style="text-align: left;">
+          <span data-i18n="pt">Sobre a Paróquia</span>
+          <span data-i18n="en">About Our Parish</span>
+        </p>
+        <h2>
+          <span data-i18n="pt">Uma Comunidade de Fé e Esperança</span>
+          <span data-i18n="en">A Community of Faith and Hope</span>
+        </h2>
+        <div class="about-gold-rule"></div>
+        <p>
+          <span data-i18n="pt">Por mais de 27 anos, Nossa Senhora Aparecida tem sido uma comunidade católica brasileira-americana de fé. Estabelecida como paróquia independente em 2020 após quase duas décadas como quase-paróquia sob São Pedro, a comunidade se expandiu para um novo local em Bethel, permitindo maior alcance pastoral e formação religiosa.</span>
+          <span data-i18n="en">For more than 27 years, Our Lady of Aparecida has been a Brazilian-American Catholic community of faith. Established as an independent parish in 2020 after nearly two decades as a quasi-parish under St. Peter's, the community has expanded to a new location in Bethel, allowing for greater pastoral outreach and religious formation.</span>
+        </p>
+        <p>
+          <span data-i18n="pt">Sob a liderança do Pe. Leonel Medeiros, Vigário Episcopal para Católicos Brasileiros, a paróquia promove o desenvolvimento da fé por meio de 28 ministérios ativos, retiros, preparação sacramental e programas para jovens.</span>
+          <span data-i18n="en">Under the leadership of Fr. Leonel Medeiros, Episcopal Vicar for Brazilian Catholics, the parish fosters faith development through 28 active ministries, retreats, sacramental preparation, and youth programs.</span>
+        </p>
+        <div class="about-stats">
+          <div>
+            <div class="stat-number">1,100+</div>
+            <div class="stat-label">
+              <span data-i18n="pt">Famílias Registradas</span>
+              <span data-i18n="en">Registered Families</span>
+            </div>
+          </div>
+          <div>
+            <div class="stat-number">28</div>
+            <div class="stat-label">
+              <span data-i18n="pt">Ministérios Ativos</span>
+              <span data-i18n="en">Active Ministries</span>
+            </div>
+          </div>
+          <div>
+            <div class="stat-number">11</div>
+            <div class="stat-label">
+              <span data-i18n="pt">Missas Semanais</span>
+              <span data-i18n="en">Weekly Masses</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MASS SCHEDULE
+     ============================================ -->
+<section class="section section-blue" id="schedule">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Venha Rezar Conosco</span>
+        <span data-i18n="en">Come Pray With Us</span>
+      </p>
+      <h2 class="section-title" style="color: #fff;">
+        <span data-i18n="pt">Horário das Santas Missas</span>
+        <span data-i18n="en">Mass Schedule</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="schedule-wrapper">
+      <div class="schedule-header">
+        <h3>
+          <span data-i18n="pt">Missas de Fim de Semana</span>
+          <span data-i18n="en">Weekend Masses</span>
+        </h3>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th><span data-i18n="pt">Dia</span><span data-i18n="en">Day</span></th>
+            <th><span data-i18n="pt">Horário</span><span data-i18n="en">Time</span></th>
+            <th><span data-i18n="pt">Idioma</span><span data-i18n="en">Language</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="schedule-day" rowspan="2">
+              <span data-i18n="pt">Sábado</span><span data-i18n="en">Saturday</span>
+            </td>
+            <td class="schedule-time">5:00 PM</td>
+            <td><span class="lang-badge lang-badge-pt">Português</span></td>
+          </tr>
+          <tr>
+            <td class="schedule-time">7:00 PM</td>
+            <td><span class="lang-badge lang-badge-pt">Português</span></td>
+          </tr>
+          <tr>
+            <td class="schedule-day" rowspan="4">
+              <span data-i18n="pt">Domingo</span><span data-i18n="en">Sunday</span>
+            </td>
+            <td class="schedule-time">7:30 AM</td>
+            <td><span class="lang-badge lang-badge-pt">Português</span></td>
+          </tr>
+          <tr>
+            <td class="schedule-time">9:30 AM</td>
+            <td><span class="lang-badge lang-badge-pt">Português</span></td>
+          </tr>
+          <tr>
+            <td class="schedule-time">11:30 AM</td>
+            <td><span class="lang-badge lang-badge-en">English</span></td>
+          </tr>
+          <tr>
+            <td class="schedule-time">6:00 PM</td>
+            <td><span class="lang-badge lang-badge-pt">Português</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="schedule-note">
+        <span>📅</span>
+        <span>
+          <strong>
+            <span data-i18n="pt">Missas Diárias:</span>
+            <span data-i18n="en">Daily Masses:</span>
+          </strong>
+          <span data-i18n="pt"> Seg–Qua &amp; Sex 7:00 PM (PT) · Qui 6:45 AM (PT)</span>
+          <span data-i18n="en"> Mon–Wed &amp; Fri 7:00 PM (PT) · Thu 6:45 AM (PT)</span>
+        </span>
+      </div>
+      <div class="schedule-note" style="border-top: 1px solid var(--warm-200); background: var(--gold-50);">
+        <span>⛪</span>
+        <span>
+          <strong>
+            <span data-i18n="pt">Quarta-feira de Cinzas — 18 de Fevereiro:</span>
+            <span data-i18n="en">Ash Wednesday — February 18:</span>
+          </strong>
+          <span data-i18n="pt"> 6:30 AM · 12:15 PM · 5:30 PM · 7:30 PM (Todas em Português)</span>
+          <span data-i18n="en"> 6:30 AM · 12:15 PM · 5:30 PM · 7:30 PM (All in Portuguese)</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONFESSION & GIVING CALLOUT
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="callout-split">
+      <div class="callout-box callout-blue">
+        <div class="callout-icon">🕊️</div>
+        <h3 class="callout-title">
+          <span data-i18n="pt">Sacramento da Reconciliação</span>
+          <span data-i18n="en">Sacrament of Reconciliation</span>
+        </h3>
+        <p class="callout-text">
+          <span data-i18n="pt">Sábados das 3:30 às 4:30 PM com Pe. Leonel. Todos os sábados entre este horário.</span>
+          <span data-i18n="en">Saturdays from 3:30 to 4:30 PM with Fr. Leonel. Every Saturday during this time.</span>
+        </p>
+        <a href="#" class="btn btn-outline-white">
+          <span data-i18n="pt">Saiba Mais</span>
+          <span data-i18n="en">Learn More</span>
+        </a>
+      </div>
+      <div class="callout-box callout-gold">
+        <div class="callout-icon">💛</div>
+        <h3 class="callout-title">
+          <span data-i18n="pt">Ofertório e Dízimo</span>
+          <span data-i18n="en">Online Giving</span>
+        </h3>
+        <p class="callout-text">
+          <span data-i18n="pt">Apoie nossa paróquia com sua contribuição. Dízimo online seguro e conveniente.</span>
+          <span data-i18n="en">Support our parish with your contribution. Secure and convenient online tithing.</span>
+        </p>
+        <a href="#" class="btn btn-outline-white">
+          <span data-i18n="pt">Contribuir Agora</span>
+          <span data-i18n="en">Give Now</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MINISTRIES PREVIEW
+     ============================================ -->
+<section class="section section-alt" id="ministries">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Pastorais & Movimentos</span>
+        <span data-i18n="en">Ministries & Movements</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Nossos Ministérios</span>
+        <span data-i18n="en">Our Ministries</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">Encontre o seu lugar na comunidade. Com 28 ministérios ativos, há oportunidades para todos.</span>
+        <span data-i18n="en">Find your place in the community. With 28 active ministries, there are opportunities for everyone.</span>
+      </p>
+    </div>
+    <div class="ministry-grid">
+      <div class="ministry-card">
+        <div class="ministry-icon">📖</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Educação Religiosa</span>
+            <span data-i18n="en">Religious Education</span>
+          </div>
+          <div class="ministry-coord">Sandro Doblins</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">👨‍👩‍👧‍👦</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Pastoral Familiar</span>
+            <span data-i18n="en">Family Ministry</span>
+          </div>
+          <div class="ministry-coord">Luciana &amp; Geraldo De Oliveira</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🔥</div>
+        <div>
+          <div class="ministry-name">GOVES — Grupo de Oração</div>
+          <div class="ministry-coord">Jamir Costa</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">👦</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Grupo de Jovens</span>
+            <span data-i18n="en">Young Adults Group</span>
+          </div>
+          <div class="ministry-coord">Gabriela &amp; Tamnata Pereira</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">📿</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Terço dos Homens</span>
+            <span data-i18n="en">Men's Rosary Group</span>
+          </div>
+          <div class="ministry-coord">Acacio Deoliveira</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🎭</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Pastoral do Teatro</span>
+            <span data-i18n="en">Theater Ministry</span>
+          </div>
+          <div class="ministry-coord">Washington Arpini</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🙏</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Terço das Mães</span>
+            <span data-i18n="en">Mothers' Rosary</span>
+          </div>
+          <div class="ministry-coord">Fabiana Neupman &amp; Estela Barros</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🎵</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Ministros da Palavra</span>
+            <span data-i18n="en">Ministers of the Word</span>
+          </div>
+          <div class="ministry-coord">Neti DaSilva, Marcia Pereira</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🎉</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">Grupo de Eventos</span>
+            <span data-i18n="en">Events Commission</span>
+          </div>
+          <div class="ministry-coord">Junia Ribeiro, Soraia Meirelles</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="#" class="btn btn-outline-gold">
+        <span data-i18n="pt">Ver Todos os 28 Ministérios</span>
+        <span data-i18n="en">View All 28 Ministries</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT & MAP
+     ============================================ -->
+<section class="section section-light" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Fale Conosco</span>
+        <span data-i18n="en">Get In Touch</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Contato</span>
+        <span data-i18n="en">Contact Us</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>
+          <span data-i18n="pt">Informações da Paróquia</span>
+          <span data-i18n="en">Parish Information</span>
+        </h3>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">Endereço</span>
+              <span data-i18n="en">Address</span>
+            </div>
+            <div class="contact-value">42 Vail Road, Bethel, CT 06801</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">Telefone</span>
+              <span data-i18n="en">Phone</span>
+            </div>
+            <div class="contact-value">(203) 730-9071</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">office@ourladyofaparecida.org</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">👤</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">Pároco</span>
+              <span data-i18n="en">Pastor</span>
+            </div>
+            <div class="contact-value">Rev. Leonel S. Medeiros</div>
+            <div class="contact-value" style="font-style: italic;">
+              <span data-i18n="pt">Vigário Episcopal para Católicos Brasileiros</span>
+              <span data-i18n="en">Episcopal Vicar for Brazilian Catholics</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">Horário do Escritório</span>
+              <span data-i18n="en">Office Hours</span>
+            </div>
+            <div class="contact-value">
+              <span data-i18n="pt">Segunda a Sexta, 9:00 AM – 5:00 PM</span>
+              <span data-i18n="en">Monday – Friday, 9:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.7!2d-73.397!3d41.371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIyJzE2LjAiTiA3M8KwMjMnNTAuMCJX!5e0!3m2!1sen!2sus!4v1234567890" 
+          width="100%" height="100%" style="border:0; border-radius: 12px;" 
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand-name">Our Lady of Aparecida</div>
+        <p class="footer-brand-text">
+          Paróquia Nossa Senhora da Imaculada Conceição Aparecida<br>
+          A Catholic Community of Faith<br>
+          Uma Comunidade de Fé<br>
+          Diocese of Bridgeport
+        </p>
+        <p class="footer-brand-text">
+          42 Vail Road, Bethel, CT 06801<br>
+          (203) 730-9071<br>
+          office@ourladyofaparecida.org
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Paróquia</span>
+          <span data-i18n="en">Parish</span>
+        </h4>
+        <a href="about.html" class="footer-link">
+          <span data-i18n="pt">Sobre Nós</span>
+          <span data-i18n="en">About Us</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Horário das Missas</span>
+          <span data-i18n="en">Mass Schedule</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Confissões</span>
+          <span data-i18n="en">Confessions</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Calendário</span>
+          <span data-i18n="en">Calendar</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Álbum de Fotos</span>
+          <span data-i18n="en">Photo Albums</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Ministérios</span>
+          <span data-i18n="en">Ministries</span>
+        </h4>
+        <a href="#" class="footer-link">Pastoral Familiar</a>
+        <a href="#" class="footer-link">Educação Religiosa</a>
+        <a href="#" class="footer-link">Grupo de Jovens</a>
+        <a href="#" class="footer-link">GOVES</a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Ver Todos →</span>
+          <span data-i18n="en">View All →</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Sacramentos</span>
+          <span data-i18n="en">Sacraments</span>
+        </h4>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Batismo</span>
+          <span data-i18n="en">Baptism</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Primeira Comunhão</span>
+          <span data-i18n="en">First Communion</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Crisma</span>
+          <span data-i18n="en">Confirmation</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Matrimônio</span>
+          <span data-i18n="en">Marriage</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Our Lady of Aparecida Parish · Diocese of Bridgeport</span>
+      <span>Built by SetonAI</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     LANGUAGE TOGGLE SCRIPT
+     ============================================ -->
+<script>
+(function() {
+  var toggle = document.getElementById('langToggle');
+
+  toggle.addEventListener('click', function(e) {
+    var btn = e.target;
+    if (!btn.classList.contains('lang-btn')) return;
+    var lang = btn.getAttribute('data-lang');
+
+    var buttons = toggle.querySelectorAll('.lang-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    btn.classList.add('active');
+
+    if (lang === 'en') {
+      document.body.classList.add('english');
+    } else {
+      document.body.classList.remove('english');
+    }
+
+    try { localStorage.setItem('ola_lang', lang); } catch(e) {}
+  });
+
+  // Restore saved language preference
+  try {
+    var saved = localStorage.getItem('ola_lang');
+    if (saved === 'en') {
+      document.body.classList.add('english');
+      toggle.querySelector('[data-lang="pt"]').classList.remove('active');
+      toggle.querySelector('[data-lang="en"]').classList.add('active');
+    }
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>

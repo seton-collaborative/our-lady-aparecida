@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nós | About Our Parish — Our Lady of Aparecida, Bethel CT</title>
+<meta name="description" content="A história da Paróquia Nossa Senhora Aparecida — a primeira paróquia brasileira oficial nos Estados Unidos. The story of the first official Brazilian parish in the United States.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --gold-50: #FDF8EF;
+  --gold-100: #F9EDCF;
+  --gold-200: #F0D48E;
+  --gold-300: #E4B94E;
+  --gold-400: #D4A024;
+  --gold-500: #B8891E;
+  --gold-600: #9A7019;
+  --gold-700: #7A5814;
+  --gold-800: #5C420F;
+
+  --blue-50: #EEF2F7;
+  --blue-100: #D5DEEB;
+  --blue-200: #A8BAD4;
+  --blue-300: #7B96BD;
+  --blue-400: #4E72A6;
+  --blue-500: #1E3A5F;
+  --blue-600: #1A3253;
+  --blue-700: #152947;
+  --blue-800: #0F1F36;
+  --blue-900: #0A1524;
+
+  --warm-50: #FAFAF8;
+  --warm-100: #F5F4F0;
+  --warm-200: #E8E6E1;
+  --warm-300: #D4D1CA;
+  --warm-400: #B5B1A8;
+  --warm-500: #8E897E;
+  --warm-600: #6B665C;
+  --warm-700: #4A4640;
+  --warm-800: #2D2B27;
+  --warm-900: #1A1917;
+
+  --green-400: #5A8C5A;
+  --green-500: #3D6B3D;
+  --terra-500: #A85A38;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--warm-900);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+.top-bar {
+  background: var(--blue-500);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: var(--gold-200);
+  transition: color 150ms;
+}
+.top-bar a:hover { color: var(--gold-300); }
+.top-bar-social { display: flex; gap: 16px; }
+
+/* ============================================
+   MAIN NAV
+   ============================================ */
+.main-nav {
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 22px; flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--warm-900);
+  line-height: 1.2;
+}
+.nav-brand-sub {
+  font-size: 0.72rem;
+  color: var(--warm-500);
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--warm-700);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 150ms;
+}
+.nav-link:hover { color: var(--gold-500); }
+.nav-link.active { color: var(--gold-600); }
+.nav-link::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold-500);
+  transition: width 250ms var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+/* Language Toggle */
+.lang-toggle {
+  display: inline-flex;
+  background: var(--warm-100);
+  border-radius: 100px;
+  padding: 3px; gap: 2px;
+}
+.lang-btn {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms;
+  background: transparent;
+  color: var(--warm-500);
+}
+.lang-btn.active {
+  background: var(--blue-500);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.lang-btn:not(.active):hover { color: var(--warm-800); background: var(--warm-200); }
+
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px;
+  flex-direction: column; justify-content: center; gap: 5px; align-items: center;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--warm-700);
+  transition: all 250ms;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 250ms var(--ease-out);
+}
+.btn-gold { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
+.btn-gold:hover { background: var(--gold-600); border-color: var(--gold-600); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,137,30,0.3); }
+.btn-blue { background: var(--blue-500); color: #fff; border-color: var(--blue-500); }
+.btn-blue:hover { background: var(--blue-600); transform: translateY(-1px); }
+.btn-outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+.btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+.btn-outline-gold { background: transparent; color: var(--gold-500); border: 2px solid var(--gold-500); }
+.btn-outline-gold:hover { background: var(--gold-500); color: #fff; }
+.btn-sm { padding: 8px 20px; font-size: 0.75rem; }
+.btn-nav { padding: 8px 18px; font-size: 0.75rem; }
+
+/* ============================================
+   CONTAINERS & SECTIONS
+   ============================================ */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 72px 0; }
+.section-light { background: #fff; }
+.section-alt { background: var(--warm-50); }
+.section-blue { background: var(--blue-500); color: #fff; }
+.section-gold-light { background: var(--gold-50); }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section-eyebrow {
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--gold-500);
+  margin-bottom: 8px;
+}
+.section-blue .section-eyebrow { color: var(--gold-300); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.4rem; font-weight: 500;
+  line-height: 1.15; margin-bottom: 12px;
+}
+.section-subtitle {
+  font-size: 1rem; color: var(--warm-500);
+  max-width: 640px; margin: 0 auto;
+}
+.section-blue .section-subtitle { color: rgba(255,255,255,0.75); }
+
+.gold-rule {
+  width: 60px; height: 2px;
+  background: var(--gold-400);
+  margin: 16px auto;
+}
+
+/* ============================================
+   PAGE HEADER (smaller than homepage hero)
+   ============================================ */
+.page-header {
+  position: relative;
+  background: var(--blue-800);
+  color: #fff;
+  padding: 80px 0 72px;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,21,36,0.3) 0%, rgba(10,21,36,0.75) 100%),
+    radial-gradient(circle at 20% 30%, rgba(184,137,30,0.15), transparent 50%),
+    linear-gradient(135deg, var(--blue-800), var(--blue-900));
+}
+.page-header .container { position: relative; z-index: 1; }
+.page-header-inner { max-width: 720px; }
+.page-header-eyebrow {
+  font-size: 0.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--gold-300);
+  margin-bottom: 14px;
+}
+.page-header-title {
+  font-family: var(--font-display);
+  font-size: 2.8rem; font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+.page-header-subtitle {
+  font-size: 1.05rem; line-height: 1.6;
+  opacity: 0.88;
+}
+
+/* ============================================
+   MISSION CARD — the poetic, centerpiece block
+   ============================================ */
+.mission-section {
+  background: linear-gradient(180deg, var(--blue-500) 0%, var(--blue-600) 100%);
+  color: #fff;
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+.mission-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(184,137,30,0.12), transparent 55%);
+}
+.mission-inner {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 24px;
+}
+.mission-eyebrow {
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.16em;
+  color: var(--gold-300);
+  margin-bottom: 20px;
+}
+.mission-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.8rem;
+  line-height: 1.35;
+  font-weight: 400;
+  margin-bottom: 28px;
+  color: #fff;
+}
+.mission-quote::before,
+.mission-quote::after {
+  content: '"';
+  color: var(--gold-400);
+  font-size: 1.4em;
+  line-height: 0;
+  position: relative;
+  top: 0.2em;
+}
+.mission-source {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-200);
+  font-weight: 600;
+}
+.mission-divider {
+  width: 40px; height: 2px;
+  background: var(--gold-400);
+  margin: 0 auto 20px;
+}
+
+/* ============================================
+   HISTORY / STATS
+   ============================================ */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.stat {
+  text-align: center;
+  padding: 24px 12px;
+  border-right: 1px solid var(--warm-200);
+}
+.stat:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--gold-500);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--warm-600);
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+.history-aside {
+  position: sticky; top: 100px;
+}
+.history-aside-label {
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--gold-500);
+  margin-bottom: 8px;
+}
+.history-aside-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 500;
+  line-height: 1.15;
+  color: var(--warm-900);
+  margin-bottom: 20px;
+}
+.history-aside-note {
+  font-size: 0.95rem;
+  color: var(--warm-600);
+  line-height: 1.7;
+  padding-left: 16px;
+  border-left: 3px solid var(--gold-400);
+}
+.history-body p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--warm-800);
+  margin-bottom: 20px;
+}
+.history-body p:first-child::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.9;
+  padding-right: 10px;
+  padding-top: 6px;
+  color: var(--gold-500);
+}
+.history-body strong { color: var(--warm-900); font-weight: 600; }
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent 0%, var(--gold-300) 8%, var(--gold-300) 92%, transparent 100%);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-year {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold-600);
+  text-align: right;
+  padding-top: 2px;
+}
+.timeline-marker {
+  position: absolute;
+  left: 115px;
+  top: 10px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold-500);
+  box-shadow: 0 0 0 4px var(--gold-100);
+}
+.timeline-content {
+  padding-left: 32px;
+}
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--warm-900);
+  margin-bottom: 6px;
+}
+.timeline-text {
+  font-size: 0.95rem;
+  color: var(--warm-600);
+  line-height: 1.65;
+}
+
+/* ============================================
+   PASTORAL STAFF
+   ============================================ */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.staff-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--warm-200);
+  transition: transform 250ms var(--ease-out), box-shadow 250ms var(--ease-out), border-color 250ms;
+}
+.staff-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30,58,95,0.08);
+  border-color: var(--gold-200);
+}
+.staff-card.featured {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--gold-50), #fff);
+  border-color: var(--gold-200);
+  padding: 36px 40px;
+}
+.staff-avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-400), var(--blue-600));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.staff-card.featured .staff-avatar {
+  width: 96px; height: 96px;
+  font-size: 1.9rem;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+}
+.staff-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--warm-900);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.staff-card.featured .staff-name { font-size: 1.55rem; }
+.staff-role {
+  font-size: 0.85rem;
+  color: var(--warm-500);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.staff-card.featured .staff-role {
+  font-size: 0.95rem;
+  color: var(--gold-600);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.staff-bio {
+  font-size: 0.9rem;
+  color: var(--warm-700);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+.staff-contact {
+  font-size: 0.82rem;
+  color: var(--gold-600);
+  font-weight: 500;
+  word-break: break-word;
+}
+.staff-contact:hover { color: var(--gold-700); text-decoration: underline; }
+
+/* ============================================
+   MUSIC MINISTRY
+   ============================================ */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.music-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  padding: 24px 22px;
+  transition: background 200ms, border-color 200ms, transform 200ms;
+}
+.music-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(228,185,78,0.4);
+  transform: translateY(-2px);
+}
+.music-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(228,185,78,0.15);
+  color: var(--gold-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.music-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+.music-coord {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+.music-note {
+  margin-top: 36px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ============================================
+   VIDEO EMBED
+   ============================================ */
+.video-section {
+  background: var(--warm-50);
+}
+.video-wrap {
+  max-width: 880px;
+  margin: 40px auto 0;
+}
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(30,58,95,0.18);
+  background: var(--warm-200);
+}
+.video-frame iframe,
+.video-frame .video-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-900));
+  color: rgba(255,255,255,0.85);
+  gap: 16px;
+  text-decoration: none;
+  transition: filter 200ms;
+}
+.video-placeholder:hover { filter: brightness(1.1); }
+.video-play-icon {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.video-caption-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.video-caption-sub {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   CTA BAND
+   ============================================ */
+.cta-band {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+  color: #fff;
+  padding: 56px 0;
+  text-align: center;
+}
+.cta-band h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.cta-band p {
+  font-size: 1rem;
+  opacity: 0.92;
+  margin-bottom: 24px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-band .btn-outline-white {
+  border-color: #fff;
+  color: #fff;
+}
+.cta-band .btn-outline-white:hover {
+  background: #fff;
+  color: var(--gold-700);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer { background: var(--warm-900); color: rgba(255,255,255,0.7); }
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 64px 0;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600;
+  color: #fff; margin-bottom: 12px;
+}
+.footer-brand-text {
+  font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;
+}
+.footer-heading {
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--gold-400); margin-bottom: 16px;
+}
+.footer-link {
+  display: block; font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  padding: 3px 0; transition: color 150ms;
+}
+.footer-link:hover { color: var(--gold-300); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+  display: flex; justify-content: space-between;
+  font-size: 0.75rem; color: rgba(255,255,255,0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .history-grid { grid-template-columns: 1fr; gap: 32px; }
+  .history-aside { position: static; }
+  .staff-grid { grid-template-columns: repeat(2, 1fr); }
+  .staff-card.featured { grid-column: span 2; }
+  .music-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+  .page-header-title { font-size: 2.3rem; }
+  .mission-quote { font-size: 1.5rem; }
+}
+@media (max-width: 768px) {
+  .page-header { padding: 56px 0 48px; }
+  .page-header-title { font-size: 1.9rem; }
+  .section { padding: 48px 0; }
+  .mission-section { padding: 64px 0; }
+  .mission-quote { font-size: 1.3rem; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); gap: 0; }
+  .stat { border-right: none; padding: 18px 8px; border-bottom: 1px solid var(--warm-200); }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+  .timeline::before { left: 8px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+  .timeline-year { text-align: left; padding-left: 32px; }
+  .timeline-marker { left: 3px; top: 8px; }
+  .timeline-content { padding-left: 32px; }
+  .staff-grid { grid-template-columns: 1fr; }
+  .staff-card.featured { grid-column: span 1; grid-template-columns: 1fr; text-align: center; padding: 28px 24px; }
+  .staff-card.featured .staff-avatar { margin: 0 auto 16px; }
+  .music-grid { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+@media (max-width: 640px) {
+  .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+  .top-bar-social { display: none; }
+}
+
+/* Language switching — default is Portuguese */
+[data-i18n="en"] { display: none; }
+body.english [data-i18n="pt"] { display: none; }
+body.english [data-i18n="en"] { display: inline; }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     TOP BAR
+     ============================================ -->
+<div class="top-bar">
+  <div class="container">
+    <div>
+      42 Vail Road, Bethel CT 06801 &nbsp;·&nbsp;
+      <a href="tel:2037309071">(203) 730-9071</a> &nbsp;·&nbsp;
+      <a href="mailto:office@ourladyofaparecida.org">office@ourladyofaparecida.org</a>
+    </div>
+    <div class="top-bar-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     MAIN NAV
+     ============================================ -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">✟</div>
+      <div>
+        <div class="nav-brand-name">Our Lady of Aparecida</div>
+        <div class="nav-brand-sub">Diocese of Bridgeport · Bethel, CT</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
+      <li><a href="about.html" class="nav-link active"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
+      <li><a href="index.html#ministries" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
+      <li><a href="index.html#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
+      <li><a href="index.html#contact" class="nav-link"><span data-i18n="pt">Contato</span><span data-i18n="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="#" class="btn btn-gold btn-nav">
+        <span data-i18n="pt">Doar</span>
+        <span data-i18n="en">Give</span>
+      </a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <p class="page-header-eyebrow">
+        <span data-i18n="pt">Nossa História</span>
+        <span data-i18n="en">Our Story</span>
+      </p>
+      <h1 class="page-header-title">
+        <span data-i18n="pt">Sobre a Nossa Paróquia</span>
+        <span data-i18n="en">About Our Parish</span>
+      </h1>
+      <p class="page-header-subtitle">
+        <span data-i18n="pt">Mais de 27 anos como comunidade católica de fé e amor. A primeira paróquia brasileira oficial nos Estados Unidos em homenagem à padroeira do Brasil.</span>
+        <span data-i18n="en">More than 27 years as a Catholic community of faith and love. The first official Brazilian parish in the United States, named after Brazil's patron saint.</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     MISSION STATEMENT
+     ============================================ -->
+<section class="mission-section">
+  <div class="mission-inner">
+    <p class="mission-eyebrow">
+      <span data-i18n="pt">Nossa Missão</span>
+      <span data-i18n="en">Our Mission</span>
+    </p>
+    <div class="mission-divider"></div>
+    <p class="mission-quote">
+      <span data-i18n="pt">Amar e Servir a Deus, Nosso Pai, em nossos irmãos e irmãs: Oferecê-Lo com amor e o sacrifício perfeito de seu filho Jesus Cristo, para que Ele se torne o Centro da minha vida.</span>
+      <span data-i18n="en">To Love and to Serve God, Our Father, in our brothers and sisters: To offer Him in love and the perfect sacrifice of His son Jesus Christ, so that He may become the Center of my life.</span>
+    </p>
+    <p class="mission-source">
+      <span data-i18n="pt">Paróquia Nossa Senhora Aparecida</span>
+      <span data-i18n="en">Our Lady of Aparecida Parish</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     BY THE NUMBERS
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Nossa Comunidade</span>
+        <span data-i18n="en">Our Community</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Uma Paróquia em Números</span>
+        <span data-i18n="en">A Parish by the Numbers</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-number">1,100+</div>
+        <div class="stat-label">
+          <span data-i18n="pt">Famílias Cadastradas</span>
+          <span data-i18n="en">Registered Families</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">28</div>
+        <div class="stat-label">
+          <span data-i18n="pt">Ministérios Ativos</span>
+          <span data-i18n="en">Active Ministries</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">27+</div>
+        <div class="stat-label">
+          <span data-i18n="pt">Anos de Comunidade</span>
+          <span data-i18n="en">Years as a Community</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">2020</div>
+        <div class="stat-label">
+          <span data-i18n="pt">Paróquia Instituída</span>
+          <span data-i18n="en">Parish Established</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HISTORY — FULL NARRATIVE
+     ============================================ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="history-grid">
+      <aside class="history-aside">
+        <p class="history-aside-label">
+          <span data-i18n="pt">História</span>
+          <span data-i18n="en">History</span>
+        </p>
+        <h2 class="history-aside-title">
+          <span data-i18n="pt">História da Nossa Comunidade</span>
+          <span data-i18n="en">The Story of Our Community</span>
+        </h2>
+        <p class="history-aside-note">
+          <span data-i18n="pt">Uma comunidade que começou pequena, cresceu em fé, e hoje serve mais de 1.100 famílias católicas brasileiras-americanas no sudoeste de Connecticut.</span>
+          <span data-i18n="en">A community that began small, grew in faith, and today serves more than 1,100 Brazilian-American Catholic families across southwestern Connecticut.</span>
+        </p>
+      </aside>
+      <div class="history-body">
+        <div data-i18n="pt">
+          <p>A Comunidade Católica Brasileira-Americana Nossa Senhora Aparecida tem mais de <strong>1.100 famílias cadastradas oficialmente</strong>, e muitas outras famílias e indivíduos ainda não cadastrados, mas que ajudam a povoar muitos eventos religiosos, sociais e culturais excepcionalmente bem frequentados. Tem muitas crianças, adolescentes e jovens, e a maioria dos adultos tem menos de 45 anos.</p>
+          <p>A comunidade é sustentável, solvente e próspera, cumpre suas obrigações e cumpre suas responsabilidades; tem os talentos humanos de que necessita, ansiosos por servir.</p>
+          <p>Há mais de <strong>27 anos</strong> Nossa Senhora Aparecida se mantém estável como comunidade católica de fé e amor, com muitos fiéis em movimentos, serviços, ministérios pastorais e/ou de outra forma dedicados ao serviço do Senhor. Nossa Senhora Aparecida se esforça para atender às necessidades sacramentais dos membros, forma, encoraja, apóia, sustenta e renova <strong>28 ministérios pastorais</strong> e grupos de serviço vibrantes, promove o desenvolvimento da fé, reuniões sociais, retiros, estudos bíblicos e desenvolvimento de liderança leiga.</p>
+          <p>Desde a sua criação em <strong>25 de janeiro de 2020</strong>, a Quasi-Paróquia Nossa Senhora Aparecida pode celebrar missas diárias e dominicais em horários estratégicos, pois agora conta com o total apoio do nosso Bispo <strong>Frank J. Caggiano</strong>. A Paróquia Nossa Senhora Aparecida também adquiriu uma nova unidade localizada na <strong>42 Vail Rd, Bethel, CT 06801</strong> para resolver seu problema de espaço suficiente e adequado.</p>
+          <p>Por mais de <strong>17 anos</strong>, Nossa Senhora Aparecida fez parte da Paróquia São Pedro, contando com o espaço físico da Igreja São Pedro desde a sua criação. Na época e atualmente, a paróquia celebra duas missas de fim de semana na Igreja de São Pedro: sábado e domingo à noite às 19h30.</p>
+          <p>A Campanha da Capital Diocesana possibilitou a transferência do antigo Centro Comunitário Brasileiro (na Liberty Street, 61, em Danbury) para uma Paróquia instituída, junto com a aquisição e reaproveitamento do novo imóvel em Bethel. Nossa Senhora Aparecida está totalmente encarregada de direcionar o reaproveitamento do antigo salão de recepção de Michael's At The Grove em um novo espaço de culto, escritórios e salas de aula.</p>
+          <p>A Paróquia Nossa Senhora Aparecida agradece imensamente a Paróquia São Pedro pela ajuda nesses 20 anos de parceria e trabalho em prol da pregação do Evangelho e da Salvação das Almas.</p>
+        </div>
+        <div data-i18n="en">
+          <p>The Brazilian-American Catholic Community of Our Lady of Aparecida has over <strong>1,100 officially registered families</strong>, plus many more families and individuals who are not yet registered but help fill our exceptionally well-attended religious, social, and cultural events. The community has many children, adolescents, and young adults, with most of its adults under 45 years old.</p>
+          <p>The community is sustainable, solvent, and thriving — fulfilling its obligations and responsibilities, with abundant human talent eager to serve.</p>
+          <p>For more than <strong>27 years</strong>, Our Lady of Aparecida has remained stable as a Catholic community of faith and love, with many faithful active in movements, services, and pastoral ministries. The parish works to meet the sacramental needs of its members and forms, encourages, supports, and renews <strong>28 vibrant pastoral ministries</strong> and service groups. It promotes faith development, social gatherings, retreats, Bible studies, and lay leadership formation.</p>
+          <p>Since its creation on <strong>January 25, 2020</strong>, the Quasi-Parish of Our Lady of Aparecida has been able to celebrate daily and Sunday Masses at strategic times, thanks to the full support of our Bishop, <strong>Frank J. Caggiano</strong>. The parish also acquired a new property at <strong>42 Vail Road, Bethel, CT 06801</strong> to resolve its need for adequate space for worship, fellowship, and ministry.</p>
+          <p>For more than <strong>17 years</strong>, Our Lady of Aparecida was part of St. Peter Parish, relying on the physical space of St. Peter Church since its founding. Then and now, the parish celebrates two weekend Masses at St. Peter Church: Saturday and Sunday evening at 7:30 PM.</p>
+          <p>The Diocesan Capital Campaign made it possible to transfer the former Brazilian Community Center (at 61 Liberty Street, Danbury) to an established parish, together with the acquisition and repurposing of the new Bethel property. Our Lady of Aparecida is fully responsible for directing the transformation of the former Michael's At The Grove reception hall into a new space for worship, offices, and classrooms.</p>
+          <p>Our Lady of Aparecida Parish is deeply grateful to St. Peter Parish for 20 years of partnership in preaching the Gospel and in the salvation of souls.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TIMELINE
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Marcos</span>
+        <span data-i18n="en">Milestones</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Uma Jornada de Fé</span>
+        <span data-i18n="en">A Journey of Faith</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">1999</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">Nasce a Comunidade</span>
+            <span data-i18n="en">The Community is Born</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">A Comunidade Católica Brasileira-Americana Nossa Senhora Aparecida começa a se reunir no sudoeste de Connecticut, servindo à crescente população de famílias brasileiras na região.</span>
+            <span data-i18n="en">The Brazilian-American Catholic Community of Our Lady of Aparecida begins gathering in southwestern Connecticut, serving the growing population of Brazilian families in the area.</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2007</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">Lar na Paróquia São Pedro</span>
+            <span data-i18n="en">Home at St. Peter Parish</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">Por 17 anos, a comunidade celebra missas e sacramentos com o apoio da Paróquia São Pedro em Danbury — uma parceria que continua até hoje com duas missas semanais em São Pedro.</span>
+            <span data-i18n="en">For 17 years, the community celebrates Masses and sacraments with the support of St. Peter Parish in Danbury — a partnership that continues today with two weekly Masses at St. Peter.</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2010s</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">Centro Comunitário em Danbury</span>
+            <span data-i18n="en">Community Center in Danbury</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">O Centro Comunitário Brasileiro Nossa Senhora Aparecida, na 61 Liberty Street em Danbury, torna-se o lar das atividades pastorais, reuniões dos 28 ministérios, retiros e eventos comunitários.</span>
+            <span data-i18n="en">The Brazilian Community Center of Our Lady of Aparecida, at 61 Liberty Street in Danbury, becomes the home for pastoral activities, meetings of the 28 ministries, retreats, and community events.</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">Instituição como Quasi-Paróquia</span>
+            <span data-i18n="en">Establishment as a Quasi-Parish</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">Em 25 de janeiro de 2020, Nossa Senhora Aparecida é oficialmente instituída como Quasi-Paróquia pelo Bispo Frank J. Caggiano — a primeira paróquia brasileira oficial nos Estados Unidos com este nome.</span>
+            <span data-i18n="en">On January 25, 2020, Our Lady of Aparecida is officially established as a Quasi-Parish by Bishop Frank J. Caggiano — the first official Brazilian parish in the United States bearing this name.</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          <span data-i18n="pt">Hoje</span>
+          <span data-i18n="en">Today</span>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">Novo Lar em Bethel</span>
+            <span data-i18n="en">A New Home in Bethel</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">A Campanha da Capital Diocesana torna possível a aquisição do imóvel na 42 Vail Rd. em Bethel — o antigo Michael's At The Grove, agora reaproveitado como espaço de culto, escritórios e salas de aula para uma comunidade de mais de 1.100 famílias.</span>
+            <span data-i18n="en">The Diocesan Capital Campaign makes possible the acquisition of the property at 42 Vail Road in Bethel — the former Michael's At The Grove, now repurposed as a space for worship, offices, and classrooms for a community of more than 1,100 families.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PASTORAL STAFF
+     ============================================ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Equipe Pastoral</span>
+        <span data-i18n="en">Pastoral Staff</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Quem Nos Serve</span>
+        <span data-i18n="en">Those Who Serve Us</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">Nossa equipe pastoral guia a vida sacramental e comunitária da paróquia em colaboração com dezenas de voluntários.</span>
+        <span data-i18n="en">Our pastoral team guides the sacramental and community life of the parish in collaboration with dozens of volunteers.</span>
+      </p>
+    </div>
+    <div class="staff-grid">
+
+      <div class="staff-card featured">
+        <div class="staff-avatar">LM</div>
+        <div>
+          <div class="staff-name">Rev. Leonel S. Medeiros</div>
+          <div class="staff-role">
+            <span data-i18n="pt">Vigário Episcopal para Brasileiros · Administrador</span>
+            <span data-i18n="en">Episcopal Vicar for Brazilians · Administrator</span>
+          </div>
+          <p class="staff-bio">
+            <span data-i18n="pt">Pe. Leonel é o Vigário Episcopal nomeado para os Católicos Brasileiros na Diocese de Bridgeport. Ele é diretamente responsável pela vida sacramental e ministerial de Nossa Senhora Aparecida e supervisiona o atendimento pastoral à comunidade católica brasileira em toda a diocese. Também dirige o Centro Comunitário.</span>
+            <span data-i18n="en">Fr. Leonel is the appointed Episcopal Vicar for Brazilian Catholics in the Diocese of Bridgeport. He is directly responsible for the sacramental life and ministry of Our Lady of Aparecida and oversees pastoral care for the Brazilian Catholic community throughout the diocese. He also serves as Community Center Director.</span>
+          </p>
+          <a href="mailto:frmedeiros@diobpt.org" class="staff-contact">frmedeiros@diobpt.org</a>
+        </div>
+      </div>
+
+      <div class="staff-card">
+        <div class="staff-avatar">M</div>
+        <div class="staff-name">Ms. Maruska</div>
+        <div class="staff-role">
+          <span data-i18n="pt">Secretária</span>
+          <span data-i18n="en">Parish Secretary</span>
+        </div>
+        <a href="mailto:office@ourladyofaparecida.org" class="staff-contact">office@ourladyofaparecida.org</a>
+      </div>
+
+      <div class="staff-card">
+        <div class="staff-avatar">SD</div>
+        <div class="staff-name">Sandro Doblins</div>
+        <div class="staff-role">
+          <span data-i18n="pt">Diretor de Educação Religiosa</span>
+          <span data-i18n="en">Director of Religious Education</span>
+        </div>
+      </div>
+
+      <div class="staff-card">
+        <div class="staff-avatar">PC</div>
+        <div class="staff-name">
+          <span data-i18n="pt">Equipe de Comunicações · PASCOM</span>
+          <span data-i18n="en">Communications Team · PASCOM</span>
+        </div>
+        <div class="staff-role">
+          Jamir Costa · Gabriela Pereira · Nayara Silva
+        </div>
+        <p class="staff-bio">
+          <span data-i18n="pt">Responsáveis pelas comunicações paroquiais, redes sociais e cobertura de eventos.</span>
+          <span data-i18n="en">Responsible for parish communications, social media, and event coverage.</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MUSIC MINISTRY
+     ============================================ -->
+<section class="section section-blue">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Ministério de Música</span>
+        <span data-i18n="en">Music Ministry</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Louvor em Cinco Vozes</span>
+        <span data-i18n="en">Praise in Five Voices</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">Cinco coros e conjuntos musicais servem cada missa e celebração, liderados inteiramente por voluntários da paróquia.</span>
+        <span data-i18n="en">Five choirs and musical ensembles serve every Mass and celebration, led entirely by parish volunteers.</span>
+      </p>
+    </div>
+    <div class="music-grid">
+      <div class="music-card">
+        <div class="music-icon">🎶</div>
+        <div class="music-name">
+          <span data-i18n="pt">Filhos de Maria</span>
+          <span data-i18n="en">Sons of Mary</span>
+        </div>
+        <div class="music-coord">Priscilla Gomes</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">🎵</div>
+        <div class="music-name">Totus Tuus</div>
+        <div class="music-coord">Tamnata Pereira</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">🔥</div>
+        <div class="music-name">
+          <span data-i18n="pt">Ministério Carismático (GOVES)</span>
+          <span data-i18n="en">Charismatic Music Ministry (GOVES)</span>
+        </div>
+        <div class="music-coord">Carlos Mendes</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">🎼</div>
+        <div class="music-name">
+          <span data-i18n="pt">Coro em Inglês · Missa das 11h</span>
+          <span data-i18n="en">English Choir · 11am Mass</span>
+        </div>
+        <div class="music-coord">Sophia Da Silva</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">✨</div>
+        <div class="music-name">
+          <span data-i18n="pt">Missa de Sábado 17h</span>
+          <span data-i18n="en">Saturday 5pm Mass</span>
+        </div>
+        <div class="music-coord">Daniel Castro</div>
+      </div>
+    </div>
+    <p class="music-note">
+      <span data-i18n="pt">*Todos os coordenadores de música são voluntários da paróquia.</span>
+      <span data-i18n="en">*All music coordinators are volunteers of the parish.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     VIDEO — SANTUÁRIO NACIONAL
+     ============================================ -->
+<section class="section video-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Nossa Devoção</span>
+        <span data-i18n="en">Our Devotion</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Missa no Santuário Nacional</span>
+        <span data-i18n="en">Mass at the National Shrine</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">Peregrinos da nossa comunidade no Santuário Nacional de Aparecida — o maior santuário mariano do mundo e coração da nossa devoção brasileira.</span>
+        <span data-i18n="en">Pilgrims from our community at the National Shrine of Aparecida — the largest Marian shrine in the world and heart of our Brazilian devotion.</span>
+      </p>
+    </div>
+    <div class="video-wrap">
+      <div class="video-frame">
+        <!-- Replace href below with actual YouTube embed URL once Chris provides it -->
+        <a href="https://www.youtube.com/results?search_query=Missa+Santu%C3%A1rio+Nacional+Aparecida" target="_blank" rel="noopener" class="video-placeholder">
+          <div class="video-play-icon">▶</div>
+          <div class="video-caption-title">Missa · Santuário Nacional de Aparecida</div>
+          <div class="video-caption-sub">17 de agosto de 2023</div>
+        </a>
+        <!-- To embed directly, replace the anchor above with:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Missa Santuário Nacional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA BAND
+     ============================================ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>
+      <span data-i18n="pt">Encontre o Seu Lugar</span>
+      <span data-i18n="en">Find Your Place</span>
+    </h2>
+    <p>
+      <span data-i18n="pt">Com 28 ministérios ativos, há um lugar para você servir, orar e crescer na fé.</span>
+      <span data-i18n="en">With 28 active ministries, there is a place for you to serve, pray, and grow in faith.</span>
+    </p>
+    <a href="index.html#ministries" class="btn btn-outline-white">
+      <span data-i18n="pt">Ver Todos os Ministérios</span>
+      <span data-i18n="en">Explore All Ministries</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand-name">Our Lady of Aparecida</div>
+        <p class="footer-brand-text">
+          <span data-i18n="pt">Paróquia Nossa Senhora da Imaculada Conceição Aparecida<br>Uma Comunidade Católica de Fé<br>Diocese de Bridgeport</span>
+          <span data-i18n="en">Our Lady of the Immaculate Conception of Aparecida Parish<br>A Catholic Community of Faith<br>Diocese of Bridgeport</span>
+        </p>
+        <p class="footer-brand-text">
+          42 Vail Road, Bethel, CT 06801<br>
+          (203) 730-9071<br>
+          office@ourladyofaparecida.org
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Paróquia</span>
+          <span data-i18n="en">Parish</span>
+        </h4>
+        <a href="about.html" class="footer-link">
+          <span data-i18n="pt">Sobre Nós</span>
+          <span data-i18n="en">About Us</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Horário das Missas</span>
+          <span data-i18n="en">Mass Schedule</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Confissões</span>
+          <span data-i18n="en">Confessions</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Calendário</span>
+          <span data-i18n="en">Calendar</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Álbum de Fotos</span>
+          <span data-i18n="en">Photo Albums</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Ministérios</span>
+          <span data-i18n="en">Ministries</span>
+        </h4>
+        <a href="index.html#ministries" class="footer-link">Pastoral Familiar</a>
+        <a href="index.html#ministries" class="footer-link">Educação Religiosa</a>
+        <a href="index.html#ministries" class="footer-link">Grupo de Jovens</a>
+        <a href="index.html#ministries" class="footer-link">GOVES</a>
+        <a href="index.html#ministries" class="footer-link">
+          <span data-i18n="pt">Ver Todos →</span>
+          <span data-i18n="en">View All →</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Sacramentos</span>
+          <span data-i18n="en">Sacraments</span>
+        </h4>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Batismo</span>
+          <span data-i18n="en">Baptism</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Primeira Comunhão</span>
+          <span data-i18n="en">First Communion</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Crisma</span>
+          <span data-i18n="en">Confirmation</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Matrimônio</span>
+          <span data-i18n="en">Marriage</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Our Lady of Aparecida Parish · Diocese of Bridgeport</span>
+      <span>Built by SetonDigital</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     LANGUAGE TOGGLE SCRIPT
+     ============================================ -->
+<script>
+(function() {
+  var toggle = document.getElementById('langToggle');
+
+  toggle.addEventListener('click', function(e) {
+    var btn = e.target;
+    if (!btn.classList.contains('lang-btn')) return;
+    var lang = btn.getAttribute('data-lang');
+
+    var buttons = toggle.querySelectorAll('.lang-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    btn.classList.add('active');
+
+    if (lang === 'en') {
+      document.body.classList.add('english');
+    } else {
+      document.body.classList.remove('english');
+    }
+
+    try { localStorage.setItem('ola_lang', lang); } catch(e) {}
+  });
+
+  // Restore saved language preference
+  try {
+    var saved = localStorage.getItem('ola_lang');
+    if (saved === 'en') {
+      document.body.classList.add('english');
+      toggle.querySelector('[data-lang="pt"]').classList.remove('active');
+      toggle.querySelector('[data-lang="en"]').classList.add('active');
+    }
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
