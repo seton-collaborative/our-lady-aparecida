@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ministérios | Our Ministries — Our Lady of Aparecida, Bethel CT</title>
+<meta name="description" content="Encontre o seu lugar na comunidade. Find your place in the community. With a variety of active ministries, there are opportunities for everyone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --gold-50: #FDF8EF;
+  --gold-100: #F9EDCF;
+  --gold-200: #F0D48E;
+  --gold-300: #E4B94E;
+  --gold-400: #D4A024;
+  --gold-500: #B8891E;
+  --gold-600: #9A7019;
+  --gold-700: #7A5814;
+
+  --blue-50: #EEF2F7;
+  --blue-100: #D5DEEB;
+  --blue-200: #A8BAD4;
+  --blue-300: #7B96BD;
+  --blue-400: #4E72A6;
+  --blue-500: #1E3A5F;
+  --blue-600: #1A3253;
+  --blue-700: #152947;
+  --blue-800: #0F1F36;
+  --blue-900: #0A1524;
+
+  --warm-50: #FAFAF8;
+  --warm-100: #F5F4F0;
+  --warm-200: #E8E6E1;
+  --warm-300: #D4D1CA;
+  --warm-400: #B5B1A8;
+  --warm-500: #8E897E;
+  --warm-600: #6B665C;
+  --warm-700: #4A4640;
+  --warm-800: #2D2B27;
+  --warm-900: #1A1917;
+
+  --terra-500: #A85A38;
+  --green-500: #3D6B3D;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--warm-900);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   TOP BAR & NAV (matches site)
+   ============================================ */
+.top-bar {
+  background: var(--blue-500);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+.top-bar a { color: var(--gold-200); transition: color 150ms; }
+.top-bar a:hover { color: var(--gold-300); }
+.top-bar-social { display: flex; gap: 16px; }
+
+.main-nav {
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0; z-index: 100;
+}
+.main-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 22px; flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--warm-900); line-height: 1.2;
+}
+.nav-brand-sub { font-size: 0.72rem; color: var(--warm-500); }
+.nav-links { display: flex; gap: 28px; }
+.nav-link {
+  font-size: 0.9rem; font-weight: 500;
+  color: var(--warm-700);
+  position: relative; padding-bottom: 2px;
+  transition: color 150ms;
+}
+.nav-link:hover { color: var(--gold-500); }
+.nav-link.active { color: var(--gold-600); }
+.nav-link::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold-500);
+  transition: width 250ms var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+.lang-toggle {
+  display: inline-flex;
+  background: var(--warm-100);
+  border-radius: 100px;
+  padding: 3px; gap: 2px;
+}
+.lang-btn {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; transition: all 150ms;
+  background: transparent; color: var(--warm-500);
+}
+.lang-btn.active {
+  background: var(--blue-500);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.lang-btn:not(.active):hover { color: var(--warm-800); background: var(--warm-200); }
+
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px;
+  flex-direction: column; justify-content: center; gap: 5px; align-items: center;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--warm-700);
+  transition: all 250ms;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.74rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 200ms var(--ease-out);
+  white-space: nowrap;
+}
+.btn-gold { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
+.btn-gold:hover { background: var(--gold-600); border-color: var(--gold-600); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,137,30,0.3); }
+.btn-outline-gold { background: transparent; color: var(--gold-600); border: 2px solid var(--gold-400); }
+.btn-outline-gold:hover { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
+.btn-nav { padding: 8px 18px; font-size: 0.75rem; }
+
+/* ============================================
+   CONTAINERS
+   ============================================ */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+  background: var(--warm-50);
+  padding: 64px 0 56px;
+  text-align: center;
+  border-bottom: 1px solid var(--warm-200);
+}
+.page-header-eyebrow {
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.16em;
+  color: var(--gold-600);
+  margin-bottom: 14px;
+}
+.page-header-title {
+  font-family: var(--font-display);
+  font-size: 2.6rem; font-weight: 500;
+  color: var(--warm-900);
+  line-height: 1.15; margin-bottom: 12px;
+}
+.gold-rule {
+  width: 60px; height: 2px;
+  background: var(--gold-400);
+  margin: 16px auto;
+}
+.page-header-subtitle {
+  font-size: 1.02rem;
+  color: var(--warm-600);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============================================
+   MINISTRIES GRID
+   ============================================ */
+.ministries-section { padding: 64px 0 80px; }
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.ministry-card {
+  background: #fff;
+  border: 1px solid var(--warm-200);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 250ms var(--ease-out), box-shadow 250ms var(--ease-out), border-color 250ms;
+}
+.ministry-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30,58,95,0.08);
+  border-color: var(--gold-200);
+}
+
+.ministry-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.ministry-card-head-text { flex: 1; min-width: 0; }
+.ministry-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--warm-900);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.ministry-coords {
+  font-size: 0.85rem;
+  color: var(--gold-600);
+  font-weight: 500;
+  line-height: 1.55;
+}
+.ministry-coords .sep { color: var(--warm-400); margin: 0 4px; }
+
+.ministry-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.ministry-icon-blue {
+  background: var(--blue-500);
+  color: var(--gold-400);
+}
+.ministry-icon-gold {
+  background: var(--gold-100);
+  color: var(--gold-600);
+}
+.ministry-icon-warm {
+  background: var(--warm-100);
+  color: var(--warm-600);
+}
+.ministry-icon-terra {
+  background: #F4E4DC;
+  color: var(--terra-500);
+}
+.ministry-icon-circle {
+  background: transparent;
+  border: 2px solid var(--warm-300);
+  color: var(--warm-500);
+}
+
+.ministry-callout {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--warm-900);
+  margin-bottom: 8px;
+}
+.ministry-body {
+  font-size: 0.93rem;
+  color: var(--warm-700);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.ministry-body strong { color: var(--warm-900); font-weight: 600; }
+.ministry-body p + p { margin-top: 10px; }
+
+.ministry-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.ministry-actions .btn { flex: 1; min-width: 120px; }
+
+/* ============================================
+   CTA BAND
+   ============================================ */
+.cta-band {
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  color: #fff;
+  padding: 56px 0;
+  text-align: center;
+}
+.cta-band h2 {
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 500;
+  margin-bottom: 12px;
+}
+.cta-band p {
+  font-size: 1rem; opacity: 0.85;
+  margin-bottom: 24px;
+  max-width: 560px;
+  margin-left: auto; margin-right: auto;
+}
+.cta-band .btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+.cta-band .btn-outline-white:hover {
+  background: #fff;
+  color: var(--blue-700);
+  border-color: #fff;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer { background: var(--warm-900); color: rgba(255,255,255,0.7); }
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 64px 0;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600;
+  color: #fff; margin-bottom: 12px;
+}
+.footer-brand-text {
+  font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;
+}
+.footer-heading {
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--gold-400); margin-bottom: 16px;
+}
+.footer-link {
+  display: block; font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  padding: 3px 0; transition: color 150ms;
+}
+.footer-link:hover { color: var(--gold-300); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+  display: flex; justify-content: space-between;
+  font-size: 0.75rem; color: rgba(255,255,255,0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .ministries-grid { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+  .page-header-title { font-size: 2.1rem; }
+}
+@media (max-width: 768px) {
+  .page-header { padding: 48px 0 40px; }
+  .page-header-title { font-size: 1.85rem; }
+  .ministries-section { padding: 48px 0 64px; }
+  .ministry-card { padding: 24px 22px 22px; }
+  .ministry-name { font-size: 1.3rem; }
+  .ministry-icon { width: 48px; height: 48px; font-size: 20px; }
+  .ministry-actions .btn { flex: 1 1 100%; }
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+@media (max-width: 640px) {
+  .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+  .top-bar-social { display: none; }
+}
+
+/* Language switching — default is Portuguese */
+[data-i18n="en"] { display: none; }
+body.english [data-i18n="pt"] { display: none; }
+body.english [data-i18n="en"] { display: inline; }
+
+/* Block-level language switches */
+[data-i18n-block="en"] { display: none; }
+body.english [data-i18n-block="pt"] { display: none; }
+body.english [data-i18n-block="en"] { display: block; }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     TOP BAR
+     ============================================ -->
+<div class="top-bar">
+  <div class="container">
+    <div>
+      42 Vail Road, Bethel CT 06801 &nbsp;·&nbsp;
+      <a href="tel:2037309071">(203) 730-9071</a> &nbsp;·&nbsp;
+      <a href="mailto:office@ourladyofaparecida.org">office@ourladyofaparecida.org</a>
+    </div>
+    <div class="top-bar-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     MAIN NAV
+     ============================================ -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">✟</div>
+      <div>
+        <div class="nav-brand-name">Our Lady of Aparecida</div>
+        <div class="nav-brand-sub">Diocese of Bridgeport · Bethel, CT</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
+      <li><a href="about.html" class="nav-link"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
+      <li><a href="ministries.html" class="nav-link active"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
+      <li><a href="safe-environments.html" class="nav-link"><span data-i18n="pt">Ambientes Seguros</span><span data-i18n="en">Safe Environments</span></a></li>
+      <li><a href="index.html#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
+      <li><a href="index.html#contact" class="nav-link"><span data-i18n="pt">Contato</span><span data-i18n="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="giving.html" class="btn btn-gold btn-nav">
+        <span data-i18n="pt">Doar</span>
+        <span data-i18n="en">Give</span>
+      </a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <p class="page-header-eyebrow">
+      <span data-i18n="pt">Grupos e Movimentos Pastorais</span>
+      <span data-i18n="en">Pastoral Groups &amp; Movements</span>
+    </p>
+    <h1 class="page-header-title">
+      <span data-i18n="pt">Nossos Ministérios</span>
+      <span data-i18n="en">Our Ministries</span>
+    </h1>
+    <div class="gold-rule"></div>
+    <p class="page-header-subtitle">
+      <span data-i18n="pt">Encontre o seu lugar na comunidade. Com uma variedade de ministérios ativos, há oportunidades para todos.</span>
+      <span data-i18n="en">Find your place in the community. With a variety of active ministries, there are opportunities for everyone.</span>
+    </p>
+  </div>
+</header>
+
+<!-- ============================================
+     MINISTRIES GRID
+     ============================================ -->
+<section class="ministries-section">
+  <div class="container">
+    <div class="ministries-grid">
+
+      <!-- 1. Religious Education -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Educação Religiosa</span>
+              <span data-i18n="en">Religious Education</span>
+            </h2>
+            <div class="ministry-coords">
+              Sandro Doblins <span class="sep">|</span>
+              <span data-i18n="pt">Diretor</span><span data-i18n="en">Director</span>
+              <span class="sep">|</span> 203-942-8882<br>
+              Fr. Leonel <span class="sep">|</span>
+              <span data-i18n="pt">Diretor de RCIA</span><span data-i18n="en">Director of RCIA</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">📖</div>
+        </div>
+        <p class="ministry-callout">
+          <span data-i18n="pt">Inscrições para Formação na Fé Estão Abertas</span>
+          <span data-i18n="en">Registration for Faith Formation Is Now Open</span>
+        </p>
+        <div class="ministry-body">
+          <p data-i18n-block="pt">Temos inscrições abertas para aulas de Catequese todas as quartas-feiras às 8h00 e às 20h00. Por favor, traga sua identificação e Certificado de Batismo (caso tenha um). Se você não tiver o certificado, podemos ajudá-lo a obtê-lo.</p>
+          <p data-i18n-block="en">We have open registration for Catechesis classes every Wednesday at 8:00am and 8:00pm. Please provide your identification and Baptism Certificate (if you have one). If you do not have the certificate, we can help you obtain it.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Formação na Fé</span>
+            <span data-i18n="en">Faith Formation</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">
+            <span data-i18n="pt">Inscrição</span>
+            <span data-i18n="en">Registration</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Family Ministry -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Pastoral Familiar</span>
+              <span data-i18n="en">Family Ministry</span>
+            </h2>
+            <div class="ministry-coords">
+              Luciana De Oliveira <span class="sep">|</span>
+              <span data-i18n="pt">Coordenadora</span><span data-i18n="en">Coordinator</span><br>
+              Gilberto De Oliveira <span class="sep">|</span>
+              <span data-i18n="pt">Coordenador</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">👨‍👩‍👧</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt">O objetivo da Pastoral Familiar é apoiar a família para que ela possa existir e viver com dignidade, estabelecer relacionamentos e formar novas gerações segundo o plano de Deus. Abrange todas as famílias, independentemente de sua situação, com o propósito de promover a inclusão e recuperar os valores e a dignidade de cada pessoa.</p>
+          <p data-i18n-block="en">Family Ministry's objective is to support the family so that it can exist and live with dignity, establish relationships and train new generations according to God's plan. It covers all families, regardless of their situation, with the purpose of promoting inclusion and recovering the values and dignity of each person.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Missão e Objetivos</span>
+            <span data-i18n="en">Mission &amp; Objectives</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">
+            <span data-i18n="pt">Histórico</span>
+            <span data-i18n="en">History</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. GOVES — Prayer Group -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">GOVES — <span data-i18n="pt">Grupo de Oração</span><span data-i18n="en">Prayer Group</span></h2>
+            <div class="ministry-coords">
+              Jamir Costa <span class="sep">|</span>
+              <span data-i18n="pt">Coordenador</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-terra" aria-hidden="true">🔥</div>
+        </div>
+        <p class="ministry-callout">
+          <span data-i18n="pt">Grupo de Oração Semanal · Terças às 20h00</span>
+          <span data-i18n="en">Weekly Prayer Group · Tuesdays at 8:00 PM</span>
+        </p>
+        <div class="ministry-body">
+          <p data-i18n-block="pt">O propósito do Grupo de Oração é conduzir os participantes a viver um Pentecostes pessoal, a crescer e alcançar a maturidade da vida cristã cheia do Espírito, segundo o desejo de Jesus: <em>"Eu vim para que tenham vida e a tenham em abundância."</em> (Jo 10,10b)</p>
+          <p data-i18n-block="en">The purpose of the Prayer Group is to lead participants to experience personal Pentecost, to grow and reach the maturity of the Spirit-filled Christian life, according to Jesus' wishes: <em>"I have come so that the sheep may have life and have it in abundance."</em> (Jn 10,10b)</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Vídeos no YouTube</span>
+            <span data-i18n="en">YouTube Videos</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">Facebook</a>
+        </div>
+      </article>
+
+      <!-- 4. Youth Group -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Grupo de Jovens</span>
+              <span data-i18n="en">Youth Group</span>
+            </h2>
+            <div class="ministry-coords">
+              Tamnata Pereira <span class="sep">|</span> Leticia Gomes<br>
+              Tatiana Pereira <span class="sep">|</span> Kassia De Oliveira
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">🎯</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt"><strong>Filhos de Maria</strong> — acolhe todos os jovens de 13 a 17 anos. Encontros toda segunda terça-feira do mês.</p>
+          <p data-i18n-block="pt"><strong>Juventude Sem Fronteiras / Jovens Adultos</strong> — adultos jovens de 18 a 35 anos. Encontros toda primeira e terceira sexta-feira, das 20h00 às 21h00.</p>
+          <p data-i18n-block="en"><strong>Sons of Mary</strong> — welcomes all youth ages 13–17 to meet every second Tuesday.</p>
+          <p data-i18n-block="en"><strong>Youth Without Borders / Young Adults</strong> — young adults ages 18–35 meet every first &amp; third Friday from 8:00pm to 9:00pm.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Blog Teen Life</span>
+            <span data-i18n="en">Teen Life Blog</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">Facebook</a>
+        </div>
+      </article>
+
+      <!-- 5. Mother's Rosary -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Terço das Mães</span>
+              <span data-i18n="en">Mother's Rosary</span>
+            </h2>
+            <div class="ministry-coords">
+              Fabiana Neupmann <span class="sep">|</span>
+              <span data-i18n="pt">Coordenadora</span><span data-i18n="en">Coordinator</span><br>
+              Estela Barros <span class="sep">|</span>
+              <span data-i18n="pt">Coordenadora</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">📿</div>
+        </div>
+        <p class="ministry-callout">
+          <span data-i18n="pt">Toda Quinta-Feira às 20h00</span>
+          <span data-i18n="en">Every Thursday at 8:00 PM</span>
+        </p>
+        <div class="ministry-body">
+          <p data-i18n-block="pt">O grupo opera sob a direção espiritual do Padre Leonel Medeiros e uma equipe principal de apoio. Sua missão é cuidar das mães e atender às suas principais preocupações — ou seja, seus filhos — bem como instruí-las nos ensinamentos fundamentais da doutrina católica.</p>
+          <p data-i18n-block="en">The group operates under the spiritual direction of Father Leonel Medeiros and a core support team. Its mission is to care for mothers and address their primary concerns — namely, their children — as well as to instruct them in the fundamental teachings of Catholic doctrine.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Site Oficial</span>
+            <span data-i18n="en">Official Website</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">
+            <span data-i18n="pt">Fotos</span>
+            <span data-i18n="en">Photos</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 6. Men's Rosary -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Terço dos Homens</span>
+              <span data-i18n="en">Men's Rosary</span>
+            </h2>
+            <div class="ministry-coords">
+              Acacio Oliveira <span class="sep">|</span>
+              <span data-i18n="pt">Coordenador</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">🛡</div>
+        </div>
+        <p class="ministry-callout">
+          <span data-i18n="pt">Toda Segunda Sexta-Feira do Mês às 20h00</span>
+          <span data-i18n="en">Every Second Friday at 8:00 PM</span>
+        </p>
+        <div class="ministry-body">
+          <p data-i18n-block="pt">A missão do Terço dos Homens é resgatar para o coração da Igreja de Cristo homens de todas as idades, pois a presença masculina na Igreja é essencial para a formação da família e da sociedade cristã. O Terço dos Homens é um exemplo de fé e devoção.</p>
+          <p data-i18n-block="en">The mission of the Men's Rosary is to rescue for the heart of the Church of Christ men of all ages since the male presence in the Church is essential for the formation of the family and the Christian society. The Men's Rosary is an example of faith and devotion.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Vídeos no YouTube</span>
+            <span data-i18n="en">YouTube Videos</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">
+            <span data-i18n="pt">Fotos</span>
+            <span data-i18n="en">Photos</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 7. Theater and Music -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Teatro e Música</span>
+              <span data-i18n="en">Theater and Music</span>
+            </h2>
+            <div class="ministry-coords">
+              Washington Arpini <span class="sep">|</span>
+              <span data-i18n="pt">Coordenador</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">🎵</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt">A música é uma parte importante da liturgia e oferecemos muitas oportunidades para os apaixonados pela música. O Grupo de Música Carismática (GOVES Choir), o Coro Totus Tuus e o Coro Filhos de Maria — um deles é certo para você. Considere unir sua voz à nossa em canto, adoração e louvor.</p>
+          <p data-i18n-block="en">Music is a big part of worship and we have many opportunities for the musically inclined. The Charismatic Music Group (GOVES Choir), Totus Tuus Choir, and Sons of Mary (Children of Mary) Choir. One of these is right for you. Consider joining our voices in song, worship and praise.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Vídeos no YouTube</span>
+            <span data-i18n="en">YouTube Videos</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">
+            <span data-i18n="pt">Fotos</span>
+            <span data-i18n="en">Photos</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 8. Extraordinary Ministers of Communion -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Ministros Extraordinários da Comunhão</span>
+              <span data-i18n="en">Extraordinary Ministers of Communion</span>
+            </h2>
+            <div class="ministry-coords">
+              Fr. Leonel <span class="sep">|</span>
+              <span data-i18n="pt">Coordenador</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-blue" aria-hidden="true">🍷</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt">Os Ministros Extraordinários da Sagrada Eucaristia (MESC) são um grupo de leigos convidados pelo pároco para fazer parte do serviço no altar — distribuindo a Sagrada Comunhão nas missas, levando a Comunhão aos enfermos e aos que não podem sair de casa. Os MESC também participam de todos os eventos paroquiais como dever e testemunho de amor pela comunidade.</p>
+          <p data-i18n-block="en">Extraordinary Ministers of the Holy Eucharist (EMHE) are a group of lay people invited by the parish priest to be part of the service at the altar. To distribute Holy Communion at masses, to bring Holy Communion to the sick, and the home bound. EMHE also participate in all Parish events as a duty and testimony of love for the community.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Vídeo no YouTube</span>
+            <span data-i18n="en">YouTube Video</span>
+          </a>
+          <a href="#" class="btn btn-outline-gold">
+            <span data-i18n="pt">Links</span>
+            <span data-i18n="en">Links</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 9. Retreats -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Retiros</span>
+              <span data-i18n="en">Retreats</span>
+            </h2>
+            <div class="ministry-coords">
+              Jamir Costa <span class="sep">|</span>
+              <span data-i18n="pt">Facilitador</span><span data-i18n="en">Facilitator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-blue" aria-hidden="true">🏠</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt">A paróquia realiza cinco retiros anuais. Cada encontro tem um tema essencial e foco que os palestrantes preparam para compartilhar com a comunidade. Esses retiros incluem Pastoral Familiar (fevereiro), Conferência das Mulheres e Conferência dos Homens (abril), Pentecostes (maio), EAC (setembro), Jovens (setembro) e Coro (novembro).</p>
+          <p data-i18n-block="en">The parish holds five annual retreats. Each gathering has an essential theme and focus that the speakers prepare to share with the community. These retreats include Family Ministry (February), Conference of Women and Conference of Men (April), Pentecost (May), EAC (September), Youth (September), and Choir (November).</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Fotos</span>
+            <span data-i18n="en">Photos</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 10. Events Commission -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Comissão de Eventos</span>
+              <span data-i18n="en">Events Commission</span>
+            </h2>
+            <div class="ministry-coords">
+              Junia Ribeiro <span class="sep">|</span>
+              <span data-i18n="pt">Coordenadora</span><span data-i18n="en">Coordinator</span><br>
+              Soraia Meirelles <span class="sep">|</span>
+              <span data-i18n="pt">Coordenadora</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-gold" aria-hidden="true">💬</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt">O objetivo desta pastoral é a comunhão e a fraternidade entre os membros de nossa paróquia — integrando a comunidade, promovendo harmonia nas festividades, com o compromisso de todos, fomentando respeito e entusiasmo entre os paroquianos, na construção de uma comunidade que caminha pelos caminhos de Jesus.</p>
+          <p data-i18n-block="en">The objective of this pastoral ministry is the communion and fellowship of the members of our parish; integrating the community, promoting harmony in the festivities, with the commitment of all, fostering respect and enthusiasm among the parishioners, in the building of a community that walks in the ways of Jesus.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Fotos</span>
+            <span data-i18n="en">Photos</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 11. Tithing -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Dízimo</span>
+              <span data-i18n="en">Tithing</span>
+            </h2>
+            <div class="ministry-coords">
+              Fr. Leonel <span class="sep">|</span>
+              <span data-i18n="pt">Coordenador</span><span data-i18n="en">Coordinator</span>
+            </div>
+          </div>
+          <div class="ministry-icon ministry-icon-warm" aria-hidden="true">✟</div>
+        </div>
+        <div class="ministry-body" style="margin-top: 4px;">
+          <p data-i18n-block="pt">O dízimo é uma contribuição comprometida com sua comunidade. Precisa ser feito periodicamente, geralmente uma vez por semana ou uma vez por mês, conforme as condições de cada pessoa. É um exercício de doação e partilha, no qual a Comunidade Católica está disponível para cuidar das dimensões religiosa, social e missionária da Igreja.</p>
+          <p data-i18n-block="en">Tithing is a committed contribution to your community. It needs to be made periodically, usually once a week or once a month, according to the conditions of each person. It is an exercise of giving and sharing, in which the Catholic Community is available to take care of the religious, the social and the missionary dimensions of the Church.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="giving.html" class="btn btn-gold">
+            <span data-i18n="pt">Doar</span>
+            <span data-i18n="en">Give</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 12. AA Meetings -->
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">
+              <span data-i18n="pt">Reuniões de AA</span>
+              <span data-i18n="en">AA Meetings</span>
+            </h2>
+          </div>
+          <div class="ministry-icon ministry-icon-circle" aria-hidden="true">⊙</div>
+        </div>
+        <p class="ministry-callout">
+          <span data-i18n="pt">Todo Domingo às 7h30 · 42 Vail Road, Bethel</span>
+          <span data-i18n="en">Every Sunday at 7:30 AM · 42 Vail Road, Bethel</span>
+        </p>
+        <div class="ministry-body">
+          <p data-i18n-block="pt">As reuniões de AA acontecem todos os domingos pela manhã às 7h30 no endereço 42 Vail Road, Bethel. O grupo conduz as reuniões principalmente em inglês, mas todos são bem-vindos. Tradução em espanhol está disponível pela secretária eletrônica.</p>
+          <p data-i18n-block="en">AA meetings meet every Sunday morning at 7:30am at 42 Vail Road Bethel. The group speaks primarily English but all are welcome to join and participate. Spanish language translation is available in the answering machine service.</p>
+        </div>
+        <div class="ministry-actions">
+          <a href="#" class="btn btn-gold">
+            <span data-i18n="pt">Horários</span>
+            <span data-i18n="en">Schedule</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA BAND
+     ============================================ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>
+      <span data-i18n="pt">Pronto para Servir?</span>
+      <span data-i18n="en">Ready to Serve?</span>
+    </h2>
+    <p>
+      <span data-i18n="pt">Entre em contato com o escritório paroquial para conversar com um coordenador de ministério e encontrar o seu lugar.</span>
+      <span data-i18n="en">Contact the parish office to speak with a ministry coordinator and find your place.</span>
+    </p>
+    <a href="index.html#contact" class="btn btn-outline-white">
+      <span data-i18n="pt">Fale Conosco</span>
+      <span data-i18n="en">Get In Touch</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand-name">Our Lady of Aparecida</div>
+        <p class="footer-brand-text">
+          <span data-i18n="pt">Paróquia Nossa Senhora da Imaculada Conceição Aparecida<br>Uma Comunidade Católica de Fé<br>Diocese de Bridgeport</span>
+          <span data-i18n="en">Our Lady of the Immaculate Conception of Aparecida Parish<br>A Catholic Community of Faith<br>Diocese of Bridgeport</span>
+        </p>
+        <p class="footer-brand-text">
+          42 Vail Road, Bethel, CT 06801<br>
+          (203) 730-9071<br>
+          office@ourladyofaparecida.org
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Paróquia</span>
+          <span data-i18n="en">Parish</span>
+        </h4>
+        <a href="about.html" class="footer-link">
+          <span data-i18n="pt">Sobre Nós</span>
+          <span data-i18n="en">About Us</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Horário das Missas</span>
+          <span data-i18n="en">Mass Schedule</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Confissões</span>
+          <span data-i18n="en">Confessions</span>
+        </a>
+        <a href="safe-environments.html" class="footer-link">
+          <span data-i18n="pt">Ambientes Seguros</span>
+          <span data-i18n="en">Safe Environments</span>
+        </a>
+        <a href="giving.html" class="footer-link">
+          <span data-i18n="pt">Doar</span>
+          <span data-i18n="en">Give</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Ministérios</span>
+          <span data-i18n="en">Ministries</span>
+        </h4>
+        <a href="ministries.html" class="footer-link">Pastoral Familiar</a>
+        <a href="ministries.html" class="footer-link">Educação Religiosa</a>
+        <a href="ministries.html" class="footer-link">Grupo de Jovens</a>
+        <a href="ministries.html" class="footer-link">GOVES</a>
+        <a href="ministries.html" class="footer-link">
+          <span data-i18n="pt">Ver Todos →</span>
+          <span data-i18n="en">View All →</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Sacramentos</span>
+          <span data-i18n="en">Sacraments</span>
+        </h4>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Batismo</span>
+          <span data-i18n="en">Baptism</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Primeira Comunhão</span>
+          <span data-i18n="en">First Communion</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Crisma</span>
+          <span data-i18n="en">Confirmation</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Matrimônio</span>
+          <span data-i18n="en">Marriage</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Our Lady of Aparecida Parish · Diocese of Bridgeport</span>
+      <span>Built by SetonDigital</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     LANGUAGE TOGGLE
+     ============================================ -->
+<script>
+(function() {
+  var toggle = document.getElementById('langToggle');
+  toggle.addEventListener('click', function(e) {
+    var btn = e.target;
+    if (!btn.classList.contains('lang-btn')) return;
+    var lang = btn.getAttribute('data-lang');
+    var buttons = toggle.querySelectorAll('.lang-btn');
+    for (var i = 0; i < buttons.length; i++) buttons[i].classList.remove('active');
+    btn.classList.add('active');
+    if (lang === 'en') document.body.classList.add('english');
+    else document.body.classList.remove('english');
+    try { localStorage.setItem('ola_lang', lang); } catch(e) {}
+  });
+  try {
+    var saved = localStorage.getItem('ola_lang');
+    if (saved === 'en') {
+      document.body.classList.add('english');
+      toggle.querySelector('[data-lang="pt"]').classList.remove('active');
+      toggle.querySelector('[data-lang="en"]').classList.add('active');
+    }
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
