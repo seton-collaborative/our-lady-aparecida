@@ -593,93 +593,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================
-   SAFE ENVIRONMENTS HOMEPAGE BLOCK
-   ============================================ */
-.safe-env-band {
-  background: linear-gradient(135deg, #FFF5F2 0%, #FDF8EF 100%);
-  border-top: 4px solid #D64545;
-  border-bottom: 1px solid var(--warm-200);
-  padding: 56px 0;
-}
-.safe-env-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 32px;
-  align-items: center;
-  max-width: 1060px;
-  margin: 0 auto;
-}
-.safe-env-badge {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: #D64545;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 32px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(214,69,69,0.3);
-}
-.safe-env-content .safe-env-eyebrow {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #9B1C1C;
-  margin-bottom: 6px;
-}
-.safe-env-content h3 {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: var(--warm-900);
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-.safe-env-content p {
-  font-size: 0.95rem;
-  color: var(--warm-700);
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-.safe-env-content p strong { color: var(--warm-900); font-weight: 600; }
-.safe-env-content a.inline {
-  color: #9B1C1C;
-  font-weight: 600;
-  border-bottom: 1px dotted #D64545;
-}
-.safe-env-content a.inline:hover { color: #7A1414; border-color: #7A1414; }
-.safe-env-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-shrink: 0;
-}
-.btn-red {
-  background: #D64545;
-  color: #fff;
-  border-color: #D64545;
-  white-space: nowrap;
-}
-.btn-red:hover {
-  background: #B83838;
-  border-color: #B83838;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(214,69,69,0.3);
-}
-.btn-outline-red {
-  background: transparent;
-  color: #9B1C1C;
-  border: 2px solid #D64545;
-  white-space: nowrap;
-}
-.btn-outline-red:hover {
-  background: #D64545;
-  color: #fff;
-}
-
-/* ============================================
    FOOTER
    ============================================ */
 .site-footer { background: var(--warm-900); color: rgba(255,255,255,0.7); }
@@ -745,14 +658,6 @@ img { max-width: 100%; display: block; }
   .top-bar-social { display: none; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
-  .safe-env-inner { grid-template-columns: 1fr; text-align: center; gap: 20px; padding: 0 12px; }
-  .safe-env-badge { margin: 0 auto; }
-  .safe-env-actions { width: 100%; }
-  .safe-env-actions .btn { width: 100%; }
-}
-@media (max-width: 1024px) and (min-width: 641px) {
-  .safe-env-inner { grid-template-columns: auto 1fr; }
-  .safe-env-actions { grid-column: 1 / -1; flex-direction: row; justify-content: center; }
 }
 
 /* Language switching — default is Portuguese */
@@ -800,8 +705,7 @@ body.english [data-i18n="en"] { display: inline; }
     <ul class="nav-links">
       <li><a href="#" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
       <li><a href="about.html" class="nav-link"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
-      <li><a href="#ministries" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
-      <li><a href="safe-environments.html" class="nav-link"><span data-i18n="pt">Ambientes Seguros</span><span data-i18n="en">Safe Environments</span></a></li>
+      <li><a href="ministries.html" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
       <li><a href="#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
       <li><a href="#contact" class="nav-link"><span data-i18n="pt">Contato</span><span data-i18n="en">Contact</span></a></li>
     </ul>
@@ -1264,49 +1168,10 @@ body.english [data-i18n="en"] { display: inline; }
       </div>
     </div>
     <div class="section-cta">
-      <a href="#" class="btn btn-outline-gold">
+      <a href="ministries.html" class="btn btn-outline-gold">
         <span data-i18n="pt">Ver Todos os 28 Ministérios</span>
         <span data-i18n="en">View All 28 Ministries</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     SAFE ENVIRONMENTS BAND
-     ============================================ -->
-<section class="safe-env-band" aria-label="Safe Environments">
-  <div class="container">
-    <div class="safe-env-inner">
-      <div class="safe-env-badge" aria-hidden="true">🛡</div>
-      <div class="safe-env-content">
-        <div class="safe-env-eyebrow">
-          <span data-i18n="pt">Ambientes Seguros</span>
-          <span data-i18n="en">Safe Environments</span>
-        </div>
-        <h3>
-          <span data-i18n="pt">Protegendo Crianças e Adultos Vulneráveis</span>
-          <span data-i18n="en">Protecting Children &amp; Vulnerable Adults</span>
-        </h3>
-        <p>
-          <span data-i18n="pt">Nossa paróquia está totalmente comprometida com a Carta da USCCB para a Proteção de Crianças e Jovens. Todo o clero, pessoal e voluntários são certificados pelo VIRTUS.</span>
-          <span data-i18n="en">Our parish is fully committed to the USCCB Charter for the Protection of Children and Young People. All clergy, staff, and volunteers are VIRTUS-certified.</span>
-        </p>
-        <p>
-          <span data-i18n="pt"><strong>Para reportar abuso suspeito:</strong> ligue para <a href="tel:2036503265" class="inline">(203) 650-3265</a> (Erin Neil, Diocese de Bridgeport) ou, em caso de emergência, <strong>ligue 911</strong>.</span>
-          <span data-i18n="en"><strong>To report suspected abuse:</strong> call <a href="tel:2036503265" class="inline">(203) 650-3265</a> (Erin Neil, Diocese of Bridgeport) or, in an emergency, <strong>call 911</strong>.</span>
-        </p>
-      </div>
-      <div class="safe-env-actions">
-        <a href="safe-environments.html" class="btn btn-red">
-          <span data-i18n="pt">Saiba Mais</span>
-          <span data-i18n="en">Learn More</span>
-        </a>
-        <a href="safe-environments.html#report" class="btn btn-outline-red">
-          <span data-i18n="pt">Como Reportar</span>
-          <span data-i18n="en">How to Report</span>
-        </a>
-      </div>
     </div>
   </div>
 </section>
@@ -1454,7 +1319,7 @@ body.english [data-i18n="en"] { display: inline; }
         <a href="#" class="footer-link">Educação Religiosa</a>
         <a href="#" class="footer-link">Grupo de Jovens</a>
         <a href="#" class="footer-link">GOVES</a>
-        <a href="#" class="footer-link">
+        <a href="ministries.html" class="footer-link">
           <span data-i18n="pt">Ver Todos →</span>
           <span data-i18n="en">View All →</span>
         </a>
