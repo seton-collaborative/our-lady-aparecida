@@ -224,34 +224,63 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   background: var(--blue-800);
 }
-/* Hero slide stack — soft crossfade between 3 slots with subtle Ken Burns zoom */
+/* Hero slide stack — soft crossfade between 6 slots with subtle Ken Burns zoom */
 .hero-slides { position: absolute; inset: 0; overflow: hidden; }
 .hero-slide {
   position: absolute; inset: 0;
   opacity: 0;
-  animation: heroCrossfade 21s infinite;
+  animation: heroCrossfade 42s infinite;
 }
 .hero-slide:nth-child(2) { animation-delay: 7s; }
 .hero-slide:nth-child(3) { animation-delay: 14s; }
+.hero-slide:nth-child(4) { animation-delay: 21s; }
+.hero-slide:nth-child(5) { animation-delay: 28s; }
+.hero-slide:nth-child(6) { animation-delay: 35s; }
 .hero-slide img {
   width: 100%; height: 100%;
   object-fit: cover; object-position: center;
-  animation: heroKenBurns 21s infinite linear;
+  animation: heroKenBurns 42s infinite linear;
 }
 .hero-slide:nth-child(2) img { animation-delay: 7s; }
 .hero-slide:nth-child(3) img { animation-delay: 14s; }
+.hero-slide:nth-child(4) img { animation-delay: 21s; }
+.hero-slide:nth-child(5) img { animation-delay: 28s; }
+.hero-slide:nth-child(6) img { animation-delay: 35s; }
+/* Cover hero slides (2-6) — default crop favors the top so heads stay in frame */
+.hero-slide:not(.hero-slide-aparecida) img { object-position: center 25%; }
+/* Slide 2 (photo-024, seated congregation) — face rows live in the lower half, push the crop down to center them */
+.hero-slide:nth-child(2) img { object-position: center 58%; }
+/* Slide 4 (photo-076, portrait Easter Vigil) — center on the priest's and deacons' faces, accept losing the bottom of the candle */
+.hero-slide:nth-child(4) img { object-position: center 26%; }
+/* Aparecida slide — show the full statue (contain, no crop), navy fill behind,
+   anchored right so she stays clear of the left-aligned headline.
+   Slow Ken Burns push-in toward her face during the visible window. */
+.hero-slide.hero-slide-aparecida { background: var(--blue-500); }
+.hero-slide.hero-slide-aparecida img {
+  object-fit: contain;
+  object-position: right center;
+  transform-origin: 85% 25%;
+  animation: heroKenBurnsAparecida 42s infinite linear;
+}
 
 @keyframes heroCrossfade {
   0%   { opacity: 0; }
   3%   { opacity: 1; }
-  30%  { opacity: 1; }
-  36%  { opacity: 0; }
+  15%  { opacity: 1; }
+  18%  { opacity: 0; }
   100% { opacity: 0; }
 }
 @keyframes heroKenBurns {
   0%   { transform: scale(1); }
-  36%  { transform: scale(1.06); }
+  18%  { transform: scale(1.06); }
   100% { transform: scale(1.06); }
+}
+@keyframes heroKenBurnsAparecida {
+  0%   { transform: scale(1); }
+  3%   { transform: scale(1); }     /* full statue visible the moment she fades in */
+  15%  { transform: scale(1.10); }  /* fully pushed in on her face by the start of crossfade */
+  18%  { transform: scale(1.10); }  /* hold during fade-out */
+  100% { transform: scale(1); }     /* invisible reset back to start */
 }
 
 .hero-overlay {
@@ -266,6 +295,7 @@ img { max-width: 100%; display: block; }
   .hero-slide { animation: none; opacity: 1; }
   .hero-slide:not(:first-child) { display: none; }
   .hero-slide img { animation: none; transform: none; }
+  .hero-slide.hero-slide-aparecida img { animation: none; transform: none; }
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-content { max-width: 620px; color: #fff; }
@@ -846,6 +876,7 @@ img { max-width: 100%; display: block; }
   transition: transform 600ms var(--ease-out);
 }
 .gallery-item:hover img { transform: scale(1.04); }
+.gallery-cta { text-align: center; margin-top: 36px; }
 @media (prefers-reduced-motion: reduce) {
   .gallery-item img { transition: none; }
   .gallery-item:hover img { transform: none; }
@@ -935,6 +966,7 @@ body.english [data-i18n="en"] { display: inline; }
     <ul class="nav-links">
       <li><a href="#" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
       <li><a href="about.html" class="nav-link"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
+      <li><a href="gallery.html" class="nav-link"><span data-i18n="pt">Galeria</span><span data-i18n="en">Gallery</span></a></li>
       <li><a href="#ministries" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
       <li><a href="safe-environments.html" class="nav-link"><span data-i18n="pt">Ambientes Seguros</span><span data-i18n="en">Safe Environments</span></a></li>
       <li><a href="#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
@@ -961,17 +993,29 @@ body.english [data-i18n="en"] { display: inline; }
      ============================================ -->
 <section class="hero">
   <div class="hero-slides" aria-hidden="true">
-    <!-- HERO SLOT 1 — Parish Building exterior. Swap src below for the real photo (16:9, ≥ 1600×900). Update alt text to describe the photo. -->
-    <div class="hero-slide">
-      <img src="images/placeholder-hero-1-building.svg" alt="Parish building exterior — Our Lady of Aparecida in Bethel, Connecticut">
+    <!-- HERO SLOT 1 — Our Lady of Aparecida (the patroness). Statue right-of-center keeps headline clear. -->
+    <div class="hero-slide hero-slide-aparecida">
+      <img src="images/photos/photo-002-large.jpg" alt="Statue of Nossa Senhora Aparecida, crowned, in a navy and gold mantle with Brazilian emblems">
     </div>
-    <!-- HERO SLOT 2 — Sacrament being celebrated. Swap src below for the real photo (16:9, ≥ 1600×900). Update alt text to describe the photo. -->
+    <!-- HERO SLOT 2 — Parishioners at a parish conference. -->
     <div class="hero-slide">
-      <img src="images/placeholder-hero-2-sacrament.svg" alt="Sacrament being celebrated at Our Lady of Aparecida">
+      <img src="images/photos/photo-024-large.jpg" alt="Parishioners gathered for a parish conference at Our Lady of Aparecida">
     </div>
-    <!-- HERO SLOT 3 — Parishioners gathered as community. Swap src below for the real photo (16:9, ≥ 1600×900). Update alt text to describe the photo. -->
+    <!-- HERO SLOT 3 — Marian procession. -->
     <div class="hero-slide">
-      <img src="images/placeholder-hero-3-parishioners.svg" alt="Parishioners gathered after Mass at Our Lady of Aparecida">
+      <img src="images/photos/photo-058-large.jpg" alt="A Marian procession at Our Lady of Aparecida, parishioners lining the aisle with a blue veil canopy">
+    </div>
+    <!-- HERO SLOT 4 — Easter Vigil, Paschal candle. -->
+    <div class="hero-slide">
+      <img src="images/photos/photo-076-large.jpg" alt="The Easter Vigil at Our Lady of Aparecida, the Paschal candle carried up the aisle">
+    </div>
+    <!-- HERO SLOT 5 — Mass procession with incense. -->
+    <div class="hero-slide">
+      <img src="images/photos/photo-005-large.jpg" alt="Two ministers process up the aisle with incense at Mass at Our Lady of Aparecida">
+    </div>
+    <!-- HERO SLOT 6 — Parishioners gathered at a parish event. -->
+    <div class="hero-slide">
+      <img src="images/photos/photo-052-large.jpg" alt="Parishioners gathered for a parish event at Our Lady of Aparecida">
     </div>
   </div>
   <div class="hero-overlay"></div>
@@ -995,6 +1039,36 @@ body.english [data-i18n="en"] { display: inline; }
           <span data-i18n="pt">Conheça a Paróquia</span>
           <span data-i18n="en">About Our Parish</span>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     OUR LADY OF APARECIDA — PATRONESS
+     ============================================ -->
+<section class="section section-alt" id="patroness">
+  <div class="container">
+    <div class="events-feature reveal-stagger">
+      <!-- PATRONESS PHOTO — Aparecida shrine niche illuminated. Replace if a better devotional shot arrives. -->
+      <div class="events-feature-image">
+        <img src="images/photos/photo-031-medium.jpg" alt="The illuminated shrine niche of Nossa Senhora Aparecida at Our Lady of Aparecida in Bethel">
+      </div>
+      <div class="events-feature-text">
+        <p class="section-eyebrow" style="text-align: left;">
+          <span data-i18n="pt">Nossa Padroeira</span>
+          <span data-i18n="en">Our Patroness</span>
+        </p>
+        <h2>
+          <span data-i18n="pt">Nossa Senhora Aparecida</span>
+          <span data-i18n="en">Our Lady of Aparecida</span>
+        </h2>
+        <div class="about-gold-rule"></div>
+        <p>
+          <!-- [CONFIRM PT] — verify the Portuguese with the parish before publishing -->
+          <span data-i18n="pt">Nossa Senhora Aparecida é a Padroeira do Brasil. Em 1717, pescadores retiraram do Rio Paraíba uma pequena imagem escura da Imaculada Conceição, e a devoção a ela só cresceu desde então. Como a primeira paróquia oficialmente brasileira nos Estados Unidos, trazemos essa devoção para Bethel.</span>
+          <span data-i18n="en">Our Lady of Aparecida is the Patroness of Brazil. In 1717, fishermen on the Paraíba River drew a small dark statue of the Immaculate Conception from the water, and devotion to her has grown ever since. As the first official Brazilian parish in the United States, we carry that devotion home to Bethel.</span>
+        </p>
       </div>
     </div>
   </div>
@@ -1061,7 +1135,7 @@ body.english [data-i18n="en"] { display: inline; }
       <div class="card">
         <!-- SACRAMENTS CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
         <div class="card-image img-sacraments">
-          <img src="images/placeholder-sacraments-1-card.svg" alt="A sacrament celebrated at Our Lady of Aparecida">
+          <img src="images/photos/photo-034-medium.jpg" alt="A young woman receives the sacrament of Baptism at Our Lady of Aparecida">
         </div>
         <div class="card-body">
           <p class="card-eyebrow">Sacramento</p>
@@ -1082,7 +1156,7 @@ body.english [data-i18n="en"] { display: inline; }
       <div class="card">
         <!-- FAITH FORMATION CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
         <div class="card-image img-formation">
-          <img src="images/placeholder-formation-1-card.svg" alt="Faith formation at Our Lady of Aparecida">
+          <img src="images/photos/photo-029-medium.jpg" alt="First Communion procession with children carrying candles and the Book of the Gospels at Our Lady of Aparecida">
         </div>
         <div class="card-body">
           <p class="card-eyebrow">Catequese</p>
@@ -1103,7 +1177,7 @@ body.english [data-i18n="en"] { display: inline; }
       <div class="card">
         <!-- MINISTRIES CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
         <div class="card-image img-ministries">
-          <img src="images/placeholder-ministries-1-card.svg" alt="Parishioners serving in ministry at Our Lady of Aparecida">
+          <img src="images/photos/photo-081-medium.jpg" alt="Young altar servers in white surplices and red cassocks sing by candlelight at the Easter Vigil">
         </div>
         <div class="card-body">
           <p class="card-eyebrow">
@@ -1136,7 +1210,7 @@ body.english [data-i18n="en"] { display: inline; }
     <div class="about-grid reveal-stagger">
       <!-- ABOUT SECTION PHOTO — Swap src for the real photo (4:3 or 3:2, ≥ 1200×900). Update alt. -->
       <div class="about-image">
-        <img src="images/placeholder-about-1-altar.svg" alt="The sanctuary at Our Lady of Aparecida">
+        <img src="images/photos/photo-014-large.jpg" alt="The bronze statue of Nossa Senhora Aparecida set in a gilded shrine niche inscribed 'The Spirit and the Bride say: Come, Lord Jesus'">
       </div>
       <div class="about-text">
         <p class="section-eyebrow" style="text-align: left;">
@@ -1205,30 +1279,36 @@ body.english [data-i18n="en"] { display: inline; }
       </p>
     </div>
     <div class="gallery-grid reveal-stagger">
-      <!-- GALLERY SLOT 1 — Sacrament. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <!-- GALLERY SLOT 1 — Sacrament: First Communion close-up. -->
       <div class="gallery-item">
-        <img src="images/placeholder-gallery-1-sacrament.svg" alt="A sacrament celebrated at Our Lady of Aparecida">
+        <img src="images/photos/photo-041-medium.jpg" alt="A young girl receives First Holy Communion at Our Lady of Aparecida">
       </div>
-      <!-- GALLERY SLOT 2 — Event. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <!-- GALLERY SLOT 2 — Devotion: parishioners raise roses during the May Crowning. -->
       <div class="gallery-item">
-        <img src="images/placeholder-gallery-2-event.svg" alt="A parish event at Our Lady of Aparecida">
+        <img src="images/photos/photo-049-medium.jpg" alt="Parishioners raise roses during the May Crowning of Our Lady at Our Lady of Aparecida">
       </div>
-      <!-- GALLERY SLOT 3 — Parishioners. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <!-- GALLERY SLOT 3 — Holy Week: Washing of the feet on Holy Thursday. -->
       <div class="gallery-item">
-        <img src="images/placeholder-gallery-3-parishioners.svg" alt="Parishioners gathered at Our Lady of Aparecida">
+        <img src="images/photos/photo-067-medium.jpg" alt="The washing of the feet on Holy Thursday at Our Lady of Aparecida">
       </div>
-      <!-- GALLERY SLOT 4 — Parish Building. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <!-- GALLERY SLOT 4 — Building / interior: sanctuary during Mass. -->
       <div class="gallery-item">
-        <img src="images/placeholder-gallery-4-building.svg" alt="The parish building of Our Lady of Aparecida">
+        <img src="images/photos/photo-021-medium.jpg" alt="The interior of the sanctuary at Our Lady of Aparecida during Mass, with the congregation gathered before the central crucifix">
       </div>
-      <!-- GALLERY SLOT 5 — Sacrament. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <!-- GALLERY SLOT 5 — Liturgy: elevation of the chalice at the consecration. -->
       <div class="gallery-item">
-        <img src="images/placeholder-gallery-5-sacrament.svg" alt="A sacrament celebrated at Our Lady of Aparecida">
+        <img src="images/photos/photo-039-medium.jpg" alt="The priest elevates the chalice at the consecration during Mass at Our Lady of Aparecida">
       </div>
-      <!-- GALLERY SLOT 6 — Event. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <!-- GALLERY SLOT 6 — Parish Life: II Women's Conference assembly. -->
       <div class="gallery-item">
-        <img src="images/placeholder-gallery-6-event.svg" alt="A parish event at Our Lady of Aparecida">
+        <img src="images/photos/photo-055-medium.jpg" alt="The Women's Conference assembly at Our Lady of Aparecida">
       </div>
+    </div>
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn btn-outline-gold">
+        <span data-i18n="pt">Ver Galeria Completa →</span>
+        <span data-i18n="en">View Full Gallery →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1382,7 +1462,7 @@ body.english [data-i18n="en"] { display: inline; }
     <div class="events-feature reveal-stagger">
       <!-- EVENTS PHOTO SLOT — Featured event photo. Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
       <div class="events-feature-image">
-        <img src="images/placeholder-events-1-feature.svg" alt="Parishioners gathered at a parish event">
+        <img src="images/photos/photo-056-medium.jpg" alt="Parishioners smiling together at the Women's Conference at Our Lady of Aparecida">
       </div>
       <div class="events-feature-text">
         <h2>
