@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria | Gallery — Our Lady of Aparecida, Bethel CT</title>
+<meta name="description" content="Momentos da vida da nossa comunidade — sacramentos, eventos e celebrações. Moments from the life of our parish — sacraments, events and celebrations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --gold-50: #FDF8EF;
+  --gold-100: #F9EDCF;
+  --gold-200: #F0D48E;
+  --gold-300: #E4B94E;
+  --gold-400: #D4A024;
+  --gold-500: #B8891E;
+  --gold-600: #9A7019;
+  --gold-700: #7A5814;
+
+  --blue-50: #EEF2F7;
+  --blue-100: #D5DEEB;
+  --blue-200: #A8BAD4;
+  --blue-300: #7B96BD;
+  --blue-400: #4E72A6;
+  --blue-500: #1E3A5F;
+  --blue-600: #1A3253;
+  --blue-700: #152947;
+  --blue-800: #0F1F36;
+  --blue-900: #0A1524;
+
+  --warm-50: #FAFAF8;
+  --warm-100: #F5F4F0;
+  --warm-200: #E8E6E1;
+  --warm-300: #D4D1CA;
+  --warm-400: #B5B1A8;
+  --warm-500: #8E897E;
+  --warm-600: #6B665C;
+  --warm-700: #4A4640;
+  --warm-800: #2D2B27;
+  --warm-900: #1A1917;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--warm-900);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   TOP BAR & NAV (matches site)
+   ============================================ */
+.top-bar {
+  background: var(--blue-500);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+.top-bar a { color: var(--gold-200); transition: color 150ms; }
+.top-bar a:hover { color: var(--gold-300); }
+.top-bar-social { display: flex; gap: 16px; }
+
+.main-nav {
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0; z-index: 100;
+}
+.main-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--warm-900); line-height: 1.2;
+}
+.nav-brand-sub { font-size: 0.72rem; color: var(--warm-500); }
+.nav-links { display: flex; gap: 28px; }
+.nav-link {
+  font-size: 0.9rem; font-weight: 500;
+  color: var(--warm-700);
+  position: relative; padding-bottom: 2px;
+  transition: color 150ms;
+}
+.nav-link:hover { color: var(--gold-500); }
+.nav-link.active { color: var(--gold-600); }
+.nav-link::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold-500);
+  transition: width 250ms var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+.lang-toggle {
+  display: inline-flex;
+  background: var(--warm-100);
+  border-radius: 100px;
+  padding: 3px; gap: 2px;
+}
+.lang-btn {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; transition: all 150ms;
+  background: transparent; color: var(--warm-500);
+}
+.lang-btn.active {
+  background: var(--blue-500);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.lang-btn:not(.active):hover { color: var(--warm-800); background: var(--warm-200); }
+
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px;
+  flex-direction: column; justify-content: center; gap: 5px; align-items: center;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--warm-700);
+  transition: all 250ms;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.74rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 200ms var(--ease-out);
+  white-space: nowrap;
+}
+.btn-gold { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
+.btn-gold:hover { background: var(--gold-600); border-color: var(--gold-600); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,137,30,0.3); }
+.btn-nav { padding: 8px 18px; font-size: 0.75rem; }
+
+/* ============================================
+   CONTAINERS
+   ============================================ */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+  background: var(--warm-50);
+  padding: 64px 0 56px;
+  text-align: center;
+  border-bottom: 1px solid var(--warm-200);
+}
+.page-header-eyebrow {
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.16em;
+  color: var(--gold-600);
+  margin-bottom: 14px;
+}
+.page-header-title {
+  font-family: var(--font-display);
+  font-size: 2.6rem; font-weight: 500;
+  color: var(--warm-900);
+  line-height: 1.15; margin-bottom: 12px;
+}
+.gold-rule {
+  width: 60px; height: 2px;
+  background: var(--gold-400);
+  margin: 16px auto;
+}
+.page-header-subtitle {
+  font-size: 1.02rem;
+  color: var(--warm-600);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============================================
+   GALLERY — filters + masonry + lightbox
+   ============================================ */
+.gallery-section { padding: 48px 0 80px; }
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.gallery-filter {
+  font-family: var(--font-body);
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 9px 18px;
+  border: 1.5px solid var(--warm-300);
+  border-radius: 100px;
+  background: #fff;
+  color: var(--warm-700);
+  cursor: pointer;
+  transition: all 200ms var(--ease-out);
+}
+.gallery-filter:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-700);
+  background: var(--gold-50);
+}
+.gallery-filter.is-active {
+  background: var(--blue-500);
+  color: #fff;
+  border-color: var(--blue-500);
+}
+.gallery-filter.is-active:hover {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+  color: #fff;
+}
+
+.gallery-count {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--warm-500);
+  margin-bottom: 28px;
+  letter-spacing: 0.04em;
+}
+
+/* Masonry via CSS columns */
+.gallery-masonry {
+  column-count: 4;
+  column-gap: 14px;
+}
+@media (max-width: 1100px) { .gallery-masonry { column-count: 3; } }
+@media (max-width: 780px)  { .gallery-masonry { column-count: 2; } }
+@media (max-width: 460px)  { .gallery-masonry { column-count: 1; } }
+
+.gallery-photo {
+  break-inside: avoid;
+  margin: 0 0 14px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--warm-100);
+  cursor: pointer;
+  position: relative;
+  transition: opacity 350ms var(--ease-out), transform 350ms var(--ease-out);
+}
+.gallery-photo img {
+  width: 100%;
+  display: block;
+  transition: transform 600ms var(--ease-out);
+}
+.gallery-photo::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(15,31,54,0.45) 0%, transparent 40%);
+  opacity: 0;
+  transition: opacity 250ms var(--ease-out);
+  pointer-events: none;
+}
+.gallery-photo:hover img { transform: scale(1.04); }
+.gallery-photo:hover::after { opacity: 1; }
+.gallery-photo.is-hidden {
+  display: none;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(10,21,36,0.92);
+  z-index: 1000;
+  display: none;
+  align-items: center; justify-content: center;
+  padding: 32px;
+}
+.lightbox.is-open { display: flex; }
+.lightbox-stage {
+  position: relative;
+  max-width: min(1400px, 96vw);
+  max-height: 92vh;
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 92vh;
+  display: block;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox-caption {
+  position: absolute;
+  bottom: -34px; left: 0; right: 0;
+  text-align: center;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+.lightbox-btn {
+  position: absolute;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  transition: all 180ms var(--ease-out);
+  backdrop-filter: blur(6px);
+}
+.lightbox-btn:hover {
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+  transform: scale(1.05);
+}
+.lightbox-close { top: 24px; right: 24px; }
+.lightbox-prev  { top: 50%; left: 16px; transform: translateY(-50%); }
+.lightbox-next  { top: 50%; right: 16px; transform: translateY(-50%); }
+.lightbox-prev:hover, .lightbox-next:hover { transform: translateY(-50%) scale(1.05); }
+
+@media (max-width: 600px) {
+  .lightbox { padding: 16px; }
+  .lightbox-close { top: 14px; right: 14px; width: 40px; height: 40px; font-size: 18px; }
+  .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 18px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-stagger.is-visible > * { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .gallery-photo img { transition: none; }
+  .gallery-photo:hover img { transform: none; }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer { background: var(--warm-900); color: rgba(255,255,255,0.7); }
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding: 64px 0 40px;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-brand-text {
+  font-size: 0.86rem; line-height: 1.7;
+  margin-bottom: 16px;
+}
+.footer-heading {
+  color: #fff;
+  font-size: 0.78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.footer-link {
+  display: block;
+  font-size: 0.88rem;
+  padding: 6px 0;
+  color: rgba(255,255,255,0.7);
+  transition: color 150ms;
+}
+.footer-link:hover { color: var(--gold-300); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 0;
+  display: flex; justify-content: space-between;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 900px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+@media (max-width: 600px) {
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+  .top-bar-social { display: none; }
+  .page-header-title { font-size: 2rem; }
+  .gallery-filter { font-size: 0.72rem; padding: 8px 14px; }
+}
+
+/* Language switching — default is Portuguese */
+[data-i18n="en"] { display: none; }
+body.english [data-i18n="pt"] { display: none; }
+body.english [data-i18n="en"] { display: inline; }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     TOP BAR
+     ============================================ -->
+<div class="top-bar">
+  <div class="container">
+    <div>
+      42 Vail Road, Bethel CT 06801 &nbsp;·&nbsp;
+      <a href="tel:2037309071">(203) 730-9071</a> &nbsp;·&nbsp;
+      <a href="mailto:office@ourladyofaparecida.org">office@ourladyofaparecida.org</a>
+    </div>
+    <div class="top-bar-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     MAIN NAV
+     ============================================ -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/crest-pt.jpg" alt="Nossa Senhora Aparecida — Diocese de Bridgeport · Bethel, CT" class="nav-logo" data-i18n="pt">
+      <img src="images/crest-en.jpg" alt="Our Lady of Aparecida — Diocese of Bridgeport · Bethel, CT" class="nav-logo" data-i18n="en">
+      <div>
+        <div class="nav-brand-name">Our Lady of Aparecida</div>
+        <div class="nav-brand-sub">Diocese of Bridgeport · Bethel, CT</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
+      <li><a href="about.html" class="nav-link"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
+      <li><a href="gallery.html" class="nav-link active"><span data-i18n="pt">Galeria</span><span data-i18n="en">Gallery</span></a></li>
+      <li><a href="ministries.html" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
+      <li><a href="safe-environments.html" class="nav-link"><span data-i18n="pt">Ambientes Seguros</span><span data-i18n="en">Safe Environments</span></a></li>
+      <li><a href="index.html#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
+      <li><a href="index.html#contact" class="nav-link"><span data-i18n="pt">Contato</span><span data-i18n="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="giving.html" class="btn btn-gold btn-nav">
+        <span data-i18n="pt">Doar</span>
+        <span data-i18n="en">Give</span>
+      </a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <p class="page-header-eyebrow">
+      <span data-i18n="pt">Galeria</span>
+      <span data-i18n="en">Gallery</span>
+    </p>
+    <h1 class="page-header-title">
+      <span data-i18n="pt">Vida Paroquial em Imagens</span>
+      <span data-i18n="en">Parish Life in Pictures</span>
+    </h1>
+    <div class="gold-rule"></div>
+    <p class="page-header-subtitle">
+      <span data-i18n="pt">Momentos da vida da nossa comunidade — sacramentos, eventos e celebrações ao longo do ano.</span>
+      <span data-i18n="en">Moments from the life of our community — sacraments, events and celebrations throughout the year.</span>
+    </p>
+  </div>
+</header>
+
+<!-- ============================================
+     GALLERY
+     ============================================ -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-filters reveal" role="tablist" aria-label="Gallery filters">
+      <button class="gallery-filter is-active" data-filter="all">
+        <span data-i18n="pt">Todas</span>
+        <span data-i18n="en">All</span>
+      </button>
+      <button class="gallery-filter" data-filter="mass-liturgy">
+        <span data-i18n="pt">Missa & Liturgia</span>
+        <span data-i18n="en">Mass &amp; Liturgy</span>
+      </button>
+      <button class="gallery-filter" data-filter="sacraments">
+        <span data-i18n="pt">Sacramentos</span>
+        <span data-i18n="en">Sacraments</span>
+      </button>
+      <button class="gallery-filter" data-filter="our-lady-devotion">
+        <span data-i18n="pt">Nossa Senhora & Devoção</span>
+        <span data-i18n="en">Our Lady &amp; Devotion</span>
+      </button>
+      <button class="gallery-filter" data-filter="holy-week-easter">
+        <span data-i18n="pt">Semana Santa & Páscoa</span>
+        <span data-i18n="en">Holy Week &amp; Easter</span>
+      </button>
+      <button class="gallery-filter" data-filter="parish-life-events">
+        <span data-i18n="pt">Vida Paroquial & Eventos</span>
+        <span data-i18n="en">Parish Life &amp; Events</span>
+      </button>
+      <button class="gallery-filter" data-filter="music-servers">
+        <span data-i18n="pt">Música & Coroinhas</span>
+        <span data-i18n="en">Music &amp; Servers</span>
+      </button>
+    </div>
+
+    <p class="gallery-count" aria-live="polite">
+      <span id="galleryCount">81</span>
+      <span data-i18n="pt"> fotos</span>
+      <span data-i18n="en"> photos</span>
+    </p>
+
+    <div class="gallery-masonry reveal-stagger" id="galleryGrid">
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-001-large.jpg" data-alt-pt="Encenação ao ar livre da Última Ceia na Sexta-feira Santa" data-alt-en="Outdoor Last Supper tableau on Good Friday at Our Lady of Aparecida">
+        <img src="images/photos/photo-001-medium.jpg" loading="lazy" alt="Outdoor Last Supper tableau on Good Friday at Our Lady of Aparecida">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-002-large.jpg" data-alt-pt="Imagem de Nossa Senhora Aparecida com manto e coroa" data-alt-en="Statue of Nossa Senhora Aparecida, crowned, in a navy and gold mantle">
+        <img src="images/photos/photo-002-medium.jpg" loading="lazy" alt="Statue of Nossa Senhora Aparecida, crowned, in a navy and gold mantle">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-003-large.jpg" data-alt-pt="Cálice eucarístico, uvas e pão" data-alt-en="Eucharistic chalice with grapes and bread">
+        <img src="images/photos/photo-003-medium.jpg" loading="lazy" alt="Eucharistic chalice with grapes and bread">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-004-large.jpg" data-alt-pt="Cacho de uvas com cálice ao fundo" data-alt-en="Cluster of red grapes with chalice in the background">
+        <img src="images/photos/photo-004-medium.jpg" loading="lazy" alt="Cluster of red grapes with chalice in the background">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-005-large.jpg" data-alt-pt="Procissão com incenso na Missa" data-alt-en="Mass procession with incense at Our Lady of Aparecida">
+        <img src="images/photos/photo-005-medium.jpg" loading="lazy" alt="Mass procession with incense at Our Lady of Aparecida">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-006-large.jpg" data-alt-pt="Procissão das ofertas com galhetas e cálice" data-alt-en="Offertory procession with cruets and chalice">
+        <img src="images/photos/photo-006-medium.jpg" loading="lazy" alt="Offertory procession with cruets and chalice">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-007-large.jpg" data-alt-pt="Crucifixo na parede do santuário" data-alt-en="Mounted crucifix on the sanctuary wall">
+        <img src="images/photos/photo-007-medium.jpg" loading="lazy" alt="Mounted crucifix on the sanctuary wall">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-008-large.jpg" data-alt-pt="Alianças de casamento ao lado de castiçais e relicário" data-alt-en="Wedding rings beside candlesticks and a reliquary">
+        <img src="images/photos/photo-008-medium.jpg" loading="lazy" alt="Wedding rings beside candlesticks and a reliquary">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-009-large.jpg" data-alt-pt="Pão consagrado em patena com espigas de trigo" data-alt-en="Round loaf on a paten with wheat sheaves">
+        <img src="images/photos/photo-009-medium.jpg" loading="lazy" alt="Round loaf on a paten with wheat sheaves">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-010-large.jpg" data-alt-pt="Detalhe de alva, cíngulo e crucifixo peitoral" data-alt-en="Detail of alb, cincture and pectoral crucifix">
+        <img src="images/photos/photo-010-medium.jpg" loading="lazy" alt="Detail of alb, cincture and pectoral crucifix">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-011-large.jpg" data-alt-pt="Missa com o bispo no altar e assembleia cheia" data-alt-en="Mass with the bishop at the altar and the full congregation">
+        <img src="images/photos/photo-011-medium.jpg" loading="lazy" alt="Mass with the bishop at the altar and the full congregation">
+      </figure>
+      <figure class="gallery-photo" data-category="music-servers" data-large="images/photos/photo-012-large.jpg" data-alt-pt="Mão tocando violão no ministério de música" data-alt-en="Hand strumming an acoustic guitar in the music ministry">
+        <img src="images/photos/photo-012-medium.jpg" loading="lazy" alt="Hand strumming an acoustic guitar in the music ministry">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-013-large.jpg" data-alt-pt="Píxide dourada com uvas e pão" data-alt-en="Ornate gold ciborium with grapes and bread">
+        <img src="images/photos/photo-013-medium.jpg" loading="lazy" alt="Ornate gold ciborium with grapes and bread">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-014-large.jpg" data-alt-pt="Nicho-altar de Nossa Senhora Aparecida em mosaico dourado" data-alt-en="Aparecida shrine niche in a gilded mosaic frame">
+        <img src="images/photos/photo-014-medium.jpg" loading="lazy" alt="Aparecida shrine niche in a gilded mosaic frame">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-015-large.jpg" data-alt-pt="Imagem de Nossa Senhora sobre arranjo em forma de coração" data-alt-en="Statue of Our Lady atop a heart-shaped floral arrangement">
+        <img src="images/photos/photo-015-medium.jpg" loading="lazy" alt="Statue of Our Lady atop a heart-shaped floral arrangement">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-016-large.jpg" data-alt-pt="Pia batismal de mármore sob medalhão da Sagrada Família" data-alt-en="Marble baptismal font beneath the Holy Family relief medallion">
+        <img src="images/photos/photo-016-medium.jpg" loading="lazy" alt="Marble baptismal font beneath the Holy Family relief medallion">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-017-large.jpg" data-alt-pt="Medalhão decorativo de Nossa Senhora Aparecida" data-alt-en="Inlaid wall medallion of Our Lady of Aparecida">
+        <img src="images/photos/photo-017-medium.jpg" loading="lazy" alt="Inlaid wall medallion of Our Lady of Aparecida">
+      </figure>
+      <figure class="gallery-photo" data-category="parish-life-events" data-large="images/photos/photo-018-large.jpg" data-alt-pt="Medalhão da Sagrada Família na parede do santuário" data-alt-en="Holy Family relief medallion on the sanctuary wall">
+        <img src="images/photos/photo-018-medium.jpg" loading="lazy" alt="Holy Family relief medallion on the sanctuary wall">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-019-large.jpg" data-alt-pt="Bispo no altar com coroinhas durante a consagração" data-alt-en="Bishop with altar servers during the consecration">
+        <img src="images/photos/photo-019-medium.jpg" loading="lazy" alt="Bishop with altar servers during the consecration">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-020-large.jpg" data-alt-pt="Bispo beija o Evangeliário com coroinhas atrás" data-alt-en="Bishop kisses the Book of the Gospels with altar servers behind">
+        <img src="images/photos/photo-020-medium.jpg" loading="lazy" alt="Bishop kisses the Book of the Gospels with altar servers behind">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-021-large.jpg" data-alt-pt="Vista do interior do santuário durante a Missa" data-alt-en="Interior of the sanctuary during Mass">
+        <img src="images/photos/photo-021-medium.jpg" loading="lazy" alt="Interior of the sanctuary during Mass">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-022-large.jpg" data-alt-pt="Procissão de entrada com a cruz processional" data-alt-en="Entrance procession with the processional cross">
+        <img src="images/photos/photo-022-medium.jpg" loading="lazy" alt="Entrance procession with the processional cross">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-023-large.jpg" data-alt-pt="Dois sacerdotes se abraçam após a Missa" data-alt-en="Two priests embrace at the altar after Mass">
+        <img src="images/photos/photo-023-medium.jpg" loading="lazy" alt="Two priests embrace at the altar after Mass">
+      </figure>
+      <figure class="gallery-photo" data-category="parish-life-events" data-large="images/photos/photo-024-large.jpg" data-alt-pt="Paroquianos reunidos para uma conferência paroquial" data-alt-en="Parishioners gathered for a parish conference">
+        <img src="images/photos/photo-024-medium.jpg" loading="lazy" alt="Parishioners gathered for a parish conference">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-025-large.jpg" data-alt-pt="Procissão das ofertas pelos paroquianos" data-alt-en="Offertory procession by parishioners">
+        <img src="images/photos/photo-025-medium.jpg" loading="lazy" alt="Offertory procession by parishioners">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-026-large.jpg" data-alt-pt="Sacerdote acende o Círio Pascal" data-alt-en="Priest lights the Paschal candle">
+        <img src="images/photos/photo-026-medium.jpg" loading="lazy" alt="Priest lights the Paschal candle">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-027-large.jpg" data-alt-pt="Capela de Nossa Senhora Aparecida com mosaico dourado" data-alt-en="Shrine niche of Our Lady of Aparecida with gold mosaic">
+        <img src="images/photos/photo-027-medium.jpg" loading="lazy" alt="Shrine niche of Our Lady of Aparecida with gold mosaic">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-028-large.jpg" data-alt-pt="Dois sacerdotes paramentados de branco" data-alt-en="Two priests vested in white">
+        <img src="images/photos/photo-028-medium.jpg" loading="lazy" alt="Two priests vested in white">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments music-servers" data-large="images/photos/photo-029-large.jpg" data-alt-pt="Procissão de Primeira Comunhão com castiçais e o Lecionário" data-alt-en="First Communion procession with candles and the Lectionary">
+        <img src="images/photos/photo-029-medium.jpg" loading="lazy" alt="First Communion procession with candles and the Lectionary">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-030-large.jpg" data-alt-pt="Bandeja das ofertas da Primeira Comunhão" data-alt-en="First Communion offertory tray with grapes, bread and cruets">
+        <img src="images/photos/photo-030-medium.jpg" loading="lazy" alt="First Communion offertory tray with grapes, bread and cruets">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-031-large.jpg" data-alt-pt="Nicho iluminado de Nossa Senhora Aparecida" data-alt-en="Illuminated Aparecida shrine niche">
+        <img src="images/photos/photo-031-medium.jpg" loading="lazy" alt="Illuminated Aparecida shrine niche">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-032-large.jpg" data-alt-pt="Mesa preparada para a Crisma — Santos Óleos" data-alt-en="Table prepared for Confirmation — Holy Oils and ritual items">
+        <img src="images/photos/photo-032-medium.jpg" loading="lazy" alt="Table prepared for Confirmation — Holy Oils and ritual items">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-033-large.jpg" data-alt-pt="Frascos de Óleo dos Catecúmenos e Santo Crisma" data-alt-en="Bottles of Oil of Catechumens and Sacred Chrism">
+        <img src="images/photos/photo-033-medium.jpg" loading="lazy" alt="Bottles of Oil of Catechumens and Sacred Chrism">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-034-large.jpg" data-alt-pt="Batismo: o sacerdote derrama água sobre a candidata" data-alt-en="Baptism: the priest pours water over the candidate at the font">
+        <img src="images/photos/photo-034-medium.jpg" loading="lazy" alt="Baptism: the priest pours water over the candidate at the font">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments music-servers" data-large="images/photos/photo-035-large.jpg" data-alt-pt="Crianças trazem as ofertas na Primeira Comunhão" data-alt-en="Children bring the offertory at First Communion">
+        <img src="images/photos/photo-035-medium.jpg" loading="lazy" alt="Children bring the offertory at First Communion">
+      </figure>
+      <figure class="gallery-photo" data-category="music-servers" data-large="images/photos/photo-036-large.jpg" data-alt-pt="Coroinhas em batinas vermelhas com cestas para o ofertório" data-alt-en="Altar servers in red cassocks holding baskets for the offertory">
+        <img src="images/photos/photo-036-medium.jpg" loading="lazy" alt="Altar servers in red cassocks holding baskets for the offertory">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-037-large.jpg" data-alt-pt="Sacerdote prepara o cálice no altar" data-alt-en="Priest pours water into the chalice at the altar">
+        <img src="images/photos/photo-037-medium.jpg" loading="lazy" alt="Priest pours water into the chalice at the altar">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-038-large.jpg" data-alt-pt="Sacerdote lê o Missal Romano" data-alt-en="Priest reads from the Roman Missal">
+        <img src="images/photos/photo-038-medium.jpg" loading="lazy" alt="Priest reads from the Roman Missal">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-039-large.jpg" data-alt-pt="Sacerdote eleva o cálice na consagração" data-alt-en="Priest elevates the chalice at the consecration">
+        <img src="images/photos/photo-039-medium.jpg" loading="lazy" alt="Priest elevates the chalice at the consecration">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-040-large.jpg" data-alt-pt="Sacerdote distribui a Sagrada Comunhão com coroinha ao lado" data-alt-en="Priest distributes Holy Communion with a server at his side">
+        <img src="images/photos/photo-040-medium.jpg" loading="lazy" alt="Priest distributes Holy Communion with a server at his side">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-041-large.jpg" data-alt-pt="Menina recebe a Primeira Comunhão" data-alt-en="A young girl receives her First Holy Communion">
+        <img src="images/photos/photo-041-medium.jpg" loading="lazy" alt="A young girl receives her First Holy Communion">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-042-large.jpg" data-alt-pt="Crucifixo com a placa INRI sobre o altar" data-alt-en="Crucifix with INRI plaque above the altar">
+        <img src="images/photos/photo-042-medium.jpg" loading="lazy" alt="Crucifix with INRI plaque above the altar">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-043-large.jpg" data-alt-pt="Imagem de Nossa Senhora sobre arranjo de rosas para a Coroação" data-alt-en="Statue of Our Lady atop a rose arrangement for the May Crowning">
+        <img src="images/photos/photo-043-medium.jpg" loading="lazy" alt="Statue of Our Lady atop a rose arrangement for the May Crowning">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-044-large.jpg" data-alt-pt="Nicho de Nossa Senhora Aparecida com arranjo de flores" data-alt-en="Aparecida shrine niche with autumn floral arrangement">
+        <img src="images/photos/photo-044-medium.jpg" loading="lazy" alt="Aparecida shrine niche with autumn floral arrangement">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion music-servers" data-large="images/photos/photo-045-large.jpg" data-alt-pt="Coroinha próximo à imagem de Nossa Senhora" data-alt-en="Server near the statue of Our Lady during the May Crowning">
+        <img src="images/photos/photo-045-medium.jpg" loading="lazy" alt="Server near the statue of Our Lady during the May Crowning">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-046-large.jpg" data-alt-pt="Missa com o ministério de música ao lado do altar" data-alt-en="Mass with the music ministry beside the altar">
+        <img src="images/photos/photo-046-medium.jpg" loading="lazy" alt="Mass with the music ministry beside the altar">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-047-large.jpg" data-alt-pt="Mesa com pão, cálice, velas e a cruz processional" data-alt-en="Side table with bread, chalice, candles and the processional cross">
+        <img src="images/photos/photo-047-medium.jpg" loading="lazy" alt="Side table with bread, chalice, candles and the processional cross">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-048-large.jpg" data-alt-pt="Imagem de Nossa Senhora Aparecida no andor de rosas" data-alt-en="Statue of Our Lady of Aparecida on the rose-covered processional float">
+        <img src="images/photos/photo-048-medium.jpg" loading="lazy" alt="Statue of Our Lady of Aparecida on the rose-covered processional float">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-049-large.jpg" data-alt-pt="Paroquianos erguem rosas durante a Coroação" data-alt-en="Parishioners raise roses during the May Crowning">
+        <img src="images/photos/photo-049-medium.jpg" loading="lazy" alt="Parishioners raise roses during the May Crowning">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-050-large.jpg" data-alt-pt="Sacerdote eleva o cálice durante a Missa" data-alt-en="Priest elevates the chalice during Mass">
+        <img src="images/photos/photo-050-medium.jpg" loading="lazy" alt="Priest elevates the chalice during Mass">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy music-servers" data-large="images/photos/photo-051-large.jpg" data-alt-pt="Sacerdote no altar com coroinha marcando o Missal" data-alt-en="Priest at the altar with a server marking the Missal">
+        <img src="images/photos/photo-051-medium.jpg" loading="lazy" alt="Priest at the altar with a server marking the Missal">
+      </figure>
+      <figure class="gallery-photo" data-category="parish-life-events" data-large="images/photos/photo-052-large.jpg" data-alt-pt="Assembleia reunida para um evento paroquial" data-alt-en="Assembly gathered for a parish event">
+        <img src="images/photos/photo-052-medium.jpg" loading="lazy" alt="Assembly gathered for a parish event">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion music-servers" data-large="images/photos/photo-053-large.jpg" data-alt-pt="Imagem de Nossa Senhora com paroquianos na celebração" data-alt-en="Statue of Our Lady with parishioners at her celebration">
+        <img src="images/photos/photo-053-medium.jpg" loading="lazy" alt="Statue of Our Lady with parishioners at her celebration">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-054-large.jpg" data-alt-pt="Cálice e píxide sobre o altar" data-alt-en="Chalice and ciborium on the altar">
+        <img src="images/photos/photo-054-medium.jpg" loading="lazy" alt="Chalice and ciborium on the altar">
+      </figure>
+      <figure class="gallery-photo" data-category="parish-life-events" data-large="images/photos/photo-055-large.jpg" data-alt-pt="II Conferência para Mulheres — assembleia" data-alt-en="II Women's Conference — full hall">
+        <img src="images/photos/photo-055-medium.jpg" loading="lazy" alt="II Women's Conference — full hall">
+      </figure>
+      <figure class="gallery-photo" data-category="parish-life-events" data-large="images/photos/photo-056-large.jpg" data-alt-pt="Paroquianas na Conferência para Mulheres" data-alt-en="Parishioners at the Women's Conference">
+        <img src="images/photos/photo-056-medium.jpg" loading="lazy" alt="Parishioners at the Women's Conference">
+      </figure>
+      <figure class="gallery-photo" data-category="parish-life-events" data-large="images/photos/photo-057-large.jpg" data-alt-pt="Paroquianas à mesa na Conferência para Mulheres" data-alt-en="Parishioners around the table at the Women's Conference">
+        <img src="images/photos/photo-057-medium.jpg" loading="lazy" alt="Parishioners around the table at the Women's Conference">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-058-large.jpg" data-alt-pt="Procissão Mariana com véu azul na Coroação" data-alt-en="Marian procession with the blue veil during the May Crowning">
+        <img src="images/photos/photo-058-medium.jpg" loading="lazy" alt="Marian procession with the blue veil during the May Crowning">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-059-large.jpg" data-alt-pt="Missa quaresmal — sacerdote no altar com paramentos roxos" data-alt-en="Lenten Mass — priest at the altar with purple drapery">
+        <img src="images/photos/photo-059-medium.jpg" loading="lazy" alt="Lenten Mass — priest at the altar with purple drapery">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-060-large.jpg" data-alt-pt="Sacerdote inclinado em oração no altar (Quaresma)" data-alt-en="Priest bowed in prayer at the altar during Lent">
+        <img src="images/photos/photo-060-medium.jpg" loading="lazy" alt="Priest bowed in prayer at the altar during Lent">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-061-large.jpg" data-alt-pt="Casamento celebrado durante a Quaresma" data-alt-en="Wedding celebrated during Lent">
+        <img src="images/photos/photo-061-medium.jpg" loading="lazy" alt="Wedding celebrated during Lent">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-062-large.jpg" data-alt-pt="Sacramento do Matrimônio — preparação para a entrada" data-alt-en="Sacrament of Matrimony — moment before the entrance">
+        <img src="images/photos/photo-062-medium.jpg" loading="lazy" alt="Sacrament of Matrimony — moment before the entrance">
+      </figure>
+      <figure class="gallery-photo" data-category="sacraments" data-large="images/photos/photo-063-large.jpg" data-alt-pt="Noivos no santuário no dia do casamento" data-alt-en="Bride and groom in the sanctuary on their wedding day">
+        <img src="images/photos/photo-063-medium.jpg" loading="lazy" alt="Bride and groom in the sanctuary on their wedding day">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-064-large.jpg" data-alt-pt="Relevo de mármore da Última Ceia no altar" data-alt-en="Marble Last Supper relief on the altar frontal">
+        <img src="images/photos/photo-064-medium.jpg" loading="lazy" alt="Marble Last Supper relief on the altar frontal">
+      </figure>
+      <figure class="gallery-photo" data-category="mass-liturgy" data-large="images/photos/photo-065-large.jpg" data-alt-pt="Relicário e crucifixo sobre o altar" data-alt-en="Reliquary and altar crucifix close-up">
+        <img src="images/photos/photo-065-medium.jpg" loading="lazy" alt="Reliquary and altar crucifix close-up">
+      </figure>
+      <figure class="gallery-photo" data-category="our-lady-devotion" data-large="images/photos/photo-066-large.jpg" data-alt-pt="Imagem de Nossa Senhora Aparecida sobre pedestal" data-alt-en="Statue of Our Lady of Aparecida on a pedestal">
+        <img src="images/photos/photo-066-medium.jpg" loading="lazy" alt="Statue of Our Lady of Aparecida on a pedestal">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-067-large.jpg" data-alt-pt="Lava-pés na Quinta-feira Santa" data-alt-en="Washing of the feet on Holy Thursday">
+        <img src="images/photos/photo-067-medium.jpg" loading="lazy" alt="Washing of the feet on Holy Thursday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-068-large.jpg" data-alt-pt="Lava-pés na Quinta-feira Santa" data-alt-en="Washing of the feet on Holy Thursday">
+        <img src="images/photos/photo-068-medium.jpg" loading="lazy" alt="Washing of the feet on Holy Thursday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-069-large.jpg" data-alt-pt="Lava-pés na Quinta-feira Santa" data-alt-en="Washing of the feet on Holy Thursday">
+        <img src="images/photos/photo-069-medium.jpg" loading="lazy" alt="Washing of the feet on Holy Thursday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-070-large.jpg" data-alt-pt="Encenação da Paixão na Sexta-feira Santa" data-alt-en="Passion play on Good Friday">
+        <img src="images/photos/photo-070-medium.jpg" loading="lazy" alt="Passion play on Good Friday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-071-large.jpg" data-alt-pt="Encenação da Paixão na Sexta-feira Santa" data-alt-en="Passion play on Good Friday">
+        <img src="images/photos/photo-071-medium.jpg" loading="lazy" alt="Passion play on Good Friday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-072-large.jpg" data-alt-pt="Encenação da Paixão na Sexta-feira Santa" data-alt-en="Passion play on Good Friday">
+        <img src="images/photos/photo-072-medium.jpg" loading="lazy" alt="Passion play on Good Friday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-073-large.jpg" data-alt-pt="Encenação da Paixão na Sexta-feira Santa" data-alt-en="Passion play on Good Friday">
+        <img src="images/photos/photo-073-medium.jpg" loading="lazy" alt="Passion play on Good Friday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter" data-large="images/photos/photo-074-large.jpg" data-alt-pt="Encenação da Paixão na Sexta-feira Santa" data-alt-en="Passion play on Good Friday">
+        <img src="images/photos/photo-074-medium.jpg" loading="lazy" alt="Passion play on Good Friday">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-075-large.jpg" data-alt-pt="Vigília Pascal" data-alt-en="The Easter Vigil">
+        <img src="images/photos/photo-075-medium.jpg" loading="lazy" alt="The Easter Vigil">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-076-large.jpg" data-alt-pt="Círio Pascal trazido em procissão na Vigília" data-alt-en="The Paschal candle carried in procession at the Easter Vigil">
+        <img src="images/photos/photo-076-medium.jpg" loading="lazy" alt="The Paschal candle carried in procession at the Easter Vigil">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-077-large.jpg" data-alt-pt="Vigília Pascal — momento da celebração" data-alt-en="The Easter Vigil — a moment of celebration">
+        <img src="images/photos/photo-077-medium.jpg" loading="lazy" alt="The Easter Vigil — a moment of celebration">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-078-large.jpg" data-alt-pt="Vigília Pascal — momento da celebração" data-alt-en="The Easter Vigil — a moment of celebration">
+        <img src="images/photos/photo-078-medium.jpg" loading="lazy" alt="The Easter Vigil — a moment of celebration">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-079-large.jpg" data-alt-pt="Vigília Pascal — momento da celebração" data-alt-en="The Easter Vigil — a moment of celebration">
+        <img src="images/photos/photo-079-medium.jpg" loading="lazy" alt="The Easter Vigil — a moment of celebration">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-080-large.jpg" data-alt-pt="Vigília Pascal — momento da celebração" data-alt-en="The Easter Vigil — a moment of celebration">
+        <img src="images/photos/photo-080-medium.jpg" loading="lazy" alt="The Easter Vigil — a moment of celebration">
+      </figure>
+      <figure class="gallery-photo" data-category="holy-week-easter music-servers" data-large="images/photos/photo-081-large.jpg" data-alt-pt="Jovens coroinhas cantam à luz das velas na Vigília Pascal" data-alt-en="Young altar servers sing by candlelight at the Easter Vigil">
+        <img src="images/photos/photo-081-medium.jpg" loading="lazy" alt="Young altar servers sing by candlelight at the Easter Vigil">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     LIGHTBOX
+     ============================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+  <div class="lightbox-stage">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand-name">Our Lady of Aparecida</div>
+        <p class="footer-brand-text">
+          <span data-i18n="pt">Paróquia Nossa Senhora da Imaculada Conceição Aparecida<br>Uma Comunidade Católica de Fé<br>Diocese de Bridgeport</span>
+          <span data-i18n="en">Our Lady of the Immaculate Conception of Aparecida Parish<br>A Catholic Community of Faith<br>Diocese of Bridgeport</span>
+        </p>
+        <p class="footer-brand-text">
+          42 Vail Road, Bethel, CT 06801<br>
+          (203) 730-9071<br>
+          office@ourladyofaparecida.org
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Paróquia</span>
+          <span data-i18n="en">Parish</span>
+        </h4>
+        <a href="about.html" class="footer-link">
+          <span data-i18n="pt">Sobre Nós</span>
+          <span data-i18n="en">About Us</span>
+        </a>
+        <a href="gallery.html" class="footer-link">
+          <span data-i18n="pt">Galeria</span>
+          <span data-i18n="en">Gallery</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Horário das Missas</span>
+          <span data-i18n="en">Mass Schedule</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Confissões</span>
+          <span data-i18n="en">Confessions</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Ministérios</span>
+          <span data-i18n="en">Ministries</span>
+        </h4>
+        <a href="ministries.html" class="footer-link">Pastoral Familiar</a>
+        <a href="ministries.html" class="footer-link">Educação Religiosa</a>
+        <a href="ministries.html" class="footer-link">Grupo de Jovens</a>
+        <a href="ministries.html" class="footer-link">GOVES</a>
+        <a href="ministries.html" class="footer-link">
+          <span data-i18n="pt">Ver Todos →</span>
+          <span data-i18n="en">View All →</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Sacramentos</span>
+          <span data-i18n="en">Sacraments</span>
+        </h4>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Batismo</span>
+          <span data-i18n="en">Baptism</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Primeira Comunhão</span>
+          <span data-i18n="en">First Communion</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Crisma</span>
+          <span data-i18n="en">Confirmation</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Matrimônio</span>
+          <span data-i18n="en">Marriage</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Our Lady of Aparecida Parish · Diocese of Bridgeport</span>
+      <span>Built by SetonDigital</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     LANGUAGE TOGGLE SCRIPT
+     ============================================ -->
+<script>
+(function() {
+  var toggle = document.getElementById('langToggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', function(e) {
+    var btn = e.target;
+    if (!btn.classList.contains('lang-btn')) return;
+    var lang = btn.getAttribute('data-lang');
+
+    var buttons = toggle.querySelectorAll('.lang-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    btn.classList.add('active');
+
+    if (lang === 'en') {
+      document.body.classList.add('english');
+    } else {
+      document.body.classList.remove('english');
+    }
+
+    try { localStorage.setItem('ola_lang', lang); } catch(e) {}
+  });
+
+  try {
+    var saved = localStorage.getItem('ola_lang');
+    if (saved === 'en') {
+      document.body.classList.add('english');
+      toggle.querySelector('[data-lang="pt"]').classList.remove('active');
+      toggle.querySelector('[data-lang="en"]').classList.add('active');
+    }
+  } catch(e) {}
+})();
+</script>
+
+<!-- ============================================
+     SCROLL REVEAL
+     ============================================ -->
+<script>
+(function () {
+  var targets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (!targets.length) return;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+
+<!-- ============================================
+     GALLERY: filters + lightbox
+     ============================================ -->
+<script>
+(function () {
+  var grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+
+  var photos = Array.prototype.slice.call(grid.querySelectorAll('.gallery-photo'));
+  var filters = document.querySelectorAll('.gallery-filter');
+  var countEl = document.getElementById('galleryCount');
+
+  function applyFilter(filter) {
+    var visible = 0;
+    photos.forEach(function (photo) {
+      var cats = (photo.getAttribute('data-category') || '').split(/\s+/);
+      var show = filter === 'all' || cats.indexOf(filter) !== -1;
+      photo.classList.toggle('is-hidden', !show);
+      if (show) visible++;
+    });
+    if (countEl) countEl.textContent = visible;
+  }
+
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filters.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+
+  // Lightbox
+  var lightbox     = document.getElementById('lightbox');
+  var lightboxImg  = document.getElementById('lightboxImg');
+  var lightboxCap  = document.getElementById('lightboxCaption');
+  var btnClose     = document.getElementById('lightboxClose');
+  var btnPrev      = document.getElementById('lightboxPrev');
+  var btnNext      = document.getElementById('lightboxNext');
+  var currentIndex = -1;
+
+  function visiblePhotos() {
+    return photos.filter(function (p) { return !p.classList.contains('is-hidden'); });
+  }
+
+  function altFor(photo) {
+    var isEnglish = document.body.classList.contains('english');
+    return (isEnglish ? photo.getAttribute('data-alt-en') : photo.getAttribute('data-alt-pt')) || '';
+  }
+
+  function showAt(index) {
+    var list = visiblePhotos();
+    if (!list.length) return;
+    currentIndex = ((index % list.length) + list.length) % list.length;
+    var photo = list[currentIndex];
+    lightboxImg.src = photo.getAttribute('data-large');
+    var a = altFor(photo);
+    lightboxImg.alt = a;
+    if (lightboxCap) lightboxCap.textContent = a;
+  }
+
+  function open(photo) {
+    var list = visiblePhotos();
+    var idx = list.indexOf(photo);
+    if (idx < 0) return;
+    showAt(idx);
+    lightbox.classList.add('is-open');
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  photos.forEach(function (photo) {
+    photo.addEventListener('click', function () { open(photo); });
+  });
+
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', function () { showAt(currentIndex - 1); });
+  btnNext.addEventListener('click', function () { showAt(currentIndex + 1); });
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') showAt(currentIndex + 1);
+    else if (e.key === 'ArrowLeft')  showAt(currentIndex - 1);
+  });
+})();
+</script>
+
+</body>
+</html>
