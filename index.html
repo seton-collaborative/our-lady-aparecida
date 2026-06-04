@@ -246,8 +246,22 @@ img { max-width: 100%; display: block; }
 .hero-slide:nth-child(4) img { animation-delay: 21s; }
 .hero-slide:nth-child(5) img { animation-delay: 28s; }
 .hero-slide:nth-child(6) img { animation-delay: 35s; }
-/* Keep the Aparecida statue right-of-center so the headline stays clear */
-.hero-slide.hero-slide-aparecida img { object-position: 75% center; }
+/* Cover hero slides (2-6) — default crop favors the top so heads stay in frame */
+.hero-slide:not(.hero-slide-aparecida) img { object-position: center 25%; }
+/* Slide 2 (photo-024, seated congregation) — face rows live in the lower half, push the crop down to center them */
+.hero-slide:nth-child(2) img { object-position: center 58%; }
+/* Slide 4 (photo-076, portrait Easter Vigil) — center on the priest's and deacons' faces, accept losing the bottom of the candle */
+.hero-slide:nth-child(4) img { object-position: center 26%; }
+/* Aparecida slide — show the full statue (contain, no crop), navy fill behind,
+   anchored right so she stays clear of the left-aligned headline.
+   Slow Ken Burns push-in toward her face during the visible window. */
+.hero-slide.hero-slide-aparecida { background: var(--blue-500); }
+.hero-slide.hero-slide-aparecida img {
+  object-fit: contain;
+  object-position: right center;
+  transform-origin: 85% 25%;
+  animation: heroKenBurnsAparecida 42s infinite linear;
+}
 
 @keyframes heroCrossfade {
   0%   { opacity: 0; }
@@ -260,6 +274,13 @@ img { max-width: 100%; display: block; }
   0%   { transform: scale(1); }
   18%  { transform: scale(1.06); }
   100% { transform: scale(1.06); }
+}
+@keyframes heroKenBurnsAparecida {
+  0%   { transform: scale(1); }
+  3%   { transform: scale(1); }     /* full statue visible the moment she fades in */
+  15%  { transform: scale(1.10); }  /* fully pushed in on her face by the start of crossfade */
+  18%  { transform: scale(1.10); }  /* hold during fade-out */
+  100% { transform: scale(1); }     /* invisible reset back to start */
 }
 
 .hero-overlay {
@@ -274,6 +295,7 @@ img { max-width: 100%; display: block; }
   .hero-slide { animation: none; opacity: 1; }
   .hero-slide:not(:first-child) { display: none; }
   .hero-slide img { animation: none; transform: none; }
+  .hero-slide.hero-slide-aparecida img { animation: none; transform: none; }
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-content { max-width: 620px; color: #fff; }
