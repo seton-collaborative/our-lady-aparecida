@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder for parishioners photo">
+  <rect width="1600" height="900" fill="#0F1F36"/>
+  <rect x="40" y="40" width="1520" height="820" fill="none" stroke="#D4A024" stroke-width="4" stroke-dasharray="24 14"/>
+  <g font-family="Georgia, 'Cormorant Garamond', serif" text-anchor="middle">
+    <text x="800" y="380" fill="#F0D48E" font-size="74" font-weight="500" letter-spacing="2">PLACEHOLDER · HERO 3</text>
+    <text x="800" y="470" fill="#FAFAF8" font-size="42" font-weight="400">Parishioners — Community</text>
+  </g>
+  <g font-family="'Source Sans 3', sans-serif" text-anchor="middle" fill="#A8BAD4" font-size="22">
+    <text x="800" y="560">Replace images/placeholder-hero-3-parishioners.svg with the real photo</text>
+    <text x="800" y="595">Target aspect: 16:9 · Suggested ≥ 1600×900 · Subject: parishioners gathered after Mass or at an event</text>
+  </g>
+</svg>
