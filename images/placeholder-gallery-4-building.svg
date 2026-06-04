@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder for gallery parish building photo">
+  <rect width="800" height="800" fill="#1E3A5F"/>
+  <rect x="24" y="24" width="752" height="752" fill="none" stroke="#F0D48E" stroke-width="3" stroke-dasharray="16 10"/>
+  <g font-family="Georgia, 'Cormorant Garamond', serif" text-anchor="middle">
+    <text x="400" y="360" fill="#FAFAF8" font-size="34" font-weight="500" letter-spacing="2">GALLERY · 4</text>
+    <text x="400" y="410" fill="#F0D48E" font-size="28" font-weight="400">Parish Building</text>
+  </g>
+  <g font-family="'Source Sans 3', sans-serif" text-anchor="middle" fill="#A8BAD4" font-size="15">
+    <text x="400" y="470">Replace images/placeholder-gallery-4-building.svg</text>
+    <text x="400" y="495">1:1 · ≥ 800×800 · Exterior, sanctuary, altar</text>
+  </g>
+</svg>
