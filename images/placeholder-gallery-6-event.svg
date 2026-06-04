@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder for gallery event photo">
+  <rect width="800" height="800" fill="#5A8C5A"/>
+  <rect x="24" y="24" width="752" height="752" fill="none" stroke="#FDF8EF" stroke-width="3" stroke-dasharray="16 10"/>
+  <g font-family="Georgia, 'Cormorant Garamond', serif" text-anchor="middle">
+    <text x="400" y="360" fill="#FAFAF8" font-size="34" font-weight="500" letter-spacing="2">GALLERY · 6</text>
+    <text x="400" y="410" fill="#FDF8EF" font-size="28" font-weight="400">Event</text>
+  </g>
+  <g font-family="'Source Sans 3', sans-serif" text-anchor="middle" fill="#E8E6E1" font-size="15">
+    <text x="400" y="470">Replace images/placeholder-gallery-6-event.svg</text>
+    <text x="400" y="495">1:1 · ≥ 800×800 · Procession, festival, etc.</text>
+  </g>
+</svg>

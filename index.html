@@ -482,6 +482,11 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
   display: flex; align-items: center; justify-content: center;
   color: var(--warm-400); font-size: 0.85rem;
+  overflow: hidden;
+}
+.about-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
 }
 .about-text h2 {
   font-family: var(--font-display);
@@ -785,6 +790,72 @@ img { max-width: 100%; display: block; }
   .safe-env-actions { grid-column: 1 / -1; flex-direction: row; justify-content: center; }
 }
 
+/* Feature-card image — let card-image hold a real <img> swappable for the real photo */
+.card-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+
+/* Events feature — 2-column layout with photo + text panel */
+.events-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.events-feature-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--green-500), var(--blue-700));
+}
+.events-feature-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.events-feature-text h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 500;
+  color: var(--warm-900);
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.events-feature-text p {
+  color: var(--warm-700);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+/* Parish Life gallery — responsive grid of square photo slots */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--warm-100), var(--warm-200));
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 600ms var(--ease-out);
+}
+.gallery-item:hover img { transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item img { transition: none; }
+  .gallery-item:hover img { transform: none; }
+}
+
+@media (max-width: 768px) {
+  .events-feature { grid-template-columns: 1fr; gap: 24px; }
+  .events-feature-text h2 { font-size: 1.8rem; }
+}
+
 /* Scroll reveal — fade-and-rise via IntersectionObserver */
 .reveal {
   opacity: 0;
@@ -988,7 +1059,10 @@ body.english [data-i18n="en"] { display: inline; }
     </div>
     <div class="cards-grid reveal-stagger">
       <div class="card">
-        <div class="card-image img-sacraments" style="background: url('images/eucharist.jpg') center/cover no-repeat;"></div>
+        <!-- SACRAMENTS CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+        <div class="card-image img-sacraments">
+          <img src="images/placeholder-sacraments-1-card.svg" alt="A sacrament celebrated at Our Lady of Aparecida">
+        </div>
         <div class="card-body">
           <p class="card-eyebrow">Sacramento</p>
           <h3 class="card-title">
@@ -1006,7 +1080,10 @@ body.english [data-i18n="en"] { display: inline; }
         </div>
       </div>
       <div class="card">
-        <div class="card-image img-formation" style="background: url('images/font.jpg') center/cover no-repeat;"></div>
+        <!-- FAITH FORMATION CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+        <div class="card-image img-formation">
+          <img src="images/placeholder-formation-1-card.svg" alt="Faith formation at Our Lady of Aparecida">
+        </div>
         <div class="card-body">
           <p class="card-eyebrow">Catequese</p>
           <h3 class="card-title">
@@ -1024,7 +1101,10 @@ body.english [data-i18n="en"] { display: inline; }
         </div>
       </div>
       <div class="card">
-        <div class="card-image img-ministries" style="background: url('images/youth.jpg') center/cover no-repeat;"></div>
+        <!-- MINISTRIES CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+        <div class="card-image img-ministries">
+          <img src="images/placeholder-ministries-1-card.svg" alt="Parishioners serving in ministry at Our Lady of Aparecida">
+        </div>
         <div class="card-body">
           <p class="card-eyebrow">
             <span data-i18n="pt">Ministérios</span>
@@ -1054,7 +1134,9 @@ body.english [data-i18n="en"] { display: inline; }
 <section class="section section-alt" id="about">
   <div class="container">
     <div class="about-grid reveal-stagger">
-      <div class="about-image" style="background: url('images/altar.jpg') center/cover no-repeat;">
+      <!-- ABOUT SECTION PHOTO — Swap src for the real photo (4:3 or 3:2, ≥ 1200×900). Update alt. -->
+      <div class="about-image">
+        <img src="images/placeholder-about-1-altar.svg" alt="The sanctuary at Our Lady of Aparecida">
       </div>
       <div class="about-text">
         <p class="section-eyebrow" style="text-align: left;">
@@ -1097,6 +1179,55 @@ body.english [data-i18n="en"] { display: inline; }
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PARISH LIFE GALLERY
+     ============================================ -->
+<section class="section section-light" id="parish-life">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Galeria</span>
+        <span data-i18n="en">Gallery</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Vida Paroquial em Imagens</span>
+        <span data-i18n="en">Parish Life in Pictures</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">Momentos da vida da nossa comunidade — sacramentos, eventos, e o encontro dos paroquianos.</span>
+        <span data-i18n="en">Moments from the life of our community — sacraments, events, and our parishioners gathered together.</span>
+      </p>
+    </div>
+    <div class="gallery-grid reveal-stagger">
+      <!-- GALLERY SLOT 1 — Sacrament. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <div class="gallery-item">
+        <img src="images/placeholder-gallery-1-sacrament.svg" alt="A sacrament celebrated at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 2 — Event. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <div class="gallery-item">
+        <img src="images/placeholder-gallery-2-event.svg" alt="A parish event at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 3 — Parishioners. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <div class="gallery-item">
+        <img src="images/placeholder-gallery-3-parishioners.svg" alt="Parishioners gathered at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 4 — Parish Building. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <div class="gallery-item">
+        <img src="images/placeholder-gallery-4-building.svg" alt="The parish building of Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 5 — Sacrament. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <div class="gallery-item">
+        <img src="images/placeholder-gallery-5-sacrament.svg" alt="A sacrament celebrated at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 6 — Event. Swap src for the real photo (1:1, ≥ 800×800). Update alt. -->
+      <div class="gallery-item">
+        <img src="images/placeholder-gallery-6-event.svg" alt="A parish event at Our Lady of Aparecida">
       </div>
     </div>
   </div>
@@ -1227,6 +1358,51 @@ body.english [data-i18n="en"] { display: inline; }
           <span data-i18n="pt">Contribuir Agora</span>
           <span data-i18n="en">Give Now</span>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     EVENTS
+     ============================================ -->
+<section class="section section-light" id="events">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">Eventos</span>
+        <span data-i18n="en">Events</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">Próximos Eventos</span>
+        <span data-i18n="en">Upcoming Events</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="events-feature reveal-stagger">
+      <!-- EVENTS PHOTO SLOT — Featured event photo. Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+      <div class="events-feature-image">
+        <img src="images/placeholder-events-1-feature.svg" alt="Parishioners gathered at a parish event">
+      </div>
+      <div class="events-feature-text">
+        <h2>
+          <span data-i18n="pt">Uma Comunidade em Celebração</span>
+          <span data-i18n="en">A Community in Celebration</span>
+        </h2>
+        <p>
+          <span data-i18n="pt">Ao longo do ano celebramos a vida em comunidade — retiros de família, conferências, festas litúrgicas e encontros pastorais. Cada evento é um convite para crescer juntos na fé.</span>
+          <span data-i18n="en">Throughout the year we celebrate life as a community — family retreats, conferences, liturgical feasts, and pastoral gatherings. Each event is an invitation to grow together in faith.</span>
+        </p>
+        <p>
+          <span data-i18n="pt">Confira nossos próximos eventos e venha participar.</span>
+          <span data-i18n="en">Check back here for upcoming events and come be part of the celebration.</span>
+        </p>
+        <div class="hero-actions" style="margin-top: 24px;">
+          <a href="#contact" class="btn btn-gold">
+            <span data-i18n="pt">Fale Conosco</span>
+            <span data-i18n="en">Contact Us</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
