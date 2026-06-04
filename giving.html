@@ -93,11 +93,9 @@ img { max-width: 100%; display: block; }
 .main-nav .container { display: flex; justify-content: space-between; align-items: center; }
 .nav-brand { display: flex; align-items: center; gap: 12px; }
 .nav-logo {
-  width: 50px; height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 22px; flex-shrink: 0;
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
 }
 .nav-brand-name {
   font-family: var(--font-display);
@@ -446,7 +444,8 @@ body.english [data-i18n-block="en"] { display: block; }
 <nav class="main-nav">
   <div class="container">
     <a href="index.html" class="nav-brand">
-      <div class="nav-logo">✟</div>
+      <img src="images/crest-pt.jpg" alt="Nossa Senhora Aparecida — Diocese de Bridgeport · Bethel, CT" class="nav-logo" data-i18n="pt">
+      <img src="images/crest-en.jpg" alt="Our Lady of Aparecida — Diocese of Bridgeport · Bethel, CT" class="nav-logo" data-i18n="en">
       <div>
         <div class="nav-brand-name">Our Lady of Aparecida</div>
         <div class="nav-brand-sub">Diocese of Bridgeport · Bethel, CT</div>
