@@ -615,6 +615,9 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem; opacity: 0.85;
   margin-bottom: 20px; line-height: 1.6;
 }
+/* Callout boxes with no button: drop the trailing margin so both halves of the
+   split stay the same height. */
+.callout-text:last-child { margin-bottom: 0; }
 
 /* ============================================
    CONTACT / MAP
@@ -857,6 +860,39 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
+/* Upcoming events list — dated rows with a gold rule, navy titles */
+.events-list {
+  list-style: none;
+  margin: 24px 0 0;
+  border-top: 1px solid var(--warm-200);
+}
+.events-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 14px;
+  padding: 14px 0 14px 16px;
+  border-bottom: 1px solid var(--warm-200);
+  border-left: 3px solid var(--gold-400);
+}
+.event-date {
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--gold-500);
+  flex-shrink: 0;
+}
+.event-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-weight: 500;
+  color: var(--blue-500);
+  line-height: 1.3;
+}
+.event-venue {
+  font-family: var(--font-body);
+  font-size: 0.85rem; font-weight: 400;
+  color: var(--warm-500);
+}
+
 /* Parish Life gallery — responsive grid of square photo slots */
 .gallery-grid {
   display: grid;
@@ -885,6 +921,8 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .events-feature { grid-template-columns: 1fr; gap: 24px; }
   .events-feature-text h2 { font-size: 1.8rem; }
+  .events-list-item { padding-left: 14px; }
+  .event-name { font-size: 1.05rem; }
 }
 
 /* Scroll reveal — fade-and-rise via IntersectionObserver */
@@ -1420,10 +1458,6 @@ body.english [data-i18n="en"] { display: inline; }
           <span data-i18n="pt">Sábados das 3:30 às 4:30 PM com Pe. Leonel. Todos os sábados entre este horário.</span>
           <span data-i18n="en">Saturdays from 3:30 to 4:30 PM with Fr. Leonel. Every Saturday during this time.</span>
         </p>
-        <a href="#" class="btn btn-outline-white">
-          <span data-i18n="pt">Saiba Mais</span>
-          <span data-i18n="en">Learn More</span>
-        </a>
       </div>
       <div class="callout-box callout-gold">
         <div class="callout-icon">💛</div>
@@ -1435,7 +1469,7 @@ body.english [data-i18n="en"] { display: inline; }
           <span data-i18n="pt">Apoie nossa paróquia com sua contribuição. Dízimo online seguro e conveniente.</span>
           <span data-i18n="en">Support our parish with your contribution. Secure and convenient online tithing.</span>
         </p>
-        <a href="#" class="btn btn-outline-white">
+        <a href="https://osvhub.com/our-lady-of-aparecida-parish/giving/funds" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
           <span data-i18n="pt">Contribuir Agora</span>
           <span data-i18n="en">Give Now</span>
         </a>
@@ -1478,6 +1512,39 @@ body.english [data-i18n="en"] { display: inline; }
           <span data-i18n="pt">Confira nossos próximos eventos e venha participar.</span>
           <span data-i18n="en">Check back here for upcoming events and come be part of the celebration.</span>
         </p>
+        <ul class="events-list">
+          <li class="events-list-item">
+            <span class="event-date">
+              <span data-i18n="pt">5–6 de setembro de 2026</span>
+              <span data-i18n="en">September 5–6, 2026</span>
+            </span>
+            <span class="event-name">
+              <span data-i18n="pt">Retiro EAC Adolescentes</span>
+              <span data-i18n="en">EAC Adolescentes Retreat</span>
+            </span>
+          </li>
+          <li class="events-list-item">
+            <span class="event-date">
+              <span data-i18n="pt">3–4 de outubro de 2026</span>
+              <span data-i18n="en">October 3–4, 2026</span>
+            </span>
+            <span class="event-name">
+              <span data-i18n="pt">Retiro Nossa Senhora Aparecida</span>
+              <span data-i18n="en">Our Lady of Aparecida Retreat</span>
+            </span>
+          </li>
+          <li class="events-list-item">
+            <span class="event-date">
+              <span data-i18n="pt">9 de outubro de 2026</span>
+              <span data-i18n="en">October 9, 2026</span>
+            </span>
+            <span class="event-name">
+              <span data-i18n="pt">3º Gala Anual</span>
+              <span data-i18n="en">3rd Annual Gala</span>
+              <span class="event-venue">· The Amber Room Colonnade</span>
+            </span>
+          </li>
+        </ul>
         <div class="hero-actions" style="margin-top: 24px;">
           <a href="#contact" class="btn btn-gold">
             <span data-i18n="pt">Fale Conosco</span>
