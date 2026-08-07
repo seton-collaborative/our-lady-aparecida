@@ -318,6 +318,9 @@ img { max-width: 100%; display: block; }
 }
 .ministry-body strong { color: var(--warm-900); font-weight: 600; }
 .ministry-body p + p { margin-top: 10px; }
+/* Cards with no action buttons: drop the body's trailing margin so the card
+   bottom matches its padding instead of leaving a gap. */
+.ministry-body:last-child { margin-bottom: 0; }
 
 .ministry-actions {
   display: flex;
@@ -541,16 +544,6 @@ body.english [data-i18n-block="en"] { display: block; }
           <p data-i18n-block="pt">Temos inscrições abertas para aulas de Catequese todas as quartas-feiras às 8h00 e às 20h00. Por favor, traga sua identificação e Certificado de Batismo (caso tenha um). Se você não tiver o certificado, podemos ajudá-lo a obtê-lo.</p>
           <p data-i18n-block="en">We have open registration for Catechesis classes every Wednesday at 8:00am and 8:00pm. Please provide your identification and Baptism Certificate (if you have one). If you do not have the certificate, we can help you obtain it.</p>
         </div>
-        <div class="ministry-actions">
-          <a href="#" class="btn btn-gold">
-            <span data-i18n="pt">Formação na Fé</span>
-            <span data-i18n="en">Faith Formation</span>
-          </a>
-          <a href="#" class="btn btn-outline-gold">
-            <span data-i18n="pt">Inscrição</span>
-            <span data-i18n="en">Registration</span>
-          </a>
-        </div>
       </article>
 
       <!-- 2. Family Ministry -->
@@ -573,16 +566,6 @@ body.english [data-i18n-block="en"] { display: block; }
         <div class="ministry-body" style="margin-top: 4px;">
           <p data-i18n-block="pt">O objetivo da Pastoral Familiar é apoiar a família para que ela possa existir e viver com dignidade, estabelecer relacionamentos e formar novas gerações segundo o plano de Deus. Abrange todas as famílias, independentemente de sua situação, com o propósito de promover a inclusão e recuperar os valores e a dignidade de cada pessoa.</p>
           <p data-i18n-block="en">Family Ministry's objective is to support the family so that it can exist and live with dignity, establish relationships and train new generations according to God's plan. It covers all families, regardless of their situation, with the purpose of promoting inclusion and recovering the values and dignity of each person.</p>
-        </div>
-        <div class="ministry-actions">
-          <a href="#" class="btn btn-gold">
-            <span data-i18n="pt">Missão e Objetivos</span>
-            <span data-i18n="en">Mission &amp; Objectives</span>
-          </a>
-          <a href="#" class="btn btn-outline-gold">
-            <span data-i18n="pt">Histórico</span>
-            <span data-i18n="en">History</span>
-          </a>
         </div>
       </article>
 
@@ -912,12 +895,6 @@ body.english [data-i18n-block="en"] { display: block; }
         <div class="ministry-body">
           <p data-i18n-block="pt">As reuniões de AA acontecem todos os domingos pela manhã às 7h30 no endereço 42 Vail Road, Bethel. O grupo conduz as reuniões principalmente em inglês, mas todos são bem-vindos. Tradução em espanhol está disponível pela secretária eletrônica.</p>
           <p data-i18n-block="en">AA meetings meet every Sunday morning at 7:30am at 42 Vail Road Bethel. The group speaks primarily English but all are welcome to join and participate. Spanish language translation is available in the answering machine service.</p>
-        </div>
-        <div class="ministry-actions">
-          <a href="#" class="btn btn-gold">
-            <span data-i18n="pt">Horários</span>
-            <span data-i18n="en">Schedule</span>
-          </a>
         </div>
       </article>
 
