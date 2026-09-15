@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatórios Financeiros | Financial Reports - Our Lady of Aparecida, Bethel CT</title>
+<meta name="description" content="Relatórios financeiros da Paróquia Nossa Senhora Aparecida, conforme as diretrizes da Diocese de Bridgeport. Financial reports of Our Lady of Aparecida Parish, per the guidelines of the Diocese of Bridgeport.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --gold-50: #FDF8EF;
+  --gold-100: #F9EDCF;
+  --gold-200: #F0D48E;
+  --gold-300: #E4B94E;
+  --gold-400: #D4A024;
+  --gold-500: #B8891E;
+  --gold-600: #9A7019;
+  --gold-700: #7A5814;
+  --gold-800: #5C420F;
+
+  --blue-50: #EEF2F7;
+  --blue-100: #D5DEEB;
+  --blue-200: #A8BAD4;
+  --blue-300: #7B96BD;
+  --blue-400: #4E72A6;
+  --blue-500: #1E3A5F;
+  --blue-600: #1A3253;
+  --blue-700: #152947;
+  --blue-800: #0F1F36;
+  --blue-900: #0A1524;
+
+  --warm-50: #FAFAF8;
+  --warm-100: #F5F4F0;
+  --warm-200: #E8E6E1;
+  --warm-300: #D4D1CA;
+  --warm-400: #B5B1A8;
+  --warm-500: #8E897E;
+  --warm-600: #6B665C;
+  --warm-700: #4A4640;
+  --warm-800: #2D2B27;
+  --warm-900: #1A1917;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--warm-900);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+.top-bar {
+  background: var(--blue-500);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: var(--gold-200);
+  transition: color 150ms;
+}
+.top-bar a:hover { color: var(--gold-300); }
+.top-bar-social { display: flex; gap: 16px; }
+
+/* ============================================
+   MAIN NAV
+   ============================================ */
+.main-nav {
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--warm-900);
+  line-height: 1.2;
+}
+.nav-brand-sub {
+  font-size: 0.72rem;
+  color: var(--warm-500);
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--warm-700);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 150ms;
+}
+.nav-link:hover { color: var(--gold-500); }
+.nav-link.active { color: var(--gold-600); }
+.nav-link::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold-500);
+  transition: width 250ms var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+/* Language Toggle */
+.lang-toggle {
+  display: inline-flex;
+  background: var(--warm-100);
+  border-radius: 100px;
+  padding: 3px; gap: 2px;
+}
+.lang-btn {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms;
+  background: transparent;
+  color: var(--warm-500);
+}
+.lang-btn.active {
+  background: var(--blue-500);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.lang-btn:not(.active):hover { color: var(--warm-800); background: var(--warm-200); }
+
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px;
+  flex-direction: column; justify-content: center; gap: 5px; align-items: center;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--warm-700);
+  transition: all 250ms;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 250ms var(--ease-out);
+}
+.btn-gold { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
+.btn-gold:hover { background: var(--gold-600); border-color: var(--gold-600); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,137,30,0.3); }
+.btn-outline-gold { background: transparent; color: var(--gold-500); border: 2px solid var(--gold-500); }
+.btn-outline-gold:hover { background: var(--gold-500); color: #fff; }
+.btn-nav { padding: 8px 18px; font-size: 0.75rem; }
+
+/* ============================================
+   CONTAINERS & SECTIONS
+   ============================================ */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 72px 0; }
+.section-light { background: #fff; }
+
+/* ============================================
+   PAGE HEADER (smaller than homepage hero)
+   ============================================ */
+.page-header {
+  position: relative;
+  background: var(--blue-800);
+  color: #fff;
+  padding: 80px 0 72px;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,21,36,0.3) 0%, rgba(10,21,36,0.75) 100%),
+    radial-gradient(circle at 20% 30%, rgba(184,137,30,0.15), transparent 50%),
+    linear-gradient(135deg, var(--blue-800), var(--blue-900));
+}
+.page-header .container { position: relative; z-index: 1; }
+.page-header-inner { max-width: 720px; }
+.page-header-title {
+  font-family: var(--font-display);
+  font-size: 2.8rem; font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+.page-header-subtitle {
+  font-size: 1.05rem; line-height: 1.6;
+  opacity: 0.88;
+}
+
+/* ============================================
+   FINANCIAL REPORTS
+   To add a report: add an <li class="report-item"> to a group.
+   To add a fiscal year or quarter: copy a whole .report-group.
+   ============================================ */
+.reports {
+  max-width: 760px;
+}
+.report-group + .report-group { margin-top: 48px; }
+.report-group-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--warm-900);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--warm-200);
+}
+.report-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer { background: var(--warm-900); color: rgba(255,255,255,0.7); }
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 64px 0;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600;
+  color: #fff; margin-bottom: 12px;
+}
+.footer-brand-text {
+  font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;
+}
+.footer-heading {
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--gold-400); margin-bottom: 16px;
+}
+.footer-link {
+  display: block; font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  padding: 3px 0; transition: color 150ms;
+}
+.footer-link:hover { color: var(--gold-300); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+  display: flex; justify-content: space-between;
+  font-size: 0.75rem; color: rgba(255,255,255,0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+  .page-header-title { font-size: 2.3rem; }
+}
+@media (max-width: 768px) {
+  .page-header { padding: 56px 0 48px; }
+  .page-header-title { font-size: 1.9rem; }
+  .section { padding: 48px 0; }
+  .report-group-title { font-size: 1.35rem; }
+  .report-list { align-items: stretch; }
+  .report-list .btn { text-align: center; }
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+@media (max-width: 640px) {
+  .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+  .top-bar-social { display: none; }
+}
+
+/* Language switching — default is Portuguese */
+[data-i18n="en"] { display: none; }
+body.english [data-i18n="pt"] { display: none; }
+body.english [data-i18n="en"] { display: inline; }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     TOP BAR
+     ============================================ -->
+<div class="top-bar">
+  <div class="container">
+    <div>
+      42 Vail Road, Bethel CT 06801 &nbsp;·&nbsp;
+      <a href="tel:2037309071">(203) 730-9071</a> &nbsp;·&nbsp;
+      <a href="mailto:office@ourladyofaparecida.org">office@ourladyofaparecida.org</a>
+    </div>
+    <div class="top-bar-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     MAIN NAV
+     ============================================ -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/crest-pt.jpg" alt="Nossa Senhora Aparecida - Diocese de Bridgeport · Bethel, CT" class="nav-logo" data-i18n="pt">
+      <img src="images/crest-en.jpg" alt="Our Lady of Aparecida - Diocese of Bridgeport · Bethel, CT" class="nav-logo" data-i18n="en">
+      <div>
+        <div class="nav-brand-name">Our Lady of Aparecida</div>
+        <div class="nav-brand-sub">Diocese of Bridgeport · Bethel, CT</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><span data-i18n="pt">Início</span><span data-i18n="en">Home</span></a></li>
+      <li><a href="about.html" class="nav-link"><span data-i18n="pt">Sobre</span><span data-i18n="en">About</span></a></li>
+      <li><a href="gallery.html" class="nav-link"><span data-i18n="pt">Galeria</span><span data-i18n="en">Gallery</span></a></li>
+      <li><a href="ministries.html" class="nav-link"><span data-i18n="pt">Ministérios</span><span data-i18n="en">Ministries</span></a></li>
+      <li><a href="safe-environments.html" class="nav-link"><span data-i18n="pt">Ambientes Seguros</span><span data-i18n="en">Safe Environments</span></a></li>
+      <li><a href="index.html#schedule" class="nav-link"><span data-i18n="pt">Horários</span><span data-i18n="en">Schedule</span></a></li>
+      <li><a href="capital-campaign.html" class="nav-link"><span data-i18n="pt">Campanha</span><span data-i18n="en">Campaign</span></a></li>
+      <li><a href="index.html#contact" class="nav-link"><span data-i18n="pt">Contato</span><span data-i18n="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="giving.html" class="btn btn-gold btn-nav">
+        <span data-i18n="pt">Doar</span>
+        <span data-i18n="en">Give</span>
+      </a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">
+        <span data-i18n="pt">Relatórios Financeiros</span>
+        <span data-i18n="en">Financial Reports</span>
+      </h1>
+      <p class="page-header-subtitle">
+        <span data-i18n="pt">Em conformidade com as diretrizes da Diocese de Bridgeport, a Paróquia disponibiliza publicamente seus relatórios financeiros. Abaixo estão os demonstrativos disponíveis.</span>
+        <span data-i18n="en">In accordance with the guidelines of the Diocese of Bridgeport, the parish makes its financial reports publicly available. The available statements are listed below.</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     REPORTS
+     Newest group first. PDFs live in documents/financials/.
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="reports">
+
+      <section class="report-group">
+        <h2 class="report-group-title">
+          <span data-i18n="pt">Ano Fiscal 2025–2026 · Quarto Trimestre</span>
+          <span data-i18n="en">Fiscal Year 2025–2026 · Fourth Quarter</span>
+        </h2>
+        <ul class="report-list">
+          <li class="report-item">
+            <a href="documents/financials/OLA-Statement-of-Financial-Position-2026-06-30.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+              <span data-i18n="pt">Demonstrativo da Posição Financeira — 30 de junho de 2026</span>
+              <span data-i18n="en">Statement of Financial Position (as of June 30, 2026)</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand-name">Our Lady of Aparecida</div>
+        <p class="footer-brand-text">
+          <span data-i18n="pt">Paróquia Nossa Senhora da Imaculada Conceição Aparecida<br>Uma Comunidade Católica de Fé<br>Diocese de Bridgeport</span>
+          <span data-i18n="en">Our Lady of the Immaculate Conception of Aparecida Parish<br>A Catholic Community of Faith<br>Diocese of Bridgeport</span>
+        </p>
+        <p class="footer-brand-text">
+          42 Vail Road, Bethel, CT 06801<br>
+          (203) 730-9071<br>
+          office@ourladyofaparecida.org
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Paróquia</span>
+          <span data-i18n="en">Parish</span>
+        </h4>
+        <a href="about.html" class="footer-link">
+          <span data-i18n="pt">Sobre Nós</span>
+          <span data-i18n="en">About Us</span>
+        </a>
+        <a href="index.html#schedule" class="footer-link">
+          <span data-i18n="pt">Horário das Missas</span>
+          <span data-i18n="en">Mass Schedule</span>
+        </a>
+        <a href="ministries.html" class="footer-link">
+          <span data-i18n="pt">Ministérios</span>
+          <span data-i18n="en">Ministries</span>
+        </a>
+        <a href="safe-environments.html" class="footer-link">
+          <span data-i18n="pt">Ambientes Seguros</span>
+          <span data-i18n="en">Safe Environments</span>
+        </a>
+        <a href="giving.html" class="footer-link">
+          <span data-i18n="pt">Doar</span>
+          <span data-i18n="en">Give</span>
+        </a>
+        <a href="capital-campaign.html" class="footer-link">
+          <span data-i18n="pt">Campanha</span>
+          <span data-i18n="en">Campaign</span>
+        </a>
+        <a href="financial-reports.html" class="footer-link">
+          <span data-i18n="pt">Relatórios Financeiros</span>
+          <span data-i18n="en">Financial Reports</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Ministérios</span>
+          <span data-i18n="en">Ministries</span>
+        </h4>
+        <a href="ministries.html" class="footer-link">Pastoral Familiar</a>
+        <a href="ministries.html" class="footer-link">Educação Religiosa</a>
+        <a href="ministries.html" class="footer-link">Grupo de Jovens Sem Fronteiras</a>
+        <a href="ministries.html" class="footer-link">GOVES</a>
+        <a href="ministries.html" class="footer-link">
+          <span data-i18n="pt">Ver Todos →</span>
+          <span data-i18n="en">View All →</span>
+        </a>
+      </div>
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">Sacramentos</span>
+          <span data-i18n="en">Sacraments</span>
+        </h4>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Batismo</span>
+          <span data-i18n="en">Baptism</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Primeira Comunhão</span>
+          <span data-i18n="en">First Communion</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Crisma</span>
+          <span data-i18n="en">Confirmation</span>
+        </a>
+        <a href="#" class="footer-link">
+          <span data-i18n="pt">Matrimônio</span>
+          <span data-i18n="en">Marriage</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Our Lady of Aparecida Parish · Diocese of Bridgeport</span>
+      <span>Built by SetonDigital</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     LANGUAGE TOGGLE SCRIPT
+     ============================================ -->
+<script>
+(function() {
+  var toggle = document.getElementById('langToggle');
+
+  toggle.addEventListener('click', function(e) {
+    var btn = e.target;
+    if (!btn.classList.contains('lang-btn')) return;
+    var lang = btn.getAttribute('data-lang');
+
+    var buttons = toggle.querySelectorAll('.lang-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    btn.classList.add('active');
+
+    if (lang === 'en') {
+      document.body.classList.add('english');
+    } else {
+      document.body.classList.remove('english');
+    }
+
+    try { localStorage.setItem('ola_lang', lang); } catch(e) {}
+  });
+
+  // Restore saved language preference
+  try {
+    var saved = localStorage.getItem('ola_lang');
+    if (saved === 'en') {
+      document.body.classList.add('english');
+      toggle.querySelector('[data-lang="pt"]').classList.remove('active');
+      toggle.querySelector('[data-lang="en"]').classList.add('active');
+    }
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
