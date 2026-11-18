@@ -1,0 +1,46 @@
+<!-- ============================================
+     LANGUAGE TOGGLE
+     ============================================ -->
+<script>
+(function() {
+  var toggle = document.getElementById('langToggle');
+  toggle.addEventListener('click', function(e) {
+    var btn = e.target;
+    if (!btn.classList.contains('lang-btn')) return;
+    var lang = btn.getAttribute('data-lang');
+    var buttons = toggle.querySelectorAll('.lang-btn');
+    for (var i = 0; i < buttons.length; i++) buttons[i].classList.remove('active');
+    btn.classList.add('active');
+    if (lang === 'en') document.body.classList.add('english');
+    else document.body.classList.remove('english');
+    try { localStorage.setItem('ola_lang', lang); } catch(e) {}
+  });
+  try {
+    var saved = localStorage.getItem('ola_lang');
+    if (saved === 'en') {
+      document.body.classList.add('english');
+      toggle.querySelector('[data-lang="pt"]').classList.remove('active');
+      toggle.querySelector('[data-lang="en"]').classList.add('active');
+    }
+  } catch(e) {}
+})();
+</script>
+
+<!-- ============================================
+     EXPIRING ITEMS
+     Hides anything marked data-hide-after once that date has passed
+     (Eastern time), until the next build removes it for good.
+     ============================================ -->
+<script>
+(function() {
+  var items = document.querySelectorAll('[data-hide-after]');
+  if (!items.length) return;
+  var today;
+  try {
+    today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  } catch(e) { return; }
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].getAttribute('data-hide-after') < today) items[i].style.display = 'none';
+  }
+})();
+</script>

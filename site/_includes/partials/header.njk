@@ -1,0 +1,49 @@
+<!-- ============================================
+     MAIN NAV
+     ============================================ -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="{{ '#' if home else 'index.html' }}" class="nav-brand">
+      <img src="{{ theme.logo.pt }}" alt="{{ theme.logo.alt.pt }}" class="nav-logo" data-i18n="pt">
+      <img src="{{ theme.logo.en }}" alt="{{ theme.logo.alt.en }}" class="nav-logo" data-i18n="en">
+      <div>
+{%- if home %}
+        <div class="nav-brand-name">
+          <span data-i18n="pt">{{ menu.brand.name.pt }}</span>
+          <span data-i18n="en">{{ menu.brand.name.en }}</span>
+        </div>
+{%- else %}
+        <div class="nav-brand-name">{{ menu.brand.name.en }}</div>
+{%- endif %}
+        <div class="nav-brand-sub">{{ menu.brand.sub }}</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+{%- for item in menu.nav %}
+      <li><a href="{{ item.home_href if (home and item.home_href) else item.href }}" class="nav-link{{ ' active' if item.key == nav_active }}"><span data-i18n="pt">{{ item.pt }}</span><span data-i18n="en">{{ item.en }}</span></a></li>
+{%- endfor %}
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+{%- if give_direct %}
+      <a href="{{ menu.give.direct_href }}" target="_blank" rel="noopener" class="btn btn-gold btn-nav">
+{%- else %}
+      <a href="{{ menu.give.href }}" class="btn btn-gold btn-nav">
+{%- endif %}
+        <span data-i18n="pt">{{ menu.give.pt }}</span>
+        <span data-i18n="en">{{ menu.give.en }}</span>
+      </a>
+{%- if not home %}
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+{%- endif %}
+    </div>
+{%- if home %}
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+{%- endif %}
+  </div>
+</nav>

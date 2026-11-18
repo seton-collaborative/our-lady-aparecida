@@ -1,0 +1,97 @@
+# Written text on giving.html, grouped by section of the page, top to bottom.
+# Each pt/en pair is one piece of text in Portuguese and English. A plain value shows in both languages.
+# Text may contain simple HTML such as <br>, <em> and <strong>.
+meta:
+  title: Doação Online | Online Giving - Our Lady of Aparecida, Bethel CT
+  description: Uma forma segura e conveniente de apoiar nossa paróquia. A safe and convenient way to support Our Lady of the Immaculate Conception of Aparecida Parish.
+page_header:
+  support_our_parish_s_mission:
+    pt: Apoie a Missão da Nossa Paróquia
+    en: Support Our Parish's Mission
+  online_giving:
+    pt: Doação Online
+    en: Online Giving
+  a_safe_and_convenient_way:
+    pt: Uma forma segura e conveniente de apoiar a Paróquia Nossa Senhora da Imaculada Conceição Aparecida.
+    en: A safe and convenient way to support Our Lady of the Immaculate Conception of Aparecida Parish.
+primary_cta:
+  make_a_donation_online:
+    pt: Fazer uma Doação Online ↗
+    en: Make a Donation Online ↗
+giving_content:
+  n24_7_accessibility:
+    pt: Acessível 24/7
+    en: 24/7 Accessibility
+  your_online_donation_can_be:
+    pt: Sua doação online pode ser feita a qualquer momento conveniente para você - basta ter acesso à internet. Você pode configurar doações únicas ou recorrentes. As doações online são creditadas em seu informe fiscal no final do ano (exceto quando feitas anonimamente). Você pode cancelar ou alterar os detalhes da sua conta e os valores das doações a qualquer momento.
+    en: Your online donation can be made any time that is convenient for you - all you need is internet access. You can set up one-time or recurring gifts. Online donations are credited to your tax statement at the end of the year (except when made anonymously). You can cancel or change your account details and donation amounts at any time.
+  benefits_of_donating_online:
+    pt: Vantagens de Doar Online
+    en: Benefits of Donating Online
+  no_need_for_checks_or:
+    pt: Sem necessidade de cheques ou dinheiro
+    en: No need for checks or cash
+  n24_7_web_based_access:
+    pt: Acesso 24/7 pela web
+    en: 24/7 web-based access
+  easily_schedule_recurring_gifts:
+    pt: Programe doações recorrentes facilmente
+    en: Easily schedule recurring gifts
+  your_donation_amount_can_be:
+    pt: O valor da sua doação pode ser ajustado conforme necessário
+    en: Your donation amount can be adjusted as needed
+  donating_with_a_credit_card:
+    pt: Doar com cartão de crédito permite acumular benefícios, como milhas aéreas ou cashback, quando seu cartão oferecer
+    en: Donating with a credit card allows you to enjoy rewards, such as airline miles or cash bonuses, if your card offers them
+  you_support_your_parish_every:
+    pt: Você apoia a sua paróquia todos os meses - mesmo quando estiver longe
+    en: You support your parish every month - even when you are away
+  how_to_begin:
+    pt: Como Começar
+    en: How To Begin
+  if_you_need_to_set:
+    pt: 'Se você precisar configurar uma conta, siga as instruções abaixo:'
+    en: 'If you need to set up an account, follow the instructions below:'
+  create_a_new_account:
+    pt: Crie uma nova conta
+    en: Create a new account
+  click_on_the_make_a:
+    pt: Clique no botão <strong>FAZER UMA DOAÇÃO ONLINE</strong> acima e toque em "Create Account" no canto superior direito. Na tela seguinte, clique em "Create New Account."
+    en: Click on the <strong>MAKE A DONATION ONLINE</strong> button above and tap "Create Account" in the upper right corner. On the next screen, click "Create New Account."
+  enter_your_account_information:
+    pt: Insira as informações da sua conta
+    en: Enter your account information
+  login_information_the_user_id:
+    pt: <strong>Informações de login:</strong> O ID de usuário deve ter de 6 a 12 caracteres e conter letras e números (como smith78). A senha escolhida deve ter entre 8 e 16 caracteres e conter letras, números e pelo menos um símbolo, como !, @, &amp;, *. Não preencha o campo Registration Code, pois ele serve apenas para auxiliar com a conta.
+    en: <strong>Login information:</strong> The user ID must be 6 to 12 characters long and contain letters and numbers (such as smith78). The password chosen must be between 8 and 16 characters and contain letters, numbers and at least one symbol such as !, @, &amp;, *. Do not enter information for the Registration Code, as this is only to help with the account.
+  personal_and_address_information_the:
+    pt: <strong>Informações pessoais e de endereço:</strong> O endereço de e-mail deve ser único. Você não pode usar o mesmo endereço de e-mail para dois IDs de usuário diferentes. Preencha todos os campos marcados com asterisco vermelho (*).
+    en: <strong>Personal and address information:</strong> The email address must be unique. You cannot use the same email address for two different user IDs. Be sure to enter information in all boxes marked with a red asterisk (*).
+  security_code_fill_in_the:
+    pt: <strong>Código de segurança:</strong> Preencha o código mostrado na parte inferior da tela antes de enviar.
+    en: <strong>Security code:</strong> Fill in the code created in the bottom box of the screen before you submit.
+  click_the_submit_button_an:
+    pt: <strong>Clique no botão "Submit":</strong> Um e-mail será enviado para confirmar sua nova conta e ID de usuário.
+    en: <strong>Click the "Submit" button:</strong> An email will be sent to you to confirm your new account and user ID.
+  confirm_your_new_account:
+    pt: Confirme sua nova conta
+    en: Confirm your new account
+  open_the_email_that_confirms:
+    pt: Abra o e-mail que confirma sua conta e clique em qualquer link no topo do e-mail. Isso confirma sua conta para que você tenha acesso ao login. Se o link não funcionar, copie e cole no navegador. Após clicar nesse link, você retornará à página de login do Online Giving.
+    en: Open the email that confirms your account and click on any link at the top of the email. This confirms your account so you have access to the login. If the link doesn't work, copy and paste it into your browser's address bar. After clicking on this link, you will be taken back to the Parish Online Giving login page.
+  log_in_to_your_account:
+    pt: Faça login na sua conta
+    en: Log in to your account
+  click_on_sign_in_in:
+    pt: Clique em "Sign In" no canto superior direito. Na tela seguinte, insira seu ID de usuário e senha para continuar a configurar sua conta. Insira as informações da conta bancária ou cartão de crédito que deseja usar para suas doações. Agora você pode configurar doações para coletas dominicais e/ou outros fundos listados no site.
+    en: Click on "Sign In" in the upper right corner. On the next screen, enter your user ID and password to continue setting up your account. Enter the bank account or credit card information you want to use for your donations. Now you can set up gifts for Sunday collections and/or other funds listed on the site.
+final_cta:
+  ready_to_support_our_parish:
+    pt: Pronto para apoiar a missão da nossa paróquia?
+    en: Ready to support our parish's mission?
+  make_a_donation_online:
+    pt: Fazer uma Doação Online ↗
+    en: Make a Donation Online ↗
+  financial_reports:
+    pt: Relatórios Financeiros →
+    en: Financial Reports →

@@ -1,0 +1,97 @@
+# Header menu and footer links (Admin level).
+# href is the link on every page except the homepage; home_href, where given,
+# is the link on the homepage (for sections of the homepage itself).
+nav:
+  - key: home
+    pt: Início
+    en: Home
+    href: index.html
+    home_href: "#"
+  - key: about
+    pt: Sobre
+    en: About
+    href: about.html
+  - key: gallery
+    pt: Galeria
+    en: Gallery
+    href: gallery.html
+  - key: ministries
+    pt: Ministérios
+    en: Ministries
+    href: ministries.html
+    home_href: "#ministries"
+  - key: safe-environments
+    pt: Ambientes Seguros
+    en: Safe Environments
+    href: safe-environments.html
+  - key: schedule
+    pt: Horários
+    en: Schedule
+    href: index.html#schedule
+    home_href: "#schedule"
+  - key: campaign
+    pt: Campanha
+    en: Campaign
+    href: capital-campaign.html
+  - key: contact
+    pt: Contato
+    en: Contact
+    href: index.html#contact
+    home_href: "#contact"
+
+# The gold Give button. On the Giving and Capital Campaign pages it goes straight
+# to the online giving site; everywhere else it opens the Giving page.
+give:
+  pt: Doar
+  en: Give
+  href: giving.html
+  direct_href: https://osvhub.com/our-lady-of-aparecida-parish/giving/funds
+
+brand:
+  name:
+    pt: Nossa Senhora Aparecida
+    en: Our Lady of Aparecida
+  sub: Diocese of Bridgeport · Bethel, CT
+
+social:
+  - label: Facebook
+    href: "#"
+  - label: Instagram
+    href: "#"
+
+footer:
+  brand_name: Our Lady of Aparecida
+  brand_text:
+    pt: Paróquia Nossa Senhora da Imaculada Conceição Aparecida<br>Uma Comunidade Católica de Fé<br>Diocese de Bridgeport
+    en: Our Lady of the Immaculate Conception of Aparecida Parish<br>A Catholic Community of Faith<br>Diocese of Bridgeport
+  columns:
+    - heading:
+        pt: Paróquia
+        en: Parish
+      links:
+        - { pt: Sobre Nós, en: About Us, href: about.html }
+        - { pt: Horário das Missas, en: Mass Schedule, href: index.html#schedule }
+        - { pt: Ministérios, en: Ministries, href: ministries.html }
+        - { pt: Ambientes Seguros, en: Safe Environments, href: safe-environments.html }
+        - { pt: Doar, en: Give, href: giving.html }
+        - { pt: Campanha, en: Campaign, href: capital-campaign.html }
+        - { pt: Relatórios Financeiros, en: Financial Reports, href: financial-reports.html }
+    - heading:
+        pt: Ministérios
+        en: Ministries
+      links:
+        - { text: Pastoral Familiar, href: ministries.html }
+        - { text: Educação Religiosa, href: ministries.html }
+        - { text: Grupo de Jovens Sem Fronteiras, href: ministries.html }
+        - { text: GOVES, href: ministries.html }
+        - { pt: Ver Todos →, en: View All →, href: ministries.html }
+    - heading:
+        pt: Sacramentos
+        en: Sacraments
+      links:
+        - { pt: Batismo, en: Baptism, href: "#" }
+        - { pt: Primeira Comunhão, en: First Communion, href: "#" }
+        - { pt: Crisma, en: Confirmation, href: "#" }
+        - { pt: Matrimônio, en: Marriage, href: "#" }
+  copyright: © 2026 Our Lady of Aparecida Parish · Diocese of Bridgeport
+  credit: Built by SetonDigital

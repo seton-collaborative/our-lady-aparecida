@@ -1,0 +1,37 @@
+{%- from "partials/bilingual.njk" import both -%}
+<div class="ministries-grid">
+{% for m in parish.ministries %}
+      <article class="ministry-card">
+        <div class="ministry-card-head">
+          <div class="ministry-card-head-text">
+            <h2 class="ministry-name">{% for part in m.name %}{{ ' ' if not loop.first }}{{ both(part) }}{% endfor %}</h2>
+{%- if m.coordinators | length %}
+            <div class="ministry-coords">
+{%- for line in m.coordinators %}
+              {% for item in line %}{{ ' <span class="sep">|</span> ' | safe if not loop.first }}{{ both(item) }}{% endfor %}{{ '<br>' | safe if not loop.last }}
+{%- endfor %}
+            </div>
+{%- endif %}
+          </div>
+          <div class="ministry-icon ministry-icon-{{ m.icon_style }}" aria-hidden="true">{{ m.icon }}</div>
+        </div>
+{%- if m.callout %}
+        <p class="ministry-callout">
+          <span data-i18n="pt">{{ m.callout.pt | t }}</span>
+          <span data-i18n="en">{{ m.callout.en | t }}</span>
+        </p>
+{%- endif %}
+        <div class="ministry-body"{% if m.tight_spacing %} style="margin-top: 4px;"{% endif %}>
+          <p data-i18n-block="pt">{{ m.description.pt | t }}</p>
+          <p data-i18n-block="en">{{ m.description.en | t }}</p>
+        </div>
+{%- if m.buttons | length %}
+        <div class="ministry-actions">
+{%- for b in m.buttons %}
+          <a href="{{ b.link }}" class="btn {{ 'btn-gold' if b.style == 'gold' else 'btn-outline-gold' }}"{% if b.new_tab %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ both(b.label) }}</a>
+{%- endfor %}
+        </div>
+{%- endif %}
+      </article>
+{% endfor %}
+    </div>

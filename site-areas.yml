@@ -1,0 +1,16 @@
+# Who may change what. The editing tool reads this file.
+# Editor: parish office staff. Designer: look and photos. Admin: structure and locked pages.
+editor:
+  - content/            # text, events, announcements, pop-ups, Mass schedule, staff, ministries, contact
+  - documents/          # downloadable files (except documents/financials/)
+designer:
+  - design/             # colors, fonts, logo, homepage slides, gallery list
+  - images/
+admin:
+  - site/               # page templates, header, footer, menu
+  - eleventy.config.js
+  - netlify.toml
+  - site-areas.yml
+locked:                 # admin only; diocesan compliance and financial pages
+  - site/locked/
+  - documents/financials/

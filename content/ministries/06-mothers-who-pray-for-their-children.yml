@@ -1,0 +1,35 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Mães que Oram Pelos Filhos
+  en: Mothers who Pray for their Children
+coordinators:
+- - Fabiana Neupmann
+  - pt: Coordenadora
+    en: Coordinator
+- - Estela Barros
+  - pt: Coordenadora
+    en: Coordinator
+icon: 📿
+icon_style: circle
+callout:
+  pt: Toda Quinta-Feira às 20h00
+  en: Every Thursday at 8:00 PM
+description:
+  pt: O grupo opera sob a direção espiritual do Padre Leonel Medeiros e uma equipe principal de apoio. Sua missão é cuidar das mães e atender às suas principais preocupações - ou seja, seus filhos - bem como instruí-las nos ensinamentos fundamentais da doutrina católica.
+  en: The group operates under the spiritual direction of Father Leonel Medeiros and a core support team. Its mission is to care for mothers and address their primary concerns - namely, their children - as well as to instruct them in the fundamental teachings of Catholic doctrine.
+buttons:
+- label:
+    pt: Site Oficial
+    en: Official Website
+  link: '#'
+  style: gold
+  new_tab: false
+- label:
+    pt: Fotos
+    en: Photos
+  link: '#'
+  style: outline
+  new_tab: false

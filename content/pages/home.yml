@@ -1,0 +1,261 @@
+# Written text on index.html, grouped by section of the page, top to bottom.
+# Each pt/en pair is one piece of text in Portuguese and English. A plain value shows in both languages.
+# Text may contain simple HTML such as <br>, <em> and <strong>.
+meta:
+  title: Our Lady of Aparecida Parish | Paróquia Nossa Senhora Aparecida - Bethel, CT
+  description: The first official Brazilian parish in the US named after Brazil's patron saint. A Catholic Community of Faith in the Diocese of Bridgeport.
+hero:
+  diocese_of_bridgeport_bethel_connecticut: Diocese of Bridgeport · Bethel, Connecticut
+  our_lady_of_the_immaculate:
+    pt: Nossa Senhora da Imaculada Conceição Aparecida
+    en: Our Lady of the Immaculate Conception of Aparecida
+  the_first_official_brazilian_parish:
+    pt: A primeira paróquia brasileira oficial nos Estados Unidos em homenagem à padroeira do Brasil. Uma comunidade de fé vibrante com mais de 1.100 famílias registradas.
+    en: The first official Brazilian parish in the United States named after Brazil's patron saint. A vibrant community of faith with over 1,100 registered families.
+  mass_times:
+    pt: Horário das Missas
+    en: Mass Times
+  about_our_parish:
+    pt: Conheça a Paróquia
+    en: About Our Parish
+our_lady_of_aparecida_patroness:
+  our_patroness:
+    pt: Nossa Padroeira
+    en: Our Patroness
+  our_lady_of_aparecida:
+    pt: Nossa Senhora Aparecida
+    en: Our Lady of Aparecida
+  our_lady_of_aparecida_is:
+    pt: Nossa Senhora Aparecida é a Padroeira do Brasil. Em 1717, pescadores retiraram do Rio Paraíba uma pequena imagem escura da Imaculada Conceição, e a devoção a ela só cresceu desde então. Como a primeira paróquia oficialmente brasileira nos Estados Unidos, trazemos essa devoção para Bethel.
+    en: Our Lady of Aparecida is the Patroness of Brazil. In 1717, fishermen on the Paraíba River drew a small dark statue of the Immaculate Conception from the water, and devotion to her has grown ever since. As the first official Brazilian parish in the United States, we carry that devotion home to Bethel.
+quick_info_bar:
+  next_mass:
+    pt: Próxima Missa
+    en: Next Mass
+  saturday_5_00_pm_portuguese:
+    pt: Sábado 5:00 PM (Português)
+    en: Saturday 5:00 PM (Portuguese)
+  confessions:
+    pt: Confissões
+    en: Confessions
+  saturday_3_30_4_30:
+    pt: Sábado 3:30 – 4:30 PM
+    en: Saturday 3:30 – 4:30 PM
+feature_cards:
+  parish_life:
+    pt: Vida Paroquial
+    en: Parish Life
+  grow_in_faith_with_us:
+    pt: Cresça na Fé Conosco
+    en: Grow in Faith With Us
+  sacramento: Sacramento
+  sacraments:
+    pt: Sacramentos
+    en: Sacraments
+  baptism_first_communion_confirmation_marriage:
+    pt: Batismo, Primeira Comunhão, Crisma, Matrimônio e Unção dos Enfermos. Preparação sacramental disponível durante todo o ano.
+    en: Baptism, First Communion, Confirmation, Marriage, and Anointing of the Sick. Sacramental preparation available year-round.
+  learn_more:
+    pt: Saiba mais
+    en: Learn more
+  catequese: Catequese
+  faith_formation:
+    pt: Formação na Fé
+    en: Faith Formation
+  religious_education_for_children_youth:
+    pt: Catequese para crianças, jovens e adultos. Mais de 200 crianças e 40 adultos em RCIA. Crescendo na fé por meio da oração.
+    en: Religious education for children, youth, and adults. Over 200 children and 40 adults in RCIA. Growing in faith through prayer.
+  learn_more_2:
+    pt: Saiba mais
+    en: Learn more
+  ministries:
+    pt: Ministérios
+    en: Ministries
+  n28_active_ministries:
+    pt: 28 Ministérios Ativos
+    en: 28 Active Ministries
+  opportunities_to_serve_participate_and:
+    pt: Oportunidades para servir, participar e crescer na comunidade paroquial. Desde jovens até idosos, há lugar para todos.
+    en: Opportunities to serve, participate, and grow in the parish community. From youth to seniors, there is a place for everyone.
+  view_all:
+    pt: Ver todos
+    en: View all
+about_welcome:
+  about_our_parish:
+    pt: Sobre a Paróquia
+    en: About Our Parish
+  a_community_of_faith_and:
+    pt: Uma Comunidade de Fé e Esperança
+    en: A Community of Faith and Hope
+  for_more_than_27_years:
+    pt: Por mais de 27 anos, Nossa Senhora Aparecida tem sido uma comunidade católica brasileira-americana de fé. Estabelecida como paróquia independente em 2020 após quase duas décadas como quase-paróquia sob São Pedro, a comunidade se expandiu para um novo local em Bethel, permitindo maior alcance pastoral e formação religiosa.
+    en: For more than 27 years, Our Lady of Aparecida has been a Brazilian-American Catholic community of faith. Established as an independent parish in 2020 after nearly two decades as a quasi-parish under St. Peter's, the community has expanded to a new location in Bethel, allowing for greater pastoral outreach and religious formation.
+  under_the_leadership_of_fr:
+    pt: Sob a liderança do Pe. Leonel Medeiros, Vigário Episcopal para Católicos Brasileiros, a paróquia promove o desenvolvimento da fé por meio de 28 ministérios ativos, retiros, preparação sacramental e programas para jovens.
+    en: Under the leadership of Fr. Leonel Medeiros, Episcopal Vicar for Brazilian Catholics, the parish fosters faith development through 28 active ministries, retreats, sacramental preparation, and youth programs.
+  n1_100: 1,100+
+  registered_families:
+    pt: Famílias Registradas
+    en: Registered Families
+  n28: '28'
+  active_ministries:
+    pt: Ministérios Ativos
+    en: Active Ministries
+  n11: '11'
+  weekly_masses:
+    pt: Missas Semanais
+    en: Weekly Masses
+parish_life_gallery:
+  gallery:
+    pt: Galeria
+    en: Gallery
+  parish_life_in_pictures:
+    pt: Vida Paroquial em Imagens
+    en: Parish Life in Pictures
+  moments_from_the_life_of:
+    pt: Momentos da vida da nossa comunidade - sacramentos, eventos, e o encontro dos paroquianos.
+    en: Moments from the life of our community - sacraments, events, and our parishioners gathered together.
+  view_full_gallery:
+    pt: Ver Galeria Completa →
+    en: View Full Gallery →
+mass_schedule:
+  come_pray_with_us:
+    pt: Venha Rezar Conosco
+    en: Come Pray With Us
+  mass_schedule:
+    pt: Horário das Santas Missas
+    en: Mass Schedule
+  weekend_masses:
+    pt: Missas de Fim de Semana
+    en: Weekend Masses
+confession_giving_callout:
+  sacrament_of_reconciliation:
+    pt: Sacramento da Reconciliação
+    en: Sacrament of Reconciliation
+  saturdays_from_3_30_to:
+    pt: Sábados das 3:30 às 4:30 PM com Pe. Leonel. Todos os sábados entre este horário.
+    en: Saturdays from 3:30 to 4:30 PM with Fr. Leonel. Every Saturday during this time.
+  online_giving:
+    pt: Ofertório e Dízimo
+    en: Online Giving
+  support_our_parish_with_your:
+    pt: Apoie nossa paróquia com sua contribuição. Dízimo online seguro e conveniente.
+    en: Support our parish with your contribution. Secure and convenient online tithing.
+  give_now:
+    pt: Contribuir Agora
+    en: Give Now
+events:
+  events:
+    pt: Eventos
+    en: Events
+  upcoming_events:
+    pt: Próximos Eventos
+    en: Upcoming Events
+  a_community_in_celebration:
+    pt: Uma Comunidade em Celebração
+    en: A Community in Celebration
+  throughout_the_year_we_celebrate:
+    pt: Ao longo do ano celebramos a vida em comunidade - retiros de família, conferências, festas litúrgicas e encontros pastorais. Cada evento é um convite para crescer juntos na fé.
+    en: Throughout the year we celebrate life as a community - family retreats, conferences, liturgical feasts, and pastoral gatherings. Each event is an invitation to grow together in faith.
+  check_back_here_for_upcoming:
+    pt: Confira nossos próximos eventos e venha participar.
+    en: Check back here for upcoming events and come be part of the celebration.
+  contact_us:
+    pt: Fale Conosco
+    en: Contact Us
+ministries_preview:
+  ministries_movements:
+    pt: Pastorais & Movimentos
+    en: Ministries & Movements
+  our_ministries:
+    pt: Nossos Ministérios
+    en: Our Ministries
+  find_your_place_in_the:
+    pt: Encontre o seu lugar na comunidade. Com 28 ministérios ativos, há oportunidades para todos.
+    en: Find your place in the community. With 28 active ministries, there are opportunities for everyone.
+  religious_education:
+    pt: Educação Religiosa
+    en: Religious Education
+  sandro_doblins: Sandro Doblins
+  family_ministry:
+    pt: Pastoral Familiar
+    en: Family Ministry
+  luciana_gilberto_de_oliveira: Luciana & Gilberto De Oliveira
+  goves_grupo_de_oracao: GOVES - Grupo de Oração
+  jamir_costa: Jamir Costa
+  young_adults_youth_without_borders:
+    pt: Grupo de Jovens Sem Fronteiras
+    en: Young Adults (Youth Without Borders)
+  tamnata_kassia_leticia_tatiana: Tamnata, Kassia, Leticia, Tatiana
+  men_s_rosary_group:
+    pt: Terço dos Homens
+    en: Men's Rosary Group
+  acacio_oliveira: Acacio Oliveira
+  theater_and_music:
+    pt: Teatro e Música
+    en: Theater and Music
+  washington_arpini_priscilla_gomes: Washington Arpini & Priscilla Gomes
+  mothers_who_pray_for_their:
+    pt: Mães que Oram Pelos Filhos
+    en: Mothers who Pray for their Children
+  fabiana_neupman_estela_barros: Fabiana Neupman & Estela Barros
+  ministers_of_the_word:
+    pt: Ministros da Palavra
+    en: Ministers of the Word
+  neti_dasilva_marcia_pereira: Neti DaSilva, Marcia Pereira
+  events_commission:
+    pt: Grupo de Eventos
+    en: Events Commission
+  junia_ribeiro_soraia_meirelles: Junia Ribeiro, Soraia Meirelles
+  view_all_ministries:
+    pt: Ver Todos os Ministérios
+    en: View All Ministries
+safe_environments_band:
+  safe_environments:
+    pt: Ambientes Seguros
+    en: Safe Environments
+  protecting_children_vulnerable_adults:
+    pt: Protegendo Crianças e Adultos Vulneráveis
+    en: Protecting Children & Vulnerable Adults
+  our_parish_is_fully_committed:
+    pt: Nossa paróquia está totalmente comprometida com a Carta da USCCB para a Proteção de Crianças e Jovens. Todo o clero, pessoal e voluntários são certificados pelo VIRTUS.
+    en: Our parish is fully committed to the USCCB Charter for the Protection of Children and Young People. All clergy, staff, and volunteers are VIRTUS-certified.
+  to_report_suspected_abuse_call:
+    pt: <strong>Para reportar abuso suspeito:</strong> ligue para <a href="tel:2036503265" class="inline">(203) 650-3265</a> (Erin Neil, Diocese de Bridgeport) ou, em caso de emergência, <strong>ligue 911</strong>.
+    en: <strong>To report suspected abuse:</strong> call <a href="tel:2036503265" class="inline">(203) 650-3265</a> (Erin Neil, Diocese of Bridgeport) or, in an emergency, <strong>call 911</strong>.
+  learn_more:
+    pt: Saiba Mais
+    en: Learn More
+  how_to_report:
+    pt: Como Reportar
+    en: How to Report
+contact_map:
+  get_in_touch:
+    pt: Fale Conosco
+    en: Get In Touch
+  contact_us:
+    pt: Contato
+    en: Contact Us
+  parish_information:
+    pt: Informações da Paróquia
+    en: Parish Information
+  address:
+    pt: Endereço
+    en: Address
+  phone:
+    pt: Telefone
+    en: Phone
+  email: Email
+  pastor:
+    pt: Pároco
+    en: Pastor
+  rev_leonel_s_medeiros: Rev. Leonel S. Medeiros
+  episcopal_vicar_for_brazilian_catholics:
+    pt: Vigário Episcopal para Católicos Brasileiros
+    en: Episcopal Vicar for Brazilian Catholics
+  office_hours:
+    pt: Horário do Escritório
+    en: Office Hours
+  monday_friday_9_00_am:
+    pt: Segunda a Sexta, 9:00 AM – 5:00 PM
+    en: Monday – Friday, 9:00 AM – 5:00 PM

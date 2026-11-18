@@ -1,0 +1,36 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Terço dos Homens
+  en: Men's Rosary
+coordinators:
+- - Acacio Oliveira
+  - pt: Coordenador
+    en: Coordinator
+icon: 🛡
+icon_style: circle
+callout:
+  pt: Toda Segunda-Feira às 20h00
+  en: Every Monday at 8:00 PM
+description:
+  pt: A missão do Terço dos Homens é resgatar para o coração da Igreja de Cristo homens de todas as idades, pois a presença masculina na Igreja é essencial para a formação da família e da sociedade cristã. O Terço dos Homens é um exemplo de fé e devoção.
+  en: The mission of the Men's Rosary is to rescue for the heart of the Church of Christ men of all ages since the male presence in the Church is essential for the formation of the family and the Christian society. The Men's Rosary is an example of faith and devotion.
+buttons:
+- label:
+    pt: Vídeos no YouTube
+    en: YouTube Videos
+  link: '#'
+  style: gold
+  new_tab: false
+- label:
+    pt: Fotos
+    en: Photos
+  link: '#'
+  style: outline
+  new_tab: false
+- label: Instagram
+  link: https://www.instagram.com/tercodoshomensbethelct/
+  style: outline
+  new_tab: true

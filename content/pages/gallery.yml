@@ -1,0 +1,43 @@
+# Written text on gallery.html, grouped by section of the page, top to bottom.
+# Each pt/en pair is one piece of text in Portuguese and English. A plain value shows in both languages.
+# Text may contain simple HTML such as <br>, <em> and <strong>.
+meta:
+  title: Galeria | Gallery - Our Lady of Aparecida, Bethel CT
+  description: Momentos da vida da nossa comunidade - sacramentos, eventos e celebrações. Moments from the life of our parish - sacraments, events and celebrations.
+page_header:
+  gallery:
+    pt: Galeria
+    en: Gallery
+  parish_life_in_pictures:
+    pt: Vida Paroquial em Imagens
+    en: Parish Life in Pictures
+  moments_from_the_life_of:
+    pt: Momentos da vida da nossa comunidade - sacramentos, eventos e celebrações ao longo do ano.
+    en: Moments from the life of our community - sacraments, events and celebrations throughout the year.
+gallery:
+  all:
+    pt: Todas
+    en: All
+  mass_liturgy:
+    pt: Missa & Liturgia
+    en: Mass & Liturgy
+  sacraments:
+    pt: Sacramentos
+    en: Sacraments
+  our_lady_devotion:
+    pt: Nossa Senhora & Devoção
+    en: Our Lady & Devotion
+  holy_week_easter:
+    pt: Semana Santa & Páscoa
+    en: Holy Week & Easter
+  parish_life_events:
+    pt: Vida Paroquial & Eventos
+    en: Parish Life & Events
+  music_servers:
+    pt: Música & Coroinhas
+    en: Music & Servers
+  photos:
+    pt: fotos
+    en: photos
+lightbox:
+  text: ×

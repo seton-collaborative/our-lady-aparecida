@@ -1,0 +1,59 @@
+---
+permalink: ministries.html
+styles: ministries
+content_page: ministries
+nav_active: ministries
+---
+{% extends "layouts/base.njk" %}
+{% block main %}
+{% set c = parish.pages['ministries'] %}
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <p class="page-header-eyebrow">
+      <span data-i18n="pt">{{ c.page_header.pastoral_groups_movements.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header.pastoral_groups_movements.en | t }}</span>
+    </p>
+    <h1 class="page-header-title">
+      <span data-i18n="pt">{{ c.page_header.our_ministries.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header.our_ministries.en | t }}</span>
+    </h1>
+    <div class="gold-rule"></div>
+    <p class="page-header-subtitle">
+      <span data-i18n="pt">{{ c.page_header.find_your_place_in_the.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header.find_your_place_in_the.en | t }}</span>
+    </p>
+  </div>
+</header>
+
+<!-- ============================================
+     MINISTRIES GRID
+     ============================================ -->
+<section class="ministries-section">
+  <div class="container">
+    {% include "partials/ministries-grid.njk" %}
+  </div>
+</section>
+
+<!-- ============================================
+     CTA BAND
+     ============================================ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>
+      <span data-i18n="pt">{{ c.cta_band.ready_to_serve.pt | t }}</span>
+      <span data-i18n="en">{{ c.cta_band.ready_to_serve.en | t }}</span>
+    </h2>
+    <p>
+      <span data-i18n="pt">{{ c.cta_band.contact_the_parish_office_to.pt | t }}</span>
+      <span data-i18n="en">{{ c.cta_band.contact_the_parish_office_to.en | t }}</span>
+    </p>
+    <a href="index.html#contact" class="btn btn-outline-white">
+      <span data-i18n="pt">{{ c.cta_band.get_in_touch.pt | t }}</span>
+      <span data-i18n="en">{{ c.cta_band.get_in_touch.en | t }}</span>
+    </a>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,80 @@
+---
+permalink: financial-reports.html
+styles: financial-reports
+title: Relatórios Financeiros | Financial Reports - Our Lady of Aparecida, Bethel CT
+description: Relatórios financeiros da Paróquia Nossa Senhora Aparecida, conforme as diretrizes da Diocese de Bridgeport. Financial reports of Our Lady of Aparecida Parish, per the guidelines of the Diocese of Bridgeport.
+---
+{% extends "layouts/base.njk" %}
+{% block main %}
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">
+        <span data-i18n="pt">Relatórios Financeiros</span>
+        <span data-i18n="en">Financial Reports</span>
+      </h1>
+      <p class="page-header-subtitle">
+        <span data-i18n="pt">Em conformidade com as diretrizes da Diocese de Bridgeport, a Paróquia disponibiliza publicamente seus relatórios financeiros. Abaixo estão os demonstrativos disponíveis.</span>
+        <span data-i18n="en">In accordance with the guidelines of the Diocese of Bridgeport, the parish makes its financial reports publicly available. The available statements are listed below.</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     REPORTS
+     Newest group first. PDFs live in documents/financials/.
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="reports">
+
+      <section class="report-group">
+        <h2 class="report-group-title">
+          <span data-i18n="pt">Domingo da Prestação de Contas · Ano Fiscal 2025–2026</span>
+          <span data-i18n="en">Accountability Sunday · Fiscal Year 2025–2026</span>
+        </h2>
+        <ul class="report-list">
+          <li class="report-item">
+            <a href="documents/financials/OLA-Statement-of-Activities-Accountability-Sunday-FY2025-26.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+              <span data-i18n="pt">Demonstrativo de Atividades — Ano encerrado em 30 de junho de 2026</span>
+              <span data-i18n="en">Statement of Activities (Year Ended June 30, 2026)</span>
+            </a>
+          </li>
+          <li class="report-item">
+            <a href="documents/financials/OLA-Statement-of-Financial-Position-Accountability-Sunday-2026-06-30.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+              <span data-i18n="pt">Demonstrativo da Posição Financeira — 30 de junho de 2026</span>
+              <span data-i18n="en">Statement of Financial Position (as of June 30, 2026)</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="report-group">
+        <h2 class="report-group-title">
+          <span data-i18n="pt">Ano Fiscal 2025–2026 · Quarto Trimestre</span>
+          <span data-i18n="en">Fiscal Year 2025–2026 · Fourth Quarter</span>
+        </h2>
+        <ul class="report-list">
+          <li class="report-item">
+            <a href="documents/financials/OLA-Statement-of-Activities-Q4-FY2025-26.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+              <span data-i18n="pt">Demonstrativo de Atividades — 4º Trimestre AF2025-2026</span>
+              <span data-i18n="en">Statement of Activities (4th Quarter FY2025-26)</span>
+            </a>
+          </li>
+          <li class="report-item">
+            <a href="documents/financials/OLA-Statement-of-Financial-Position-2026-06-30.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+              <span data-i18n="pt">Demonstrativo da Posição Financeira — 30 de junho de 2026</span>
+              <span data-i18n="en">Statement of Financial Position (as of June 30, 2026)</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

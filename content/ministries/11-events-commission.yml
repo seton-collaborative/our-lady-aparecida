@@ -1,0 +1,28 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Comissão de Eventos
+  en: Events Commission
+coordinators:
+- - Junia Ribeiro
+  - pt: Coordenadora
+    en: Coordinator
+- - Soraia Meirelles
+  - pt: Coordenadora
+    en: Coordinator
+icon: 💬
+icon_style: gold
+callout: null
+description:
+  pt: O objetivo desta pastoral é a comunhão e a fraternidade entre os membros de nossa paróquia - integrando a comunidade, promovendo harmonia nas festividades, com o compromisso de todos, fomentando respeito e entusiasmo entre os paroquianos, na construção de uma comunidade que caminha pelos caminhos de Jesus.
+  en: The objective of this pastoral ministry is the communion and fellowship of the members of our parish; integrating the community, promoting harmony in the festivities, with the commitment of all, fostering respect and enthusiasm among the parishioners, in the building of a community that walks in the ways of Jesus.
+tight_spacing: true
+buttons:
+- label:
+    pt: Fotos
+    en: Photos
+  link: '#'
+  style: gold
+  new_tab: false

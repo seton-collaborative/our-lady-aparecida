@@ -1,0 +1,38 @@
+{%- set ms = parish.massSchedule -%}
+<table class="schedule-table">
+        <thead>
+          <tr>
+            <th><span data-i18n="pt">{{ ms.labels.day.pt }}</span><span data-i18n="en">{{ ms.labels.day.en }}</span></th>
+            <th><span data-i18n="pt">{{ ms.labels.time.pt }}</span><span data-i18n="en">{{ ms.labels.time.en }}</span></th>
+            <th><span data-i18n="pt">{{ ms.labels.language.pt }}</span><span data-i18n="en">{{ ms.labels.language.en }}</span></th>
+          </tr>
+        </thead>
+        <tbody>
+{%- for d in ms.weekend %}
+{%- for m in d.masses %}
+          <tr>
+{%- if loop.first %}
+            <td class="schedule-day" rowspan="{{ d.masses | length }}">
+              <span data-i18n="pt">{{ d.day.pt }}</span><span data-i18n="en">{{ d.day.en }}</span>
+            </td>
+{%- endif %}
+            <td class="schedule-time">{{ m.time }}</td>
+            <td><span class="lang-badge lang-badge-{{ m.language }}">{{ ms.language_names[m.language] }}</span></td>
+          </tr>
+{%- endfor %}
+{%- endfor %}
+        </tbody>
+      </table>
+{%- for n in ms.notes %}
+      <div class="schedule-note"{% if n.highlight %} style="border-top: 1px solid var(--warm-200); background: var(--gold-50);"{% endif %}>
+        <span>{{ n.icon }}</span>
+        <span>
+          <strong>
+            <span data-i18n="pt">{{ n.label.pt | t }}</span>
+            <span data-i18n="en">{{ n.label.en | t }}</span>
+          </strong>
+          <span data-i18n="pt"> {{ n.text.pt | t }}</span>
+          <span data-i18n="en"> {{ n.text.en | t }}</span>
+        </span>
+      </div>
+{%- endfor %}

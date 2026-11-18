@@ -1,0 +1,13 @@
+# One event on the homepage Upcoming Events list.
+# show_from / hide_after: dates (YYYY-MM-DD). Empty means no limit.
+# This event is carried over from the old site with no end date on purpose.
+title:
+  pt: Retiro Nossa Senhora Aparecida
+  en: Our Lady of Aparecida Retreat
+date_label:
+  pt: 3–4 de outubro de 2026
+  en: October 3–4, 2026
+start_date: '2026-10-03'
+end_date: '2026-10-04'
+show_from: null
+hide_after: null

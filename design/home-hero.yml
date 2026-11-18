@@ -1,0 +1,16 @@
+# Photos that cross-fade behind the homepage title, in order.
+# extra_class: hero-slide-aparecida keeps the statue photo framed to the right of the headline.
+slides:
+- image: images/photos/photo-002-large.jpg
+  alt: Statue of Nossa Senhora Aparecida, crowned, in a navy and gold mantle with Brazilian emblems
+  extra_class: hero-slide-aparecida
+- image: images/photos/photo-024-large.jpg
+  alt: Parishioners gathered for a parish conference at Our Lady of Aparecida
+- image: images/photos/photo-058-large.jpg
+  alt: A Marian procession at Our Lady of Aparecida, parishioners lining the aisle with a blue veil canopy
+- image: images/photos/photo-076-large.jpg
+  alt: The Easter Vigil at Our Lady of Aparecida, the Paschal candle carried up the aisle
+- image: images/photos/photo-005-large.jpg
+  alt: Two ministers process up the aisle with incense at Mass at Our Lady of Aparecida
+- image: images/photos/photo-052-large.jpg
+  alt: Parishioners gathered for a parish event at Our Lady of Aparecida

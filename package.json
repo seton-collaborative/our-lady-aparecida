@@ -1,0 +1,17 @@
+{
+  "name": "our-lady-aparecida",
+  "private": true,
+  "description": "Our Lady of Aparecida parish website (Bethel, CT), built with Eleventy from content files.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7",
+    "js-yaml": "4.1.0",
+    "nunjucks": "3.3.0"
+  }
+}

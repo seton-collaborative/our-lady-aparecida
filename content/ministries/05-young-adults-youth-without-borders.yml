@@ -1,0 +1,30 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Grupo de Jovens Sem Fronteiras
+  en: Young Adults (Youth Without Borders)
+coordinators:
+- - Tamnata Pereira
+  - Leticia Gomes
+- - Tatiana Pereira
+  - Kassia De Oliveira
+icon: ⭐
+icon_style: circle
+callout:
+  pt: 1ª e 3ª sexta-feira · 20h00 às 21h00
+  en: Every First & Third Friday · 8:00–9:00 PM
+description:
+  pt: Adultos jovens de 18 a 35 anos.
+  en: Young adults ages 18–35.
+tight_spacing: true
+buttons:
+- label: Facebook
+  link: https://www.facebook.com/JovensSemFronteirasBethelCT
+  style: outline
+  new_tab: true
+- label: Instagram
+  link: https://www.instagram.com/jovensemfronteiras/
+  style: outline
+  new_tab: true

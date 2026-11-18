@@ -1,0 +1,989 @@
+# Photos on the Gallery page, in order. photo: the file name in images/photos without -medium/-large.
+# category: one or more filter names separated by spaces (mass-liturgy, sacraments, our-lady-devotion,
+# holy-week-easter, parish-life-events, music-servers). alt: the photo description in each language.
+photos:
+- photo: photo-001
+  category: holy-week-easter
+  alt:
+    pt: Encenação ao ar livre da Última Ceia na Sexta-feira Santa
+    en: Outdoor Last Supper tableau on Good Friday at Our Lady of Aparecida
+- photo: photo-002
+  category: our-lady-devotion
+  alt:
+    pt: Imagem de Nossa Senhora Aparecida com manto e coroa
+    en: Statue of Nossa Senhora Aparecida, crowned, in a navy and gold mantle
+- photo: photo-003
+  category: mass-liturgy
+  alt:
+    pt: Cálice eucarístico, uvas e pão
+    en: Eucharistic chalice with grapes and bread
+- photo: photo-004
+  category: mass-liturgy
+  alt:
+    pt: Cacho de uvas com cálice ao fundo
+    en: Cluster of red grapes with chalice in the background
+- photo: photo-005
+  category: mass-liturgy music-servers
+  alt:
+    pt: Procissão com incenso na Missa
+    en: Mass procession with incense at Our Lady of Aparecida
+- photo: photo-006
+  category: mass-liturgy
+  alt:
+    pt: Procissão das ofertas com galhetas e cálice
+    en: Offertory procession with cruets and chalice
+- photo: photo-007
+  category: mass-liturgy
+  alt:
+    pt: Crucifixo na parede do santuário
+    en: Mounted crucifix on the sanctuary wall
+- photo: photo-008
+  category: sacraments
+  alt:
+    pt: Alianças de casamento ao lado de castiçais e relicário
+    en: Wedding rings beside candlesticks and a reliquary
+- photo: photo-009
+  category: mass-liturgy
+  alt:
+    pt: Pão consagrado em patena com espigas de trigo
+    en: Round loaf on a paten with wheat sheaves
+- photo: photo-010
+  category: mass-liturgy
+  alt:
+    pt: Detalhe de alva, cíngulo e crucifixo peitoral
+    en: Detail of alb, cincture and pectoral crucifix
+- photo: photo-011
+  category: mass-liturgy music-servers
+  alt:
+    pt: Missa com o bispo no altar e assembleia cheia
+    en: Mass with the bishop at the altar and the full congregation
+- photo: photo-012
+  category: music-servers
+  alt:
+    pt: Mão tocando violão no ministério de música
+    en: Hand strumming an acoustic guitar in the music ministry
+- photo: photo-013
+  category: mass-liturgy
+  alt:
+    pt: Píxide dourada com uvas e pão
+    en: Ornate gold ciborium with grapes and bread
+- photo: photo-014
+  category: our-lady-devotion
+  alt:
+    pt: Nicho-altar de Nossa Senhora Aparecida em mosaico dourado
+    en: Aparecida shrine niche in a gilded mosaic frame
+- photo: photo-015
+  category: our-lady-devotion
+  alt:
+    pt: Imagem de Nossa Senhora sobre arranjo em forma de coração
+    en: Statue of Our Lady atop a heart-shaped floral arrangement
+- photo: photo-016
+  category: sacraments
+  alt:
+    pt: Pia batismal de mármore sob medalhão da Sagrada Família
+    en: Marble baptismal font beneath the Holy Family relief medallion
+- photo: photo-017
+  category: our-lady-devotion
+  alt:
+    pt: Medalhão decorativo de Nossa Senhora Aparecida
+    en: Inlaid wall medallion of Our Lady of Aparecida
+- photo: photo-018
+  category: parish-life-events
+  alt:
+    pt: Medalhão da Sagrada Família na parede do santuário
+    en: Holy Family relief medallion on the sanctuary wall
+- photo: photo-019
+  category: mass-liturgy music-servers
+  alt:
+    pt: Bispo no altar com coroinhas durante a consagração
+    en: Bishop with altar servers during the consecration
+- photo: photo-020
+  category: mass-liturgy music-servers
+  alt:
+    pt: Bispo beija o Evangeliário com coroinhas atrás
+    en: Bishop kisses the Book of the Gospels with altar servers behind
+- photo: photo-021
+  category: mass-liturgy
+  alt:
+    pt: Vista do interior do santuário durante a Missa
+    en: Interior of the sanctuary during Mass
+- photo: photo-022
+  category: mass-liturgy music-servers
+  alt:
+    pt: Procissão de entrada com a cruz processional
+    en: Entrance procession with the processional cross
+- photo: photo-023
+  category: mass-liturgy
+  alt:
+    pt: Dois sacerdotes se abraçam após a Missa
+    en: Two priests embrace at the altar after Mass
+- photo: photo-024
+  category: parish-life-events
+  alt:
+    pt: Paroquianos reunidos para uma conferência paroquial
+    en: Parishioners gathered for a parish conference
+- photo: photo-025
+  category: mass-liturgy
+  alt:
+    pt: Procissão das ofertas pelos paroquianos
+    en: Offertory procession by parishioners
+- photo: photo-026
+  category: holy-week-easter
+  alt:
+    pt: Sacerdote acende o Círio Pascal
+    en: Priest lights the Paschal candle
+- photo: photo-027
+  category: our-lady-devotion
+  alt:
+    pt: Capela de Nossa Senhora Aparecida com mosaico dourado
+    en: Shrine niche of Our Lady of Aparecida with gold mosaic
+- photo: photo-028
+  category: mass-liturgy
+  alt:
+    pt: Dois sacerdotes paramentados de branco
+    en: Two priests vested in white
+- photo: photo-029
+  category: sacraments music-servers
+  alt:
+    pt: Procissão de Primeira Comunhão com castiçais e o Lecionário
+    en: First Communion procession with candles and the Lectionary
+- photo: photo-030
+  category: sacraments
+  alt:
+    pt: Bandeja das ofertas da Primeira Comunhão
+    en: First Communion offertory tray with grapes, bread and cruets
+- photo: photo-031
+  category: our-lady-devotion
+  alt:
+    pt: Nicho iluminado de Nossa Senhora Aparecida
+    en: Illuminated Aparecida shrine niche
+- photo: photo-032
+  category: sacraments
+  alt:
+    pt: Mesa preparada para a Crisma - Santos Óleos
+    en: Table prepared for Confirmation - Holy Oils and ritual items
+- photo: photo-033
+  category: sacraments
+  alt:
+    pt: Frascos de Óleo dos Catecúmenos e Santo Crisma
+    en: Bottles of Oil of Catechumens and Sacred Chrism
+- photo: photo-034
+  category: sacraments
+  alt:
+    pt: 'Batismo: o sacerdote derrama água sobre a candidata'
+    en: 'Baptism: the priest pours water over the candidate at the font'
+- photo: photo-035
+  category: sacraments music-servers
+  alt:
+    pt: Crianças trazem as ofertas na Primeira Comunhão
+    en: Children bring the offertory at First Communion
+- photo: photo-036
+  category: music-servers
+  alt:
+    pt: Coroinhas em batinas vermelhas com cestas para o ofertório
+    en: Altar servers in red cassocks holding baskets for the offertory
+- photo: photo-037
+  category: mass-liturgy
+  alt:
+    pt: Sacerdote prepara o cálice no altar
+    en: Priest pours water into the chalice at the altar
+- photo: photo-038
+  category: mass-liturgy
+  alt:
+    pt: Sacerdote lê o Missal Romano
+    en: Priest reads from the Roman Missal
+- photo: photo-039
+  category: mass-liturgy
+  alt:
+    pt: Sacerdote eleva o cálice na consagração
+    en: Priest elevates the chalice at the consecration
+- photo: photo-040
+  category: mass-liturgy music-servers
+  alt:
+    pt: Sacerdote distribui a Sagrada Comunhão com coroinha ao lado
+    en: Priest distributes Holy Communion with a server at his side
+- photo: photo-041
+  category: sacraments
+  alt:
+    pt: Menina recebe a Primeira Comunhão
+    en: A young girl receives her First Holy Communion
+- photo: photo-042
+  category: mass-liturgy
+  alt:
+    pt: Crucifixo com a placa INRI sobre o altar
+    en: Crucifix with INRI plaque above the altar
+- photo: photo-043
+  category: our-lady-devotion
+  alt:
+    pt: Imagem de Nossa Senhora sobre arranjo de rosas para a Coroação
+    en: Statue of Our Lady atop a rose arrangement for the May Crowning
+- photo: photo-044
+  category: our-lady-devotion
+  alt:
+    pt: Nicho de Nossa Senhora Aparecida com arranjo de flores
+    en: Aparecida shrine niche with autumn floral arrangement
+- photo: photo-045
+  category: our-lady-devotion music-servers
+  alt:
+    pt: Coroinha próximo à imagem de Nossa Senhora
+    en: Server near the statue of Our Lady during the May Crowning
+- photo: photo-046
+  category: mass-liturgy music-servers
+  alt:
+    pt: Missa com o ministério de música ao lado do altar
+    en: Mass with the music ministry beside the altar
+- photo: photo-047
+  category: mass-liturgy
+  alt:
+    pt: Mesa com pão, cálice, velas e a cruz processional
+    en: Side table with bread, chalice, candles and the processional cross
+- photo: photo-048
+  category: our-lady-devotion
+  alt:
+    pt: Imagem de Nossa Senhora Aparecida no andor de rosas
+    en: Statue of Our Lady of Aparecida on the rose-covered processional float
+- photo: photo-049
+  category: our-lady-devotion
+  alt:
+    pt: Paroquianos erguem rosas durante a Coroação
+    en: Parishioners raise roses during the May Crowning
+- photo: photo-050
+  category: mass-liturgy
+  alt:
+    pt: Sacerdote eleva o cálice durante a Missa
+    en: Priest elevates the chalice during Mass
+- photo: photo-051
+  category: mass-liturgy music-servers
+  alt:
+    pt: Sacerdote no altar com coroinha marcando o Missal
+    en: Priest at the altar with a server marking the Missal
+- photo: photo-052
+  category: parish-life-events
+  alt:
+    pt: Assembleia reunida para um evento paroquial
+    en: Assembly gathered for a parish event
+- photo: photo-053
+  category: our-lady-devotion music-servers
+  alt:
+    pt: Imagem de Nossa Senhora com paroquianos na celebração
+    en: Statue of Our Lady with parishioners at her celebration
+- photo: photo-054
+  category: mass-liturgy
+  alt:
+    pt: Cálice e píxide sobre o altar
+    en: Chalice and ciborium on the altar
+- photo: photo-055
+  category: parish-life-events
+  alt:
+    pt: II Conferência para Mulheres - assembleia
+    en: II Women's Conference - full hall
+- photo: photo-056
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência para Mulheres
+    en: Parishioners at the Women's Conference
+- photo: photo-057
+  category: parish-life-events
+  alt:
+    pt: Paroquianas à mesa na Conferência para Mulheres
+    en: Parishioners around the table at the Women's Conference
+- photo: photo-058
+  category: our-lady-devotion
+  alt:
+    pt: Procissão Mariana com véu azul na Coroação
+    en: Marian procession with the blue veil during the May Crowning
+- photo: photo-059
+  category: mass-liturgy
+  alt:
+    pt: Missa quaresmal - sacerdote no altar com paramentos roxos
+    en: Lenten Mass - priest at the altar with purple drapery
+- photo: photo-060
+  category: mass-liturgy
+  alt:
+    pt: Sacerdote inclinado em oração no altar (Quaresma)
+    en: Priest bowed in prayer at the altar during Lent
+- photo: photo-061
+  category: sacraments
+  alt:
+    pt: Casamento celebrado durante a Quaresma
+    en: Wedding celebrated during Lent
+- photo: photo-062
+  category: sacraments
+  alt:
+    pt: Sacramento do Matrimônio - preparação para a entrada
+    en: Sacrament of Matrimony - moment before the entrance
+- photo: photo-063
+  category: sacraments
+  alt:
+    pt: Noivos no santuário no dia do casamento
+    en: Bride and groom in the sanctuary on their wedding day
+- photo: photo-064
+  category: mass-liturgy
+  alt:
+    pt: Relevo de mármore da Última Ceia no altar
+    en: Marble Last Supper relief on the altar frontal
+- photo: photo-065
+  category: mass-liturgy
+  alt:
+    pt: Relicário e crucifixo sobre o altar
+    en: Reliquary and altar crucifix close-up
+- photo: photo-066
+  category: our-lady-devotion
+  alt:
+    pt: Imagem de Nossa Senhora Aparecida sobre pedestal
+    en: Statue of Our Lady of Aparecida on a pedestal
+- photo: photo-067
+  category: holy-week-easter music-servers
+  alt:
+    pt: Lava-pés na Quinta-feira Santa
+    en: Washing of the feet on Holy Thursday
+- photo: photo-068
+  category: holy-week-easter music-servers
+  alt:
+    pt: Lava-pés na Quinta-feira Santa
+    en: Washing of the feet on Holy Thursday
+- photo: photo-069
+  category: holy-week-easter music-servers
+  alt:
+    pt: Lava-pés na Quinta-feira Santa
+    en: Washing of the feet on Holy Thursday
+- photo: photo-070
+  category: holy-week-easter
+  alt:
+    pt: Encenação da Paixão na Sexta-feira Santa
+    en: Passion play on Good Friday
+- photo: photo-071
+  category: holy-week-easter
+  alt:
+    pt: Encenação da Paixão na Sexta-feira Santa
+    en: Passion play on Good Friday
+- photo: photo-072
+  category: holy-week-easter
+  alt:
+    pt: Encenação da Paixão na Sexta-feira Santa
+    en: Passion play on Good Friday
+- photo: photo-073
+  category: holy-week-easter
+  alt:
+    pt: Encenação da Paixão na Sexta-feira Santa
+    en: Passion play on Good Friday
+- photo: photo-074
+  category: holy-week-easter
+  alt:
+    pt: Encenação da Paixão na Sexta-feira Santa
+    en: Passion play on Good Friday
+- photo: photo-075
+  category: holy-week-easter music-servers
+  alt:
+    pt: Vigília Pascal
+    en: The Easter Vigil
+- photo: photo-076
+  category: holy-week-easter music-servers
+  alt:
+    pt: Círio Pascal trazido em procissão na Vigília
+    en: The Paschal candle carried in procession at the Easter Vigil
+- photo: photo-077
+  category: holy-week-easter music-servers
+  alt:
+    pt: Vigília Pascal - momento da celebração
+    en: The Easter Vigil - a moment of celebration
+- photo: photo-078
+  category: holy-week-easter music-servers
+  alt:
+    pt: Vigília Pascal - momento da celebração
+    en: The Easter Vigil - a moment of celebration
+- photo: photo-079
+  category: holy-week-easter music-servers
+  alt:
+    pt: Vigília Pascal - momento da celebração
+    en: The Easter Vigil - a moment of celebration
+- photo: photo-080
+  category: holy-week-easter music-servers
+  alt:
+    pt: Vigília Pascal - momento da celebração
+    en: The Easter Vigil - a moment of celebration
+- photo: photo-081
+  category: holy-week-easter music-servers
+  alt:
+    pt: Jovens coroinhas cantam à luz das velas na Vigília Pascal
+    en: Young altar servers sing by candlelight at the Easter Vigil
+- photo: photo-082
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-083
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-084
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-085
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-086
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-087
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-088
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em 14 de setembro em Our Lady of Aparecida
+    en: Parishioners at a parish event on September 14 at Our Lady of Aparecida
+- photo: photo-089
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-090
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-091
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-092
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-093
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-094
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-095
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-096
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-097
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-098
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-099
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-100
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-101
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-102
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-103
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-104
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-105
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-106
+  category: parish-life-events
+  alt:
+    pt: Paroquianas na Conferência das Mulheres em Our Lady of Aparecida
+    en: Parishioners at the Women's Conference at Our Lady of Aparecida
+- photo: photo-107
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-108
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-109
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-110
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-111
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-112
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-113
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-114
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-115
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-116
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-117
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-118
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-119
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-120
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-121
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-122
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-123
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-124
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-125
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-126
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-127
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-128
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-129
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-130
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Festa Julina em Our Lady of Aparecida
+    en: Parishioners at the Festa Julina (July Festival) at Our Lady of Aparecida
+- photo: photo-131
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Gala paroquial 2025 em Our Lady of Aparecida
+    en: Parishioners at the 2025 Parish Gala at Our Lady of Aparecida
+- photo: photo-132
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Gala paroquial 2025 em Our Lady of Aparecida
+    en: Parishioners at the 2025 Parish Gala at Our Lady of Aparecida
+- photo: photo-133
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Gala paroquial 2025 em Our Lady of Aparecida
+    en: Parishioners at the 2025 Parish Gala at Our Lady of Aparecida
+- photo: photo-134
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Gala paroquial 2025 em Our Lady of Aparecida
+    en: Parishioners at the 2025 Parish Gala at Our Lady of Aparecida
+- photo: photo-135
+  category: parish-life-events
+  alt:
+    pt: Paroquianos na Gala paroquial 2025 em Our Lady of Aparecida
+    en: Parishioners at the 2025 Parish Gala at Our Lady of Aparecida
+- photo: photo-136
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-137
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-138
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-139
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-140
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-141
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-142
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-143
+  category: parish-life-events
+  alt:
+    pt: Encontro do Grupo de Jovens Sem Fronteiras em Our Lady of Aparecida
+    en: Young Adults (Youth Without Borders) gathering at Our Lady of Aparecida
+- photo: photo-144
+  category: parish-life-events
+  alt:
+    pt: Padre Leonel Medeiros em Our Lady of Aparecida
+    en: Father Leonel Medeiros at Our Lady of Aparecida
+- photo: photo-145
+  category: parish-life-events
+  alt:
+    pt: Padre Leonel Medeiros em Our Lady of Aparecida
+    en: Father Leonel Medeiros at Our Lady of Aparecida
+- photo: photo-146
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-147
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-148
+  category: parish-life-events
+  alt:
+    pt: Paroquianos em evento paroquial em Our Lady of Aparecida
+    en: Parishioners at a parish event at Our Lady of Aparecida
+- photo: photo-149
+  category: parish-life-events our-lady-devotion
+  alt:
+    pt: Retiro de Nossa Senhora Aparecida em Our Lady of Aparecida
+    en: Our Lady retreat at Our Lady of Aparecida
+- photo: photo-150
+  category: parish-life-events our-lady-devotion
+  alt:
+    pt: Retiro de Nossa Senhora Aparecida em Our Lady of Aparecida
+    en: Our Lady retreat at Our Lady of Aparecida
+- photo: photo-151
+  category: parish-life-events our-lady-devotion
+  alt:
+    pt: Retiro de Nossa Senhora Aparecida em Our Lady of Aparecida
+    en: Our Lady retreat at Our Lady of Aparecida
+- photo: photo-152
+  category: parish-life-events our-lady-devotion
+  alt:
+    pt: Retiro de Nossa Senhora Aparecida em Our Lady of Aparecida
+    en: Our Lady retreat at Our Lady of Aparecida
+- photo: photo-153
+  category: parish-life-events our-lady-devotion
+  alt:
+    pt: Retiro de Nossa Senhora Aparecida em Our Lady of Aparecida
+    en: Our Lady retreat at Our Lady of Aparecida
+- photo: photo-154
+  category: parish-life-events our-lady-devotion
+  alt:
+    pt: Retiro de Nossa Senhora Aparecida em Our Lady of Aparecida
+    en: Our Lady retreat at Our Lady of Aparecida
+- photo: photo-155
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-156
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-157
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-158
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-159
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-160
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-161
+  category: mass-liturgy sacraments
+  alt:
+    pt: Sacramento do Matrimônio em Our Lady of Aparecida
+    en: Sacrament of Matrimony at Our Lady of Aparecida
+- photo: photo-162
+  category: mass-liturgy sacraments
+  alt:
+    pt: Sacramento do Matrimônio em Our Lady of Aparecida
+    en: Sacrament of Matrimony at Our Lady of Aparecida
+- photo: photo-163
+  category: mass-liturgy sacraments
+  alt:
+    pt: Sacramento do Matrimônio em Our Lady of Aparecida
+    en: Sacrament of Matrimony at Our Lady of Aparecida
+- photo: photo-164
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-165
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-166
+  category: mass-liturgy
+  alt:
+    pt: Missa em Our Lady of Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-167
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-168
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-169
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-170
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-171
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-172
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-173
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-174
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-175
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-176
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-177
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-178
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-179
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-180
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-181
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-182
+  category: mass-liturgy
+  alt:
+    pt: Missa em Nossa Senhora Aparecida
+    en: Mass at Our Lady of Aparecida
+- photo: photo-183
+  category: sacraments
+  alt:
+    pt: Sacramento celebrado em Our Lady of Aparecida
+    en: Sacrament celebrated at Our Lady of Aparecida
+- photo: photo-184
+  category: sacraments
+  alt:
+    pt: Sacramento celebrado em Our Lady of Aparecida
+    en: Sacrament celebrated at Our Lady of Aparecida
+- photo: photo-185
+  category: sacraments
+  alt:
+    pt: Sacramento celebrado em Our Lady of Aparecida
+    en: Sacrament celebrated at Our Lady of Aparecida
+- photo: photo-186
+  category: sacraments
+  alt:
+    pt: Sacramento celebrado em Our Lady of Aparecida
+    en: Sacrament celebrated at Our Lady of Aparecida
+- photo: photo-187
+  category: sacraments
+  alt:
+    pt: Sacramento celebrado em Our Lady of Aparecida
+    en: Sacrament celebrated at Our Lady of Aparecida
+- photo: photo-188
+  category: sacraments
+  alt:
+    pt: Sacramento da Crisma em Our Lady of Aparecida
+    en: Sacrament of Confirmation at Our Lady of Aparecida
+- photo: photo-189
+  category: sacraments
+  alt:
+    pt: Sacramento da Crisma em Our Lady of Aparecida
+    en: Sacrament of Confirmation at Our Lady of Aparecida
+- photo: photo-190
+  category: sacraments
+  alt:
+    pt: Sacramento da Crisma em Our Lady of Aparecida
+    en: Sacrament of Confirmation at Our Lady of Aparecida
+- photo: photo-191
+  category: sacraments
+  alt:
+    pt: Sacramento da Crisma em Our Lady of Aparecida
+    en: Sacrament of Confirmation at Our Lady of Aparecida
+- photo: photo-192
+  category: sacraments
+  alt:
+    pt: Sacramento do Matrimônio em Our Lady of Aparecida
+    en: Wedding ceremony at Our Lady of Aparecida
+- photo: photo-193
+  category: sacraments
+  alt:
+    pt: Sacramento do Matrimônio em Our Lady of Aparecida
+    en: Wedding ceremony at Our Lady of Aparecida
+- photo: photo-194
+  category: sacraments
+  alt:
+    pt: Sacramento do Matrimônio em Our Lady of Aparecida
+    en: Wedding ceremony at Our Lady of Aparecida
+- photo: photo-195
+  category: sacraments holy-week-easter
+  alt:
+    pt: Vigília Pascal em Our Lady of Aparecida
+    en: The Easter Vigil at Our Lady of Aparecida
+- photo: photo-196
+  category: sacraments holy-week-easter
+  alt:
+    pt: Vigília Pascal em Our Lady of Aparecida
+    en: The Easter Vigil at Our Lady of Aparecida
+- photo: photo-197
+  category: sacraments holy-week-easter
+  alt:
+    pt: Vigília Pascal em Our Lady of Aparecida
+    en: The Easter Vigil at Our Lady of Aparecida

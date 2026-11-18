@@ -1,0 +1,25 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Dízimo
+  en: Tithing
+coordinators:
+- - Fr. Leonel
+  - pt: Coordenador
+    en: Coordinator
+icon: ✟
+icon_style: warm
+callout: null
+description:
+  pt: O dízimo é uma contribuição comprometida com sua comunidade. Precisa ser feito periodicamente, geralmente uma vez por semana ou uma vez por mês, conforme as condições de cada pessoa. É um exercício de doação e partilha, no qual a Comunidade Católica está disponível para cuidar das dimensões religiosa, social e missionária da Igreja.
+  en: Tithing is a committed contribution to your community. It needs to be made periodically, usually once a week or once a month, according to the conditions of each person. It is an exercise of giving and sharing, in which the Catholic Community is available to take care of the religious, the social and the missionary dimensions of the Church.
+tight_spacing: true
+buttons:
+- label:
+    pt: Doar
+    en: Give
+  link: giving.html
+  style: gold
+  new_tab: false

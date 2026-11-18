@@ -1,0 +1,7 @@
+<div class="hero-slides" aria-hidden="true">
+{%- for s in homeHero.slides %}
+    <div class="hero-slide{{ ' ' + s.extra_class if s.extra_class }}">
+      <img src="{{ s.image }}" alt="{{ s.alt }}">
+    </div>
+{%- endfor %}
+  </div>

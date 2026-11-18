@@ -1,0 +1,8 @@
+# Netlify builds the site with Eleventy and publishes the _site folder.
+# Settings here take priority over the build settings in the Netlify dashboard.
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"

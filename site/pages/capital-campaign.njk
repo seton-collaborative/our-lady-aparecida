@@ -1,0 +1,182 @@
+---
+permalink: capital-campaign.html
+styles: capital-campaign
+content_page: capital-campaign
+give_direct: true
+---
+{% extends "layouts/base.njk" %}
+{% block main %}
+{% set c = parish.pages['capital-campaign'] %}
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<section class="campaign-banner">
+  <div class="container">
+    <img src="images/campaign/campaign-banner.jpg"
+         alt="Campanha Construindo um Santuário a Nossa Senhora" data-i18n="pt">
+    <img src="images/campaign/campaign-banner.jpg"
+         alt="Campaign: Building a Sanctuary for Our Lady" data-i18n="en">
+  </div>
+</section>
+
+<!-- ============================================
+     PAGE HEADER (title block)
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <p class="page-header-eyebrow">
+      <span data-i18n="pt">{{ c.page_header_title_block.capital_campaign.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header_title_block.capital_campaign.en | t }}</span>
+    </p>
+    <h1 class="page-header-title">
+      <span data-i18n="pt">{{ c.page_header_title_block.building_a_sanctuary_for_our.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header_title_block.building_a_sanctuary_for_our.en | t }}</span>
+    </h1>
+    <div class="gold-rule"></div>
+  </div>
+</header>
+
+<!-- ============================================
+     INTRO + CALLOUT + CTA + QR
+     ============================================ -->
+<section class="campaign-section">
+  <div class="container">
+    <div class="campaign-narrow">
+
+      <!-- Intro paragraph -->
+      <p class="campaign-text" data-i18n-block="pt">{{ c.intro_callout_cta_qr.with_the_help_and_generosity.pt | t }}</p>
+      <p class="campaign-text" data-i18n-block="en">{{ c.intro_callout_cta_qr.with_the_help_and_generosity.en | t }}</p>
+
+      <!-- Suggested-gift callout -->
+      <div class="gift-callout">
+        <span class="gift-callout-label">
+          <span data-i18n="pt">{{ c.intro_callout_cta_qr.suggested_goal.pt | t }}</span>
+          <span data-i18n="en">{{ c.intro_callout_cta_qr.suggested_goal.en | t }}</span>
+        </span>
+        <p data-i18n-block="pt">{{ c.intro_callout_cta_qr.suggested_goal_5_per_week.pt | t }}</p>
+        <p data-i18n-block="en">{{ c.intro_callout_cta_qr.suggested_goal_5_per_week.en | t }}</p>
+      </div>
+
+      <!-- Primary CTA -->
+      <div class="campaign-cta">
+        <a href="https://www.osvhub.com/our-lady-of-aparecida-parish/giving/funds/campanha-construindo-um-santu-rio-a-nossa-senhora" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-large">
+          <span data-i18n="pt">{{ c.intro_callout_cta_qr.give_to_the_campaign.pt | t }}</span>
+          <span data-i18n="en">{{ c.intro_callout_cta_qr.give_to_the_campaign.en | t }}</span>
+        </a>
+      </div>
+
+      <!-- QR code -->
+      <div class="qr-block">
+        <div class="qr-card">
+          <img src="images/campaign/campaign-qr.png" alt="QR code" width="200" height="200">
+        </div>
+        <p class="qr-caption">
+          <span data-i18n="pt">{{ c.intro_callout_cta_qr.scan_with_your_phone_to.pt | t }}</span>
+          <span data-i18n="en">{{ c.intro_callout_cta_qr.scan_with_your_phone_to.en | t }}</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW TO GIVE, STEP BY STEP
+     ============================================ -->
+<section class="campaign-section" style="background: var(--warm-50); border-top: 1px solid var(--warm-200); border-bottom: 1px solid var(--warm-200);">
+  <div class="container">
+    <div class="campaign-narrow">
+      <h2 class="campaign-heading">
+        <span data-i18n="pt">{{ c.how_to_give_step_by_step.how_to_give_online_step.pt | t }}</span>
+        <span data-i18n="en">{{ c.how_to_give_step_by_step.how_to_give_online_step.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+
+      <ol class="steps-list">
+        <li class="step-item">
+          <div class="step-title">
+            <span data-i18n="pt">{{ c.how_to_give_step_by_step.open_the_campaign_link.pt | t }}</span>
+            <span data-i18n="en">{{ c.how_to_give_step_by_step.open_the_campaign_link.en | t }}</span>
+          </div>
+          <div class="step-body">
+            <p data-i18n-block="pt">{{ c.how_to_give_step_by_step.go_to_the_campaign_page.pt | t }}</p>
+            <p data-i18n-block="en">{{ c.how_to_give_step_by_step.go_to_the_campaign_page.en | t }}</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-title">
+            <span data-i18n="pt">{{ c.how_to_give_step_by_step.choose_your_gift_amount.pt | t }}</span>
+            <span data-i18n="en">{{ c.how_to_give_step_by_step.choose_your_gift_amount.en | t }}</span>
+          </div>
+          <div class="step-body">
+            <p data-i18n-block="pt">{{ c.how_to_give_step_by_step.examples_5_per_week_suggested.pt | t }}</p>
+            <p data-i18n-block="en">{{ c.how_to_give_step_by_step.examples_5_per_week_suggested.en | t }}</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-title">
+            <span data-i18n="pt">{{ c.how_to_give_step_by_step.choose_a_payment_method.pt | t }}</span>
+            <span data-i18n="en">{{ c.how_to_give_step_by_step.choose_a_payment_method.en | t }}</span>
+          </div>
+          <div class="step-body">
+            <p data-i18n-block="pt">{{ c.how_to_give_step_by_step.ach_or_bank_account_recommended.pt | t }}</p>
+            <p data-i18n-block="en">{{ c.how_to_give_step_by_step.ach_or_bank_account_recommended.en | t }}</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-title">
+            <span data-i18n="pt">{{ c.how_to_give_step_by_step.choose_how_often.pt | t }}</span>
+            <span data-i18n="en">{{ c.how_to_give_step_by_step.choose_how_often.en | t }}</span>
+          </div>
+          <div class="step-body">
+            <p data-i18n-block="pt">{{ c.how_to_give_step_by_step.weekly_suggested_5_per_week.pt | t }}</p>
+            <p data-i18n-block="en">{{ c.how_to_give_step_by_step.weekly_suggested_5_per_week.en | t }}</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-title">
+            <span data-i18n="pt">{{ c.how_to_give_step_by_step.confirm_your_gift.pt | t }}</span>
+            <span data-i18n="en">{{ c.how_to_give_step_by_step.confirm_your_gift.en | t }}</span>
+          </div>
+          <div class="step-body">
+            <p data-i18n-block="pt">{{ c.how_to_give_step_by_step.review_the_details_and_confirm.pt | t }}</p>
+            <p data-i18n-block="en">{{ c.how_to_give_step_by_step.review_the_details_and_confirm.en | t }}</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CAMPAIGN FLYER
+     ============================================ -->
+<section class="campaign-section">
+  <div class="container">
+    <div class="flyer-block">
+      <h2 class="flyer-heading">
+        <span data-i18n="pt">{{ c.campaign_flyer.campaign_flyer.pt | t }}</span>
+        <span data-i18n="en">{{ c.campaign_flyer.campaign_flyer.en | t }}</span>
+      </h2>
+      <img src="images/campaign/campaign-flyer.jpg"
+           alt="Folheto da campanha com instruções de doação" data-i18n="pt">
+      <img src="images/campaign/campaign-flyer.jpg"
+           alt="Campaign flyer with giving instructions" data-i18n="en">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CLOSING BLESSING
+     ============================================ -->
+<section class="campaign-blessing">
+  <div class="container">
+    <p data-i18n-block="pt">{{ c.closing_blessing.god_bless_your_generosity_our.pt | t }}</p>
+    <p data-i18n-block="en">{{ c.closing_blessing.god_bless_your_generosity_our.en | t }}</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,183 @@
+# Written text on about.html, grouped by section of the page, top to bottom.
+# Each pt/en pair is one piece of text in Portuguese and English. A plain value shows in both languages.
+# Text may contain simple HTML such as <br>, <em> and <strong>.
+meta:
+  title: Sobre Nós | About Our Parish - Our Lady of Aparecida, Bethel CT
+  description: A história da Paróquia Nossa Senhora Aparecida - a primeira paróquia brasileira oficial nos Estados Unidos. The story of the first official Brazilian parish in the United States.
+page_header:
+  our_story:
+    pt: Nossa História
+    en: Our Story
+  about_our_parish:
+    pt: Sobre a Nossa Paróquia
+    en: About Our Parish
+  more_than_27_years_as:
+    pt: Mais de 27 anos como comunidade católica de fé e amor. A primeira paróquia brasileira oficial nos Estados Unidos em homenagem à padroeira do Brasil.
+    en: More than 27 years as a Catholic community of faith and love. The first official Brazilian parish in the United States, named after Brazil's patron saint.
+mission_statement:
+  our_mission:
+    pt: Nossa Missão
+    en: Our Mission
+  to_love_and_to_serve:
+    pt: 'Amar e Servir a Deus, Nosso Pai, em nossos irmãos e irmãs: Oferecê-Lo com amor e o sacrifício perfeito de seu filho Jesus Cristo, para que Ele se torne o Centro da minha vida.'
+    en: 'To Love and to Serve God, Our Father, in our brothers and sisters: To offer Him in love and the perfect sacrifice of His son Jesus Christ, so that He may become the Center of my life.'
+  our_lady_of_aparecida_parish:
+    pt: Paróquia Nossa Senhora Aparecida
+    en: Our Lady of Aparecida Parish
+by_the_numbers:
+  our_community:
+    pt: Nossa Comunidade
+    en: Our Community
+  a_parish_by_the_numbers:
+    pt: Uma Paróquia em Números
+    en: A Parish by the Numbers
+  n1_100: 1,100+
+  registered_families:
+    pt: Famílias Cadastradas
+    en: Registered Families
+  n28: '28'
+  active_ministries:
+    pt: Ministérios Ativos
+    en: Active Ministries
+  n27: 27+
+  years_as_a_community:
+    pt: Anos de Comunidade
+    en: Years as a Community
+  n2020: '2020'
+  parish_established:
+    pt: Paróquia Instituída
+    en: Parish Established
+history_full_narrative:
+  history:
+    pt: História
+    en: History
+  the_story_of_our_community:
+    pt: História da Nossa Comunidade
+    en: The Story of Our Community
+  a_community_that_began_small:
+    pt: Uma comunidade que começou pequena, cresceu em fé, e hoje serve mais de 1.100 famílias católicas brasileiras-americanas no sudoeste de Connecticut.
+    en: A community that began small, grew in faith, and today serves more than 1,100 Brazilian-American Catholic families across southwestern Connecticut.
+  the_brazilian_american_catholic_community:
+    pt: |-
+      <p>A Comunidade Católica Brasileira-Americana Nossa Senhora Aparecida tem mais de <strong>1.100 famílias cadastradas oficialmente</strong>, e muitas outras famílias e indivíduos ainda não cadastrados, mas que ajudam a povoar muitos eventos religiosos, sociais e culturais excepcionalmente bem frequentados. Tem muitas crianças, adolescentes e jovens, e a maioria dos adultos tem menos de 45 anos.</p>
+                <p>A comunidade é sustentável, solvente e próspera, cumpre suas obrigações e cumpre suas responsabilidades; tem os talentos humanos de que necessita, ansiosos por servir.</p>
+                <p>Há mais de <strong>27 anos</strong> Nossa Senhora Aparecida se mantém estável como comunidade católica de fé e amor, com muitos fiéis em movimentos, serviços, ministérios pastorais e/ou de outra forma dedicados ao serviço do Senhor. Nossa Senhora Aparecida se esforça para atender às necessidades sacramentais dos membros, forma, encoraja, apóia, sustenta e renova <strong>28 ministérios pastorais</strong> e grupos de serviço vibrantes, promove o desenvolvimento da fé, reuniões sociais, retiros, estudos bíblicos e desenvolvimento de liderança leiga.</p>
+                <p>Desde a sua criação em <strong>25 de janeiro de 2020</strong>, a Quasi-Paróquia Nossa Senhora Aparecida pode celebrar missas diárias e dominicais em horários estratégicos, pois agora conta com o total apoio do nosso Bispo <strong>Frank J. Caggiano</strong>. A Paróquia Nossa Senhora Aparecida também adquiriu uma nova unidade localizada na <strong>42 Vail Rd, Bethel, CT 06801</strong> para resolver seu problema de espaço suficiente e adequado.</p>
+                <p>Por mais de <strong>17 anos</strong>, Nossa Senhora Aparecida fez parte da Paróquia São Pedro, contando com o espaço físico da Igreja São Pedro desde a sua criação. Na época e atualmente, a paróquia celebra duas missas de fim de semana na Igreja de São Pedro: sábado e domingo à noite às 19h30.</p>
+                <p>A Campanha da Capital Diocesana possibilitou a transferência do antigo Centro Comunitário Brasileiro (na Liberty Street, 61, em Danbury) para uma Paróquia instituída, junto com a aquisição e reaproveitamento do novo imóvel em Bethel. Nossa Senhora Aparecida está totalmente encarregada de direcionar o reaproveitamento do antigo salão de recepção de Michael's At The Grove em um novo espaço de culto, escritórios e salas de aula.</p>
+                <p>A Paróquia Nossa Senhora Aparecida agradece imensamente a Paróquia São Pedro pela ajuda nesses 20 anos de parceria e trabalho em prol da pregação do Evangelho e da Salvação das Almas.</p>
+    en: |-
+      <p>The Brazilian-American Catholic Community of Our Lady of Aparecida has over <strong>1,100 officially registered families</strong>, plus many more families and individuals who are not yet registered but help fill our exceptionally well-attended religious, social, and cultural events. The community has many children, adolescents, and young adults, with most of its adults under 45 years old.</p>
+                <p>The community is sustainable, solvent, and thriving - fulfilling its obligations and responsibilities, with abundant human talent eager to serve.</p>
+                <p>For more than <strong>27 years</strong>, Our Lady of Aparecida has remained stable as a Catholic community of faith and love, with many faithful active in movements, services, and pastoral ministries. The parish works to meet the sacramental needs of its members and forms, encourages, supports, and renews <strong>28 vibrant pastoral ministries</strong> and service groups. It promotes faith development, social gatherings, retreats, Bible studies, and lay leadership formation.</p>
+                <p>Since its creation on <strong>January 25, 2020</strong>, the Quasi-Parish of Our Lady of Aparecida has been able to celebrate daily and Sunday Masses at strategic times, thanks to the full support of our Bishop, <strong>Frank J. Caggiano</strong>. The parish also acquired a new property at <strong>42 Vail Road, Bethel, CT 06801</strong> to resolve its need for adequate space for worship, fellowship, and ministry.</p>
+                <p>For more than <strong>17 years</strong>, Our Lady of Aparecida was part of St. Peter Parish, relying on the physical space of St. Peter Church since its founding. Then and now, the parish celebrates two weekend Masses at St. Peter Church: Saturday and Sunday evening at 7:30 PM.</p>
+                <p>The Diocesan Capital Campaign made it possible to transfer the former Brazilian Community Center (at 61 Liberty Street, Danbury) to an established parish, together with the acquisition and repurposing of the new Bethel property. Our Lady of Aparecida is fully responsible for directing the transformation of the former Michael's At The Grove reception hall into a new space for worship, offices, and classrooms.</p>
+                <p>Our Lady of Aparecida Parish is deeply grateful to St. Peter Parish for 20 years of partnership in preaching the Gospel and in the salvation of souls.</p>
+timeline:
+  milestones:
+    pt: Marcos
+    en: Milestones
+  a_journey_of_faith:
+    pt: Uma Jornada de Fé
+    en: A Journey of Faith
+  n1999: '1999'
+  the_community_is_born:
+    pt: Nasce a Comunidade
+    en: The Community is Born
+  the_brazilian_american_catholic_community:
+    pt: A Comunidade Católica Brasileira-Americana Nossa Senhora Aparecida começa a se reunir no sudoeste de Connecticut, servindo à crescente população de famílias brasileiras na região.
+    en: The Brazilian-American Catholic Community of Our Lady of Aparecida begins gathering in southwestern Connecticut, serving the growing population of Brazilian families in the area.
+  n2007: '2007'
+  home_at_st_peter_parish:
+    pt: Lar na Paróquia São Pedro
+    en: Home at St. Peter Parish
+  for_17_years_the_community:
+    pt: Por 17 anos, a comunidade celebra missas e sacramentos com o apoio da Paróquia São Pedro em Danbury - uma parceria que continua até hoje com duas missas semanais em São Pedro.
+    en: For 17 years, the community celebrates Masses and sacraments with the support of St. Peter Parish in Danbury - a partnership that continues today with two weekly Masses at St. Peter.
+  n2010s: 2010s
+  community_center_in_danbury:
+    pt: Centro Comunitário em Danbury
+    en: Community Center in Danbury
+  the_brazilian_community_center_of:
+    pt: O Centro Comunitário Brasileiro Nossa Senhora Aparecida, na 61 Liberty Street em Danbury, torna-se o lar das atividades pastorais, reuniões dos 28 ministérios, retiros e eventos comunitários.
+    en: The Brazilian Community Center of Our Lady of Aparecida, at 61 Liberty Street in Danbury, becomes the home for pastoral activities, meetings of the 28 ministries, retreats, and community events.
+  n2020: '2020'
+  establishment_as_a_quasi_parish:
+    pt: Instituição como Quasi-Paróquia
+    en: Establishment as a Quasi-Parish
+  on_january_25_2020_our:
+    pt: Em 25 de janeiro de 2020, Nossa Senhora Aparecida é oficialmente instituída como Quasi-Paróquia pelo Bispo Frank J. Caggiano - a primeira paróquia brasileira oficial nos Estados Unidos com este nome.
+    en: On January 25, 2020, Our Lady of Aparecida is officially established as a Quasi-Parish by Bishop Frank J. Caggiano - the first official Brazilian parish in the United States bearing this name.
+  today:
+    pt: Hoje
+    en: Today
+  a_new_home_in_bethel:
+    pt: Novo Lar em Bethel
+    en: A New Home in Bethel
+  the_diocesan_capital_campaign_makes:
+    pt: A Campanha da Capital Diocesana torna possível a aquisição do imóvel na 42 Vail Rd. em Bethel - o antigo Michael's At The Grove, agora reaproveitado como espaço de culto, escritórios e salas de aula para uma comunidade de mais de 1.100 famílias.
+    en: The Diocesan Capital Campaign makes possible the acquisition of the property at 42 Vail Road in Bethel - the former Michael's At The Grove, now repurposed as a space for worship, offices, and classrooms for a community of more than 1,100 families.
+pastoral_staff:
+  pastoral_staff:
+    pt: Equipe Pastoral
+    en: Pastoral Staff
+  those_who_serve_us:
+    pt: Quem Nos Serve
+    en: Those Who Serve Us
+  our_pastoral_team_guides_the:
+    pt: Nossa equipe pastoral guia a vida sacramental e comunitária da paróquia em colaboração com dezenas de voluntários.
+    en: Our pastoral team guides the sacramental and community life of the parish in collaboration with dozens of volunteers.
+music_ministry:
+  music_ministry:
+    pt: Ministério de Música
+    en: Music Ministry
+  praise_in_five_voices:
+    pt: Louvor em Cinco Vozes
+    en: Praise in Five Voices
+  five_choirs_and_musical_ensembles:
+    pt: Cinco coros e conjuntos musicais servem cada missa e celebração, liderados inteiramente por voluntários da paróquia.
+    en: Five choirs and musical ensembles serve every Mass and celebration, led entirely by parish volunteers.
+  sons_of_mary:
+    pt: Filhos de Maria
+    en: Sons of Mary
+  priscilla_gomes: Priscilla Gomes
+  totus_tuus: Totus Tuus
+  tamnata_pereira: Tamnata Pereira
+  charismatic_music_ministry_goves:
+    pt: Ministério Carismático (GOVES)
+    en: Charismatic Music Ministry (GOVES)
+  carlos_mendes: Carlos Mendes
+  santa_cecilia_11_30am_mass:
+    pt: Santa Cecília · Missa das 11h30
+    en: Santa Cecília · 11:30am Mass
+  sophia_da_silva: Sophia Da Silva
+  magnificat_saturday_5pm_mass:
+    pt: Magnificat · Missa de Sábado 17h
+    en: Magnificat · Saturday 5pm Mass
+  daniel_castro: Daniel Castro
+  all_music_coordinators_are_volunteers:
+    pt: '*Todos os coordenadores de música são voluntários da paróquia.'
+    en: '*All music coordinators are volunteers of the parish.'
+video_santuario_nacional:
+  our_devotion:
+    pt: Nossa Devoção
+    en: Our Devotion
+  mass_at_the_national_shrine:
+    pt: Missa no Santuário Nacional
+    en: Mass at the National Shrine
+  pilgrims_from_our_community_at:
+    pt: Peregrinos da nossa comunidade no Santuário Nacional de Aparecida - o maior santuário mariano do mundo e coração da nossa devoção brasileira.
+    en: Pilgrims from our community at the National Shrine of Aparecida - the largest Marian shrine in the world and heart of our Brazilian devotion.
+  missa_santuario_nacional_de_aparecida: Missa · Santuário Nacional de Aparecida
+  n17_de_agosto_de_2023: 17 de agosto de 2023
+cta_band:
+  find_your_place:
+    pt: Encontre o Seu Lugar
+    en: Find Your Place
+  with_28_active_ministries_there:
+    pt: Com 28 ministérios ativos, há um lugar para você servir, orar e crescer na fé.
+    en: With 28 active ministries, there is a place for you to serve, pray, and grow in faith.
+  explore_all_ministries:
+    pt: Ver Todos os Ministérios
+    en: Explore All Ministries
