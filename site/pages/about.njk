@@ -1,0 +1,373 @@
+---
+permalink: about.html
+styles: about
+content_page: about
+nav_active: about
+---
+{% extends "layouts/base.njk" %}
+{% block main %}
+{% set c = parish.pages['about'] %}
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <p class="page-header-eyebrow">
+        <span data-i18n="pt">{{ c.page_header.our_story.pt | t }}</span>
+        <span data-i18n="en">{{ c.page_header.our_story.en | t }}</span>
+      </p>
+      <h1 class="page-header-title">
+        <span data-i18n="pt">{{ c.page_header.about_our_parish.pt | t }}</span>
+        <span data-i18n="en">{{ c.page_header.about_our_parish.en | t }}</span>
+      </h1>
+      <p class="page-header-subtitle">
+        <span data-i18n="pt">{{ c.page_header.more_than_27_years_as.pt | t }}</span>
+        <span data-i18n="en">{{ c.page_header.more_than_27_years_as.en | t }}</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     MISSION STATEMENT
+     ============================================ -->
+<section class="mission-section">
+  <div class="mission-inner">
+    <p class="mission-eyebrow">
+      <span data-i18n="pt">{{ c.mission_statement.our_mission.pt | t }}</span>
+      <span data-i18n="en">{{ c.mission_statement.our_mission.en | t }}</span>
+    </p>
+    <div class="mission-divider"></div>
+    <p class="mission-quote">
+      <span data-i18n="pt">{{ c.mission_statement.to_love_and_to_serve.pt | t }}</span>
+      <span data-i18n="en">{{ c.mission_statement.to_love_and_to_serve.en | t }}</span>
+    </p>
+    <p class="mission-source">
+      <span data-i18n="pt">{{ c.mission_statement.our_lady_of_aparecida_parish.pt | t }}</span>
+      <span data-i18n="en">{{ c.mission_statement.our_lady_of_aparecida_parish.en | t }}</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     BY THE NUMBERS
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.by_the_numbers.our_community.pt | t }}</span>
+        <span data-i18n="en">{{ c.by_the_numbers.our_community.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.by_the_numbers.a_parish_by_the_numbers.pt | t }}</span>
+        <span data-i18n="en">{{ c.by_the_numbers.a_parish_by_the_numbers.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-number">{{ c.by_the_numbers.n1_100 | t }}</div>
+        <div class="stat-label">
+          <span data-i18n="pt">{{ c.by_the_numbers.registered_families.pt | t }}</span>
+          <span data-i18n="en">{{ c.by_the_numbers.registered_families.en | t }}</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ c.by_the_numbers.n28 | t }}</div>
+        <div class="stat-label">
+          <span data-i18n="pt">{{ c.by_the_numbers.active_ministries.pt | t }}</span>
+          <span data-i18n="en">{{ c.by_the_numbers.active_ministries.en | t }}</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ c.by_the_numbers.n27 | t }}</div>
+        <div class="stat-label">
+          <span data-i18n="pt">{{ c.by_the_numbers.years_as_a_community.pt | t }}</span>
+          <span data-i18n="en">{{ c.by_the_numbers.years_as_a_community.en | t }}</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ c.by_the_numbers.n2020 | t }}</div>
+        <div class="stat-label">
+          <span data-i18n="pt">{{ c.by_the_numbers.parish_established.pt | t }}</span>
+          <span data-i18n="en">{{ c.by_the_numbers.parish_established.en | t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HISTORY — FULL NARRATIVE
+     ============================================ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="history-grid">
+      <aside class="history-aside">
+        <p class="history-aside-label">
+          <span data-i18n="pt">{{ c.history_full_narrative.history.pt | t }}</span>
+          <span data-i18n="en">{{ c.history_full_narrative.history.en | t }}</span>
+        </p>
+        <h2 class="history-aside-title">
+          <span data-i18n="pt">{{ c.history_full_narrative.the_story_of_our_community.pt | t }}</span>
+          <span data-i18n="en">{{ c.history_full_narrative.the_story_of_our_community.en | t }}</span>
+        </h2>
+        <p class="history-aside-note">
+          <span data-i18n="pt">{{ c.history_full_narrative.a_community_that_began_small.pt | t }}</span>
+          <span data-i18n="en">{{ c.history_full_narrative.a_community_that_began_small.en | t }}</span>
+        </p>
+      </aside>
+      <div class="history-body">
+        <div data-i18n="pt">
+          {{ c.history_full_narrative.the_brazilian_american_catholic_community.pt | t }}
+        </div>
+        <div data-i18n="en">
+          {{ c.history_full_narrative.the_brazilian_american_catholic_community.en | t }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TIMELINE
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.timeline.milestones.pt | t }}</span>
+        <span data-i18n="en">{{ c.timeline.milestones.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.timeline.a_journey_of_faith.pt | t }}</span>
+        <span data-i18n="en">{{ c.timeline.a_journey_of_faith.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">{{ c.timeline.n1999 | t }}</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">{{ c.timeline.the_community_is_born.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.the_community_is_born.en | t }}</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">{{ c.timeline.the_brazilian_american_catholic_community.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.the_brazilian_american_catholic_community.en | t }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">{{ c.timeline.n2007 | t }}</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">{{ c.timeline.home_at_st_peter_parish.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.home_at_st_peter_parish.en | t }}</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">{{ c.timeline.for_17_years_the_community.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.for_17_years_the_community.en | t }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">{{ c.timeline.n2010s | t }}</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">{{ c.timeline.community_center_in_danbury.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.community_center_in_danbury.en | t }}</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">{{ c.timeline.the_brazilian_community_center_of.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.the_brazilian_community_center_of.en | t }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">{{ c.timeline.n2020 | t }}</div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">{{ c.timeline.establishment_as_a_quasi_parish.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.establishment_as_a_quasi_parish.en | t }}</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">{{ c.timeline.on_january_25_2020_our.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.on_january_25_2020_our.en | t }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          <span data-i18n="pt">{{ c.timeline.today.pt | t }}</span>
+          <span data-i18n="en">{{ c.timeline.today.en | t }}</span>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            <span data-i18n="pt">{{ c.timeline.a_new_home_in_bethel.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.a_new_home_in_bethel.en | t }}</span>
+          </h3>
+          <p class="timeline-text">
+            <span data-i18n="pt">{{ c.timeline.the_diocesan_capital_campaign_makes.pt | t }}</span>
+            <span data-i18n="en">{{ c.timeline.the_diocesan_capital_campaign_makes.en | t }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PASTORAL STAFF
+     ============================================ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.pastoral_staff.pastoral_staff.pt | t }}</span>
+        <span data-i18n="en">{{ c.pastoral_staff.pastoral_staff.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.pastoral_staff.those_who_serve_us.pt | t }}</span>
+        <span data-i18n="en">{{ c.pastoral_staff.those_who_serve_us.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">{{ c.pastoral_staff.our_pastoral_team_guides_the.pt | t }}</span>
+        <span data-i18n="en">{{ c.pastoral_staff.our_pastoral_team_guides_the.en | t }}</span>
+      </p>
+    </div>
+    {% include "partials/staff-grid.njk" %}
+  </div>
+</section>
+
+<!-- ============================================
+     MUSIC MINISTRY
+     ============================================ -->
+<section class="section section-blue">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.music_ministry.music_ministry.pt | t }}</span>
+        <span data-i18n="en">{{ c.music_ministry.music_ministry.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.music_ministry.praise_in_five_voices.pt | t }}</span>
+        <span data-i18n="en">{{ c.music_ministry.praise_in_five_voices.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">{{ c.music_ministry.five_choirs_and_musical_ensembles.pt | t }}</span>
+        <span data-i18n="en">{{ c.music_ministry.five_choirs_and_musical_ensembles.en | t }}</span>
+      </p>
+    </div>
+    <div class="music-grid">
+      <div class="music-card">
+        <div class="music-icon">🎶</div>
+        <div class="music-name">
+          <span data-i18n="pt">{{ c.music_ministry.sons_of_mary.pt | t }}</span>
+          <span data-i18n="en">{{ c.music_ministry.sons_of_mary.en | t }}</span>
+        </div>
+        <div class="music-coord">{{ c.music_ministry.priscilla_gomes | t }}</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">🎵</div>
+        <div class="music-name">{{ c.music_ministry.totus_tuus | t }}</div>
+        <div class="music-coord">{{ c.music_ministry.tamnata_pereira | t }}</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">🔥</div>
+        <div class="music-name">
+          <span data-i18n="pt">{{ c.music_ministry.charismatic_music_ministry_goves.pt | t }}</span>
+          <span data-i18n="en">{{ c.music_ministry.charismatic_music_ministry_goves.en | t }}</span>
+        </div>
+        <div class="music-coord">{{ c.music_ministry.carlos_mendes | t }}</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">🎼</div>
+        <div class="music-name">
+          <span data-i18n="pt">{{ c.music_ministry.santa_cecilia_11_30am_mass.pt | t }}</span>
+          <span data-i18n="en">{{ c.music_ministry.santa_cecilia_11_30am_mass.en | t }}</span>
+        </div>
+        <div class="music-coord">{{ c.music_ministry.sophia_da_silva | t }}</div>
+      </div>
+      <div class="music-card">
+        <div class="music-icon">✨</div>
+        <div class="music-name">
+          <span data-i18n="pt">{{ c.music_ministry.magnificat_saturday_5pm_mass.pt | t }}</span>
+          <span data-i18n="en">{{ c.music_ministry.magnificat_saturday_5pm_mass.en | t }}</span>
+        </div>
+        <div class="music-coord">{{ c.music_ministry.daniel_castro | t }}</div>
+      </div>
+    </div>
+    <p class="music-note">
+      <span data-i18n="pt">{{ c.music_ministry.all_music_coordinators_are_volunteers.pt | t }}</span>
+      <span data-i18n="en">{{ c.music_ministry.all_music_coordinators_are_volunteers.en | t }}</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     VIDEO — SANTUÁRIO NACIONAL
+     ============================================ -->
+<section class="section video-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.video_santuario_nacional.our_devotion.pt | t }}</span>
+        <span data-i18n="en">{{ c.video_santuario_nacional.our_devotion.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.video_santuario_nacional.mass_at_the_national_shrine.pt | t }}</span>
+        <span data-i18n="en">{{ c.video_santuario_nacional.mass_at_the_national_shrine.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">{{ c.video_santuario_nacional.pilgrims_from_our_community_at.pt | t }}</span>
+        <span data-i18n="en">{{ c.video_santuario_nacional.pilgrims_from_our_community_at.en | t }}</span>
+      </p>
+    </div>
+    <div class="video-wrap">
+      <div class="video-frame">
+        <!-- Replace href below with actual YouTube embed URL once Chris provides it -->
+        <a href="https://www.youtube.com/results?search_query=Missa+Santu%C3%A1rio+Nacional+Aparecida" target="_blank" rel="noopener" class="video-placeholder">
+          <div class="video-play-icon">▶</div>
+          <div class="video-caption-title">{{ c.video_santuario_nacional.missa_santuario_nacional_de_aparecida | t }}</div>
+          <div class="video-caption-sub">{{ c.video_santuario_nacional.n17_de_agosto_de_2023 | t }}</div>
+        </a>
+        <!-- To embed directly, replace the anchor above with:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Missa Santuário Nacional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA BAND
+     ============================================ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>
+      <span data-i18n="pt">{{ c.cta_band.find_your_place.pt | t }}</span>
+      <span data-i18n="en">{{ c.cta_band.find_your_place.en | t }}</span>
+    </h2>
+    <p>
+      <span data-i18n="pt">{{ c.cta_band.with_28_active_ministries_there.pt | t }}</span>
+      <span data-i18n="en">{{ c.cta_band.with_28_active_ministries_there.en | t }}</span>
+    </p>
+    <a href="ministries.html" class="btn btn-outline-white">
+      <span data-i18n="pt">{{ c.cta_band.explore_all_ministries.pt | t }}</span>
+      <span data-i18n="en">{{ c.cta_band.explore_all_ministries.en | t }}</span>
+    </a>
+  </div>
+</section>
+{% endblock %}

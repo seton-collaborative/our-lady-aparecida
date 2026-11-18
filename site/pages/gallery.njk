@@ -1,0 +1,211 @@
+---
+permalink: gallery.html
+styles: gallery
+content_page: gallery
+nav_active: gallery
+---
+{% extends "layouts/base.njk" %}
+{% block main %}
+{% set c = parish.pages['gallery'] %}
+<!-- ============================================
+     PAGE HEADER
+     ============================================ -->
+<header class="page-header">
+  <div class="container">
+    <p class="page-header-eyebrow">
+      <span data-i18n="pt">{{ c.page_header.gallery.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header.gallery.en | t }}</span>
+    </p>
+    <h1 class="page-header-title">
+      <span data-i18n="pt">{{ c.page_header.parish_life_in_pictures.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header.parish_life_in_pictures.en | t }}</span>
+    </h1>
+    <div class="gold-rule"></div>
+    <p class="page-header-subtitle">
+      <span data-i18n="pt">{{ c.page_header.moments_from_the_life_of.pt | t }}</span>
+      <span data-i18n="en">{{ c.page_header.moments_from_the_life_of.en | t }}</span>
+    </p>
+  </div>
+</header>
+
+<!-- ============================================
+     GALLERY
+     ============================================ -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-filters reveal" role="tablist" aria-label="Gallery filters">
+      <button class="gallery-filter is-active" data-filter="all">
+        <span data-i18n="pt">{{ c.gallery.all.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.all.en | t }}</span>
+      </button>
+      <button class="gallery-filter" data-filter="mass-liturgy">
+        <span data-i18n="pt">{{ c.gallery.mass_liturgy.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.mass_liturgy.en | t }}</span>
+      </button>
+      <button class="gallery-filter" data-filter="sacraments">
+        <span data-i18n="pt">{{ c.gallery.sacraments.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.sacraments.en | t }}</span>
+      </button>
+      <button class="gallery-filter" data-filter="our-lady-devotion">
+        <span data-i18n="pt">{{ c.gallery.our_lady_devotion.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.our_lady_devotion.en | t }}</span>
+      </button>
+      <button class="gallery-filter" data-filter="holy-week-easter">
+        <span data-i18n="pt">{{ c.gallery.holy_week_easter.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.holy_week_easter.en | t }}</span>
+      </button>
+      <button class="gallery-filter" data-filter="parish-life-events">
+        <span data-i18n="pt">{{ c.gallery.parish_life_events.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.parish_life_events.en | t }}</span>
+      </button>
+      <button class="gallery-filter" data-filter="music-servers">
+        <span data-i18n="pt">{{ c.gallery.music_servers.pt | t }}</span>
+        <span data-i18n="en">{{ c.gallery.music_servers.en | t }}</span>
+      </button>
+    </div>
+
+    <p class="gallery-count" aria-live="polite">
+      <span id="galleryCount">{{ gallery.photos | length }}</span>
+      <span data-i18n="pt"> {{ c.gallery.photos.pt | t }}</span>
+      <span data-i18n="en"> {{ c.gallery.photos.en | t }}</span>
+    </p>
+
+    <div class="gallery-masonry reveal-stagger" id="galleryGrid">
+{% include "partials/gallery-photos.njk" %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     LIGHTBOX
+     ============================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close">{{ c.lightbox.text | t }}</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+  <div class="lightbox-stage">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption" aria-live="polite"></div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<!-- ============================================
+     SCROLL REVEAL
+     ============================================ -->
+<script>
+(function () {
+  var targets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (!targets.length) return;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+
+<!-- ============================================
+     GALLERY: filters + lightbox
+     ============================================ -->
+<script>
+(function () {
+  var grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+
+  var photos = Array.prototype.slice.call(grid.querySelectorAll('.gallery-photo'));
+  var filters = document.querySelectorAll('.gallery-filter');
+  var countEl = document.getElementById('galleryCount');
+
+  function applyFilter(filter) {
+    var visible = 0;
+    photos.forEach(function (photo) {
+      var cats = (photo.getAttribute('data-category') || '').split(/\s+/);
+      var show = filter === 'all' || cats.indexOf(filter) !== -1;
+      photo.classList.toggle('is-hidden', !show);
+      if (show) visible++;
+    });
+    if (countEl) countEl.textContent = visible;
+  }
+
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filters.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+
+  // Lightbox
+  var lightbox     = document.getElementById('lightbox');
+  var lightboxImg  = document.getElementById('lightboxImg');
+  var lightboxCap  = document.getElementById('lightboxCaption');
+  var btnClose     = document.getElementById('lightboxClose');
+  var btnPrev      = document.getElementById('lightboxPrev');
+  var btnNext      = document.getElementById('lightboxNext');
+  var currentIndex = -1;
+
+  function visiblePhotos() {
+    return photos.filter(function (p) { return !p.classList.contains('is-hidden'); });
+  }
+
+  function altFor(photo) {
+    var isEnglish = document.body.classList.contains('english');
+    return (isEnglish ? photo.getAttribute('data-alt-en') : photo.getAttribute('data-alt-pt')) || '';
+  }
+
+  function showAt(index) {
+    var list = visiblePhotos();
+    if (!list.length) return;
+    currentIndex = ((index % list.length) + list.length) % list.length;
+    var photo = list[currentIndex];
+    lightboxImg.src = photo.getAttribute('data-large');
+    var a = altFor(photo);
+    lightboxImg.alt = a;
+    if (lightboxCap) lightboxCap.textContent = a;
+  }
+
+  function open(photo) {
+    var list = visiblePhotos();
+    var idx = list.indexOf(photo);
+    if (idx < 0) return;
+    showAt(idx);
+    lightbox.classList.add('is-open');
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  photos.forEach(function (photo) {
+    photo.addEventListener('click', function () { open(photo); });
+  });
+
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', function () { showAt(currentIndex - 1); });
+  btnNext.addEventListener('click', function () { showAt(currentIndex + 1); });
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') showAt(currentIndex + 1);
+    else if (e.key === 'ArrowLeft')  showAt(currentIndex - 1);
+  });
+})();
+</script>
+{% endblock %}

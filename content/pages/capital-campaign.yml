@@ -1,0 +1,71 @@
+# Written text on capital-campaign.html, grouped by section of the page, top to bottom.
+# Each pt/en pair is one piece of text in Portuguese and English. A plain value shows in both languages.
+# Text may contain simple HTML such as <br>, <em> and <strong>.
+meta:
+  title: 'Campanha: Construindo um Santuário | Capital Campaign - Our Lady of Aparecida, Bethel CT'
+  description: Campanha Construindo um Santuário a Nossa Senhora. Building a Sanctuary for Our Lady, a capital campaign at Our Lady of the Immaculate Conception of Aparecida Parish.
+page_header_title_block:
+  capital_campaign:
+    pt: Campanha
+    en: Capital Campaign
+  building_a_sanctuary_for_our:
+    pt: Construindo um Santuário a Nossa Senhora
+    en: Building a Sanctuary for Our Lady
+intro_callout_cta_qr:
+  with_the_help_and_generosity:
+    pt: Com a ajuda e a generosidade de nossa comunidade, seguimos avançando nesta missão de fé e amor a Nossa Senhora. Sua generosidade faz parte desta missão e deixa um legado de fé para as futuras gerações. Toda contribuição faz diferença.
+    en: With the help and generosity of our community, we continue moving forward in this mission of faith and love for Our Lady. Your generosity is part of this mission and leaves a legacy of faith for future generations. Every gift makes a difference.
+  suggested_goal:
+    pt: Meta sugerida
+    en: Suggested goal
+  suggested_goal_5_per_week:
+    pt: 'Meta sugerida: $5 por semana durante 1 ano, aproximadamente $270 ao ano. Você também pode contribuir quinzenalmente, mensalmente, em uma única doação, ou em qualquer valor conforme suas possibilidades.'
+    en: 'Suggested goal: $5 per week for one year, about $270 a year. You can also give every two weeks, monthly, as a one-time gift, or in any amount that fits your means.'
+  give_to_the_campaign:
+    pt: Doar para a Campanha
+    en: Give to the Campaign
+  scan_with_your_phone_to:
+    pt: Aponte a câmera do celular para doar
+    en: Scan with your phone to give
+how_to_give_step_by_step:
+  how_to_give_online_step:
+    pt: Como fazer sua contribuição online, passo a passo
+    en: How to give online, step by step
+  open_the_campaign_link:
+    pt: Acesse o link da campanha
+    en: Open the campaign link
+  go_to_the_campaign_page:
+    pt: Abra a página da campanha pelo botão acima.
+    en: Go to the campaign page using the button above.
+  choose_your_gift_amount:
+    pt: Escolha o valor da doação
+    en: Choose your gift amount
+  examples_5_per_week_suggested:
+    pt: 'Exemplos: $5 por semana (sugerido), $10 por semana, ou um valor personalizado.'
+    en: 'Examples: $5 per week (suggested), $10 per week, or a custom amount.'
+  choose_a_payment_method:
+    pt: Escolha a forma de pagamento
+    en: Choose a payment method
+  ach_or_bank_account_recommended:
+    pt: ACH ou conta bancária (recomendado, menores taxas) com routing e account number, conta corrente ou poupança; ou cartão de crédito ou débito (Visa, Mastercard e outros).
+    en: ACH or bank account (recommended, lower fees) with routing and account number, checking or savings; or credit or debit card (Visa, Mastercard, and others).
+  choose_how_often:
+    pt: Escolha a frequência
+    en: Choose how often
+  weekly_suggested_5_per_week:
+    pt: Semanal (sugerido $5 por semana por 1 ano), quinzenal, mensal, ou doação única ($270). Você pode dar com mais frequência ou valor maior, conforme sua possibilidade.
+    en: Weekly (suggested $5 per week for 1 year), every two weeks, monthly, or a one-time gift ($270). You can give more often or a larger amount as you are able.
+  confirm_your_gift:
+    pt: Confirme sua contribuição
+    en: Confirm your gift
+  review_the_details_and_confirm:
+    pt: Revise as informações e confirme. Sua participação ajuda a construir o nosso Santuário e é um ato de fé que permanece para sempre.
+    en: Review the details and confirm. Your participation helps build our Sanctuary and is an act of faith that lasts forever.
+campaign_flyer:
+  campaign_flyer:
+    pt: Folheto da campanha
+    en: Campaign flyer
+closing_blessing:
+  god_bless_your_generosity_our:
+    pt: Deus abençoe sua generosidade! Nossa Senhora Aparecida, rogai por nós!
+    en: God bless your generosity! Our Lady Aparecida, pray for us!

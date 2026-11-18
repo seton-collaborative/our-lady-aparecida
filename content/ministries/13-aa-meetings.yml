@@ -1,0 +1,17 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Reuniões de AA
+  en: AA Meetings
+coordinators: []
+icon: ⊙
+icon_style: circle
+callout:
+  pt: Todo Domingo às 7h30 · 42 Vail Road, Bethel
+  en: Every Sunday at 7:30 AM · 42 Vail Road, Bethel
+description:
+  pt: As reuniões de AA acontecem todos os domingos pela manhã às 7h30 no endereço 42 Vail Road, Bethel. O grupo conduz as reuniões principalmente em inglês, mas todos são bem-vindos. Tradução em espanhol está disponível pela secretária eletrônica.
+  en: AA meetings meet every Sunday morning at 7:30am at 42 Vail Road Bethel. The group speaks primarily English but all are welcome to join and participate. Spanish language translation is available in the answering machine service.
+buttons: []

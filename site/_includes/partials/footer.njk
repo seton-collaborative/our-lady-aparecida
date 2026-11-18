@@ -1,0 +1,43 @@
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand-name">{{ menu.footer.brand_name }}</div>
+        <p class="footer-brand-text">
+          <span data-i18n="pt">{{ menu.footer.brand_text.pt | t }}</span>
+          <span data-i18n="en">{{ menu.footer.brand_text.en | t }}</span>
+        </p>
+        <p class="footer-brand-text">
+          {{ contact.street }}, {{ contact.city }}, {{ contact.state }} {{ contact.zip }}<br>
+          {{ contact.phone }}<br>
+          {{ contact.email }}
+        </p>
+      </div>
+{%- for col in menu.footer.columns %}
+      <div>
+        <h4 class="footer-heading">
+          <span data-i18n="pt">{{ col.heading.pt }}</span>
+          <span data-i18n="en">{{ col.heading.en }}</span>
+        </h4>
+{%- for link in col.links %}
+{%- if link.text %}
+        <a href="{{ link.href }}" class="footer-link">{{ link.text }}</a>
+{%- else %}
+        <a href="{{ link.href }}" class="footer-link">
+          <span data-i18n="pt">{{ link.pt }}</span>
+          <span data-i18n="en">{{ link.en }}</span>
+        </a>
+{%- endif %}
+{%- endfor %}
+      </div>
+{%- endfor %}
+    </div>
+    <div class="footer-bottom">
+      <span>{{ menu.footer.copyright }}</span>
+      <span>{{ menu.footer.credit }}</span>
+    </div>
+  </div>
+</footer>

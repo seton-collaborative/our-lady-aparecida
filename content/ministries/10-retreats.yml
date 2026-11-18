@@ -1,0 +1,25 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Retiros
+  en: Retreats
+coordinators:
+- - Jamir Costa
+  - pt: Facilitador
+    en: Facilitator
+icon: 🏠
+icon_style: blue
+callout: null
+description:
+  pt: A paróquia realiza vários retiros anuais. Cada encontro tem um tema essencial e foco que os palestrantes preparam para compartilhar com a comunidade. Esses retiros incluem Pastoral Familiar, Conferência das Mulheres e Conferência dos Homens, Pentecostes, EAC, Filhos de Maria, Grupo de Jovens Sem Fronteiras e Coro.
+  en: The parish holds several annual retreats. Each gathering has an essential theme and focus that the speakers prepare to share with the community. These retreats include Family Ministry, Conference of Women and Conference of Men, Pentecost, EAC, Youth Group, Young Adults (Youth Without Borders), and Choir.
+tight_spacing: true
+buttons:
+- label:
+    pt: Fotos
+    en: Photos
+  link: '#'
+  style: gold
+  new_tab: false

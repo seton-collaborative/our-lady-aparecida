@@ -1,0 +1,55 @@
+# Mass schedule shown on the homepage.
+# weekend: each day with its Masses (time and language: pt or en).
+# notes: lines under the table, such as daily Masses or a special day. highlight: true shows it on a gold background.
+# Times also appear in sentences in content/pages/home.yml (quick info bar and the confession box).
+labels:
+  day:
+    pt: Dia
+    en: Day
+  time:
+    pt: Horário
+    en: Time
+  language:
+    pt: Idioma
+    en: Language
+language_names:
+  pt: Português
+  en: English
+weekend:
+- day:
+    pt: Sábado
+    en: Saturday
+  masses:
+  - time: 5:00 PM
+    language: pt
+  - time: 7:00 PM
+    language: pt
+- day:
+    pt: Domingo
+    en: Sunday
+  masses:
+  - time: 7:30 AM
+    language: pt
+  - time: 9:30 AM
+    language: pt
+  - time: 11:30 AM
+    language: en
+  - time: 6:00 PM
+    language: pt
+notes:
+- icon: 📅
+  label:
+    pt: 'Missas Diárias:'
+    en: 'Daily Masses:'
+  text:
+    pt: Seg–Qua & Sex 7:00 PM (PT) · Qui 6:45 AM (PT)
+    en: Mon–Wed & Fri 7:00 PM (PT) · Thu 6:45 AM (PT)
+  highlight: false
+- icon: ⛪
+  label:
+    pt: 'Quarta-feira de Cinzas - 18 de Fevereiro:'
+    en: 'Ash Wednesday - February 18:'
+  text:
+    pt: 6:30 AM · 12:15 PM · 5:30 PM · 7:30 PM (Todas em Português)
+    en: 6:30 AM · 12:15 PM · 5:30 PM · 7:30 PM (All in Portuguese)
+  highlight: true

@@ -1,0 +1,22 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Pastoral Familiar
+  en: Family Ministry
+coordinators:
+- - Luciana De Oliveira
+  - pt: Coordenadora
+    en: Coordinator
+- - Gilberto De Oliveira
+  - pt: Coordenador
+    en: Coordinator
+icon: 👨‍👩‍👧
+icon_style: circle
+callout: null
+description:
+  pt: O objetivo da Pastoral Familiar é apoiar a família para que ela possa existir e viver com dignidade, estabelecer relacionamentos e formar novas gerações segundo o plano de Deus. Abrange todas as famílias, independentemente de sua situação, com o propósito de promover a inclusão e recuperar os valores e a dignidade de cada pessoa.
+  en: Family Ministry's objective is to support the family so that it can exist and live with dignity, establish relationships and train new generations according to God's plan. It covers all families, regardless of their situation, with the purpose of promoting inclusion and recovering the values and dignity of each person.
+tight_spacing: true
+buttons: []

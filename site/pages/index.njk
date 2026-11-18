@@ -1,0 +1,688 @@
+---
+permalink: index.html
+styles: index
+content_page: home
+home: true
+---
+{% extends "layouts/base.njk" %}
+{% block main %}
+{% set c = parish.pages['home'] %}
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  {% include "partials/hero-slides.njk" %}
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">{{ c.hero.diocese_of_bridgeport_bethel_connecticut | t }}</p>
+      <h1 class="hero-title">
+        <span data-i18n="pt">{{ c.hero.our_lady_of_the_immaculate.pt | t }}</span>
+        <span data-i18n="en">{{ c.hero.our_lady_of_the_immaculate.en | t }}</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-i18n="pt">{{ c.hero.the_first_official_brazilian_parish.pt | t }}</span>
+        <span data-i18n="en">{{ c.hero.the_first_official_brazilian_parish.en | t }}</span>
+      </p>
+      <div class="hero-actions">
+        <a href="#schedule" class="btn btn-gold">
+          <span data-i18n="pt">{{ c.hero.mass_times.pt | t }}</span>
+          <span data-i18n="en">{{ c.hero.mass_times.en | t }}</span>
+        </a>
+        <a href="about.html" class="btn btn-outline-white">
+          <span data-i18n="pt">{{ c.hero.about_our_parish.pt | t }}</span>
+          <span data-i18n="en">{{ c.hero.about_our_parish.en | t }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     OUR LADY OF APARECIDA — PATRONESS
+     ============================================ -->
+<section class="section section-alt" id="patroness">
+  <div class="container">
+    <div class="events-feature reveal-stagger">
+      <!-- PATRONESS PHOTO — Aparecida shrine niche illuminated. Replace if a better devotional shot arrives. -->
+      <div class="events-feature-image">
+        <img src="images/photos/photo-031-medium.jpg" alt="The illuminated shrine niche of Nossa Senhora Aparecida at Our Lady of Aparecida in Bethel">
+      </div>
+      <div class="events-feature-text">
+        <p class="section-eyebrow" style="text-align: left;">
+          <span data-i18n="pt">{{ c.our_lady_of_aparecida_patroness.our_patroness.pt | t }}</span>
+          <span data-i18n="en">{{ c.our_lady_of_aparecida_patroness.our_patroness.en | t }}</span>
+        </p>
+        <h2>
+          <span data-i18n="pt">{{ c.our_lady_of_aparecida_patroness.our_lady_of_aparecida.pt | t }}</span>
+          <span data-i18n="en">{{ c.our_lady_of_aparecida_patroness.our_lady_of_aparecida.en | t }}</span>
+        </h2>
+        <div class="about-gold-rule"></div>
+        <p>
+          <!-- [CONFIRM PT] — verify the Portuguese with the parish before publishing -->
+          <span data-i18n="pt">{{ c.our_lady_of_aparecida_patroness.our_lady_of_aparecida_is.pt | t }}</span>
+          <span data-i18n="en">{{ c.our_lady_of_aparecida_patroness.our_lady_of_aparecida_is.en | t }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     QUICK INFO BAR
+     ============================================ -->
+<div class="quick-bar">
+  <div class="container">
+    <div class="quick-item">
+      <div class="quick-icon">⛪</div>
+      <div>
+        <div class="quick-label">
+          <span data-i18n="pt">{{ c.quick_info_bar.next_mass.pt | t }}</span>
+          <span data-i18n="en">{{ c.quick_info_bar.next_mass.en | t }}</span>
+        </div>
+        <div class="quick-sub">
+          <span data-i18n="pt">{{ c.quick_info_bar.saturday_5_00_pm_portuguese.pt | t }}</span>
+          <span data-i18n="en">{{ c.quick_info_bar.saturday_5_00_pm_portuguese.en | t }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="quick-item">
+      <div class="quick-icon">🕊️</div>
+      <div>
+        <div class="quick-label">
+          <span data-i18n="pt">{{ c.quick_info_bar.confessions.pt | t }}</span>
+          <span data-i18n="en">{{ c.quick_info_bar.confessions.en | t }}</span>
+        </div>
+        <div class="quick-sub">
+          <span data-i18n="pt">{{ c.quick_info_bar.saturday_3_30_4_30.pt | t }}</span>
+          <span data-i18n="en">{{ c.quick_info_bar.saturday_3_30_4_30.en | t }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="quick-item">
+      <div class="quick-icon">📍</div>
+      <div>
+        <div class="quick-label">{{ contact.street }}, {{ contact.city }} {{ contact.state }}</div>
+        <div class="quick-sub">{{ contact.phone }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     FEATURE CARDS
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.feature_cards.parish_life.pt | t }}</span>
+        <span data-i18n="en">{{ c.feature_cards.parish_life.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.feature_cards.grow_in_faith_with_us.pt | t }}</span>
+        <span data-i18n="en">{{ c.feature_cards.grow_in_faith_with_us.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="cards-grid reveal-stagger">
+      <div class="card">
+        <!-- SACRAMENTS CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+        <div class="card-image img-sacraments">
+          <img src="images/photos/photo-034-medium.jpg" alt="A young woman receives the sacrament of Baptism at Our Lady of Aparecida">
+        </div>
+        <div class="card-body">
+          <p class="card-eyebrow">{{ c.feature_cards.sacramento | t }}</p>
+          <h3 class="card-title">
+            <span data-i18n="pt">{{ c.feature_cards.sacraments.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.sacraments.en | t }}</span>
+          </h3>
+          <p class="card-text">
+            <span data-i18n="pt">{{ c.feature_cards.baptism_first_communion_confirmation_marriage.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.baptism_first_communion_confirmation_marriage.en | t }}</span>
+          </p>
+          <a href="#" class="card-link">
+            <span data-i18n="pt">{{ c.feature_cards.learn_more.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.learn_more.en | t }}</span> →
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <!-- FAITH FORMATION CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+        <div class="card-image img-formation">
+          <img src="images/photos/photo-029-medium.jpg" alt="First Communion procession with children carrying candles and the Book of the Gospels at Our Lady of Aparecida">
+        </div>
+        <div class="card-body">
+          <p class="card-eyebrow">{{ c.feature_cards.catequese | t }}</p>
+          <h3 class="card-title">
+            <span data-i18n="pt">{{ c.feature_cards.faith_formation.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.faith_formation.en | t }}</span>
+          </h3>
+          <p class="card-text">
+            <span data-i18n="pt">{{ c.feature_cards.religious_education_for_children_youth.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.religious_education_for_children_youth.en | t }}</span>
+          </p>
+          <a href="#" class="card-link">
+            <span data-i18n="pt">{{ c.feature_cards.learn_more_2.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.learn_more_2.en | t }}</span> →
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <!-- MINISTRIES CARD PHOTO — Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+        <div class="card-image img-ministries">
+          <img src="images/photos/photo-081-medium.jpg" alt="Young altar servers in white surplices and red cassocks sing by candlelight at the Easter Vigil">
+        </div>
+        <div class="card-body">
+          <p class="card-eyebrow">
+            <span data-i18n="pt">{{ c.feature_cards.ministries.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.ministries.en | t }}</span>
+          </p>
+          <h3 class="card-title">
+            <span data-i18n="pt">{{ c.feature_cards.n28_active_ministries.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.n28_active_ministries.en | t }}</span>
+          </h3>
+          <p class="card-text">
+            <span data-i18n="pt">{{ c.feature_cards.opportunities_to_serve_participate_and.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.opportunities_to_serve_participate_and.en | t }}</span>
+          </p>
+          <a href="#" class="card-link">
+            <span data-i18n="pt">{{ c.feature_cards.view_all.pt | t }}</span>
+            <span data-i18n="en">{{ c.feature_cards.view_all.en | t }}</span> →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT / WELCOME
+     ============================================ -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid reveal-stagger">
+      <!-- ABOUT SECTION PHOTO — Swap src for the real photo (4:3 or 3:2, ≥ 1200×900). Update alt. -->
+      <div class="about-image">
+        <img src="images/photos/photo-014-large.jpg" alt="The bronze statue of Nossa Senhora Aparecida set in a gilded shrine niche inscribed 'The Spirit and the Bride say: Come, Lord Jesus'">
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow" style="text-align: left;">
+          <span data-i18n="pt">{{ c.about_welcome.about_our_parish.pt | t }}</span>
+          <span data-i18n="en">{{ c.about_welcome.about_our_parish.en | t }}</span>
+        </p>
+        <h2>
+          <span data-i18n="pt">{{ c.about_welcome.a_community_of_faith_and.pt | t }}</span>
+          <span data-i18n="en">{{ c.about_welcome.a_community_of_faith_and.en | t }}</span>
+        </h2>
+        <div class="about-gold-rule"></div>
+        <p>
+          <span data-i18n="pt">{{ c.about_welcome.for_more_than_27_years.pt | t }}</span>
+          <span data-i18n="en">{{ c.about_welcome.for_more_than_27_years.en | t }}</span>
+        </p>
+        <p>
+          <span data-i18n="pt">{{ c.about_welcome.under_the_leadership_of_fr.pt | t }}</span>
+          <span data-i18n="en">{{ c.about_welcome.under_the_leadership_of_fr.en | t }}</span>
+        </p>
+        <div class="about-stats">
+          <div>
+            <div class="stat-number">{{ c.about_welcome.n1_100 | t }}</div>
+            <div class="stat-label">
+              <span data-i18n="pt">{{ c.about_welcome.registered_families.pt | t }}</span>
+              <span data-i18n="en">{{ c.about_welcome.registered_families.en | t }}</span>
+            </div>
+          </div>
+          <div>
+            <div class="stat-number">{{ c.about_welcome.n28 | t }}</div>
+            <div class="stat-label">
+              <span data-i18n="pt">{{ c.about_welcome.active_ministries.pt | t }}</span>
+              <span data-i18n="en">{{ c.about_welcome.active_ministries.en | t }}</span>
+            </div>
+          </div>
+          <div>
+            <div class="stat-number">{{ c.about_welcome.n11 | t }}</div>
+            <div class="stat-label">
+              <span data-i18n="pt">{{ c.about_welcome.weekly_masses.pt | t }}</span>
+              <span data-i18n="en">{{ c.about_welcome.weekly_masses.en | t }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PARISH LIFE GALLERY
+     ============================================ -->
+<section class="section section-light" id="parish-life">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.parish_life_gallery.gallery.pt | t }}</span>
+        <span data-i18n="en">{{ c.parish_life_gallery.gallery.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.parish_life_gallery.parish_life_in_pictures.pt | t }}</span>
+        <span data-i18n="en">{{ c.parish_life_gallery.parish_life_in_pictures.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">{{ c.parish_life_gallery.moments_from_the_life_of.pt | t }}</span>
+        <span data-i18n="en">{{ c.parish_life_gallery.moments_from_the_life_of.en | t }}</span>
+      </p>
+    </div>
+    <div class="gallery-grid reveal-stagger">
+      <!-- GALLERY SLOT 1 — Sacrament: First Communion close-up. -->
+      <div class="gallery-item">
+        <img src="images/photos/photo-041-medium.jpg" alt="A young girl receives First Holy Communion at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 2 — Devotion: parishioners raise roses during the May Crowning. -->
+      <div class="gallery-item">
+        <img src="images/photos/photo-049-medium.jpg" alt="Parishioners raise roses during the May Crowning of Our Lady at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 3 — Holy Week: Washing of the feet on Holy Thursday. -->
+      <div class="gallery-item">
+        <img src="images/photos/photo-067-medium.jpg" alt="The washing of the feet on Holy Thursday at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 4 — Building / interior: sanctuary during Mass. -->
+      <div class="gallery-item">
+        <img src="images/photos/photo-021-medium.jpg" alt="The interior of the sanctuary at Our Lady of Aparecida during Mass, with the congregation gathered before the central crucifix">
+      </div>
+      <!-- GALLERY SLOT 5 — Liturgy: elevation of the chalice at the consecration. -->
+      <div class="gallery-item">
+        <img src="images/photos/photo-039-medium.jpg" alt="The priest elevates the chalice at the consecration during Mass at Our Lady of Aparecida">
+      </div>
+      <!-- GALLERY SLOT 6 — Parish Life: II Women's Conference assembly. -->
+      <div class="gallery-item">
+        <img src="images/photos/photo-055-medium.jpg" alt="The Women's Conference assembly at Our Lady of Aparecida">
+      </div>
+    </div>
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn btn-outline-gold">
+        <span data-i18n="pt">{{ c.parish_life_gallery.view_full_gallery.pt | t }}</span>
+        <span data-i18n="en">{{ c.parish_life_gallery.view_full_gallery.en | t }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MASS SCHEDULE
+     ============================================ -->
+<section class="section section-blue" id="schedule">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.mass_schedule.come_pray_with_us.pt | t }}</span>
+        <span data-i18n="en">{{ c.mass_schedule.come_pray_with_us.en | t }}</span>
+      </p>
+      <h2 class="section-title" style="color: #fff;">
+        <span data-i18n="pt">{{ c.mass_schedule.mass_schedule.pt | t }}</span>
+        <span data-i18n="en">{{ c.mass_schedule.mass_schedule.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="schedule-wrapper">
+      <div class="schedule-header">
+        <h3>
+          <span data-i18n="pt">{{ c.mass_schedule.weekend_masses.pt | t }}</span>
+          <span data-i18n="en">{{ c.mass_schedule.weekend_masses.en | t }}</span>
+        </h3>
+      </div>
+      {% include "partials/mass-schedule.njk" %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONFESSION & GIVING CALLOUT
+     ============================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="callout-split reveal-stagger">
+      <div class="callout-box callout-blue">
+        <div class="callout-icon">🕊️</div>
+        <h3 class="callout-title">
+          <span data-i18n="pt">{{ c.confession_giving_callout.sacrament_of_reconciliation.pt | t }}</span>
+          <span data-i18n="en">{{ c.confession_giving_callout.sacrament_of_reconciliation.en | t }}</span>
+        </h3>
+        <p class="callout-text">
+          <span data-i18n="pt">{{ c.confession_giving_callout.saturdays_from_3_30_to.pt | t }}</span>
+          <span data-i18n="en">{{ c.confession_giving_callout.saturdays_from_3_30_to.en | t }}</span>
+        </p>
+      </div>
+      <div class="callout-box callout-gold">
+        <div class="callout-icon">💛</div>
+        <h3 class="callout-title">
+          <span data-i18n="pt">{{ c.confession_giving_callout.online_giving.pt | t }}</span>
+          <span data-i18n="en">{{ c.confession_giving_callout.online_giving.en | t }}</span>
+        </h3>
+        <p class="callout-text">
+          <span data-i18n="pt">{{ c.confession_giving_callout.support_our_parish_with_your.pt | t }}</span>
+          <span data-i18n="en">{{ c.confession_giving_callout.support_our_parish_with_your.en | t }}</span>
+        </p>
+        <a href="https://osvhub.com/our-lady-of-aparecida-parish/giving/funds" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
+          <span data-i18n="pt">{{ c.confession_giving_callout.give_now.pt | t }}</span>
+          <span data-i18n="en">{{ c.confession_giving_callout.give_now.en | t }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     EVENTS
+     ============================================ -->
+<section class="section section-light" id="events">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.events.events.pt | t }}</span>
+        <span data-i18n="en">{{ c.events.events.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.events.upcoming_events.pt | t }}</span>
+        <span data-i18n="en">{{ c.events.upcoming_events.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="events-feature reveal-stagger">
+      <!-- EVENTS PHOTO SLOT — Featured event photo. Swap src for the real photo (4:3, ≥ 1200×900). Update alt. -->
+      <div class="events-feature-image">
+        <img src="images/photos/photo-056-medium.jpg" alt="Parishioners smiling together at the Women's Conference at Our Lady of Aparecida">
+      </div>
+      <div class="events-feature-text">
+        <h2>
+          <span data-i18n="pt">{{ c.events.a_community_in_celebration.pt | t }}</span>
+          <span data-i18n="en">{{ c.events.a_community_in_celebration.en | t }}</span>
+        </h2>
+        <p>
+          <span data-i18n="pt">{{ c.events.throughout_the_year_we_celebrate.pt | t }}</span>
+          <span data-i18n="en">{{ c.events.throughout_the_year_we_celebrate.en | t }}</span>
+        </p>
+        <p>
+          <span data-i18n="pt">{{ c.events.check_back_here_for_upcoming.pt | t }}</span>
+          <span data-i18n="en">{{ c.events.check_back_here_for_upcoming.en | t }}</span>
+        </p>
+        {% include "partials/events-list.njk" %}
+        <div class="hero-actions" style="margin-top: 24px;">
+          <a href="#contact" class="btn btn-gold">
+            <span data-i18n="pt">{{ c.events.contact_us.pt | t }}</span>
+            <span data-i18n="en">{{ c.events.contact_us.en | t }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MINISTRIES PREVIEW
+     ============================================ -->
+<section class="section section-alt" id="ministries">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.ministries_preview.ministries_movements.pt | t }}</span>
+        <span data-i18n="en">{{ c.ministries_preview.ministries_movements.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.ministries_preview.our_ministries.pt | t }}</span>
+        <span data-i18n="en">{{ c.ministries_preview.our_ministries.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">
+        <span data-i18n="pt">{{ c.ministries_preview.find_your_place_in_the.pt | t }}</span>
+        <span data-i18n="en">{{ c.ministries_preview.find_your_place_in_the.en | t }}</span>
+      </p>
+    </div>
+    <div class="ministry-grid reveal-stagger">
+      <div class="ministry-card">
+        <div class="ministry-icon">📖</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.religious_education.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.religious_education.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.sandro_doblins | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">👨‍👩‍👧‍👦</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.family_ministry.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.family_ministry.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.luciana_gilberto_de_oliveira | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🔥</div>
+        <div>
+          <div class="ministry-name">{{ c.ministries_preview.goves_grupo_de_oracao | t }}</div>
+          <div class="ministry-coord">{{ c.ministries_preview.jamir_costa | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">👦</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.young_adults_youth_without_borders.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.young_adults_youth_without_borders.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.tamnata_kassia_leticia_tatiana | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">📿</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.men_s_rosary_group.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.men_s_rosary_group.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.acacio_oliveira | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🎭</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.theater_and_music.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.theater_and_music.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.washington_arpini_priscilla_gomes | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🙏</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.mothers_who_pray_for_their.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.mothers_who_pray_for_their.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.fabiana_neupman_estela_barros | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🎵</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.ministers_of_the_word.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.ministers_of_the_word.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.neti_dasilva_marcia_pereira | t }}</div>
+        </div>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🎉</div>
+        <div>
+          <div class="ministry-name">
+            <span data-i18n="pt">{{ c.ministries_preview.events_commission.pt | t }}</span>
+            <span data-i18n="en">{{ c.ministries_preview.events_commission.en | t }}</span>
+          </div>
+          <div class="ministry-coord">{{ c.ministries_preview.junia_ribeiro_soraia_meirelles | t }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="ministries.html" class="btn btn-outline-gold">
+        <span data-i18n="pt">{{ c.ministries_preview.view_all_ministries.pt | t }}</span>
+        <span data-i18n="en">{{ c.ministries_preview.view_all_ministries.en | t }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SAFE ENVIRONMENTS BAND
+     ============================================ -->
+<section class="safe-env-band" aria-label="Safe Environments">
+  <div class="container">
+    <div class="safe-env-inner">
+      <div class="safe-env-badge" aria-hidden="true">🛡</div>
+      <div class="safe-env-content">
+        <div class="safe-env-eyebrow">
+          <span data-i18n="pt">{{ c.safe_environments_band.safe_environments.pt | t }}</span>
+          <span data-i18n="en">{{ c.safe_environments_band.safe_environments.en | t }}</span>
+        </div>
+        <h3>
+          <span data-i18n="pt">{{ c.safe_environments_band.protecting_children_vulnerable_adults.pt | t }}</span>
+          <span data-i18n="en">{{ c.safe_environments_band.protecting_children_vulnerable_adults.en | t }}</span>
+        </h3>
+        <p>
+          <span data-i18n="pt">{{ c.safe_environments_band.our_parish_is_fully_committed.pt | t }}</span>
+          <span data-i18n="en">{{ c.safe_environments_band.our_parish_is_fully_committed.en | t }}</span>
+        </p>
+        <p>
+          <span data-i18n="pt">{{ c.safe_environments_band.to_report_suspected_abuse_call.pt | t }}</span>
+          <span data-i18n="en">{{ c.safe_environments_band.to_report_suspected_abuse_call.en | t }}</span>
+        </p>
+      </div>
+      <div class="safe-env-actions">
+        <a href="safe-environments.html" class="btn btn-red">
+          <span data-i18n="pt">{{ c.safe_environments_band.learn_more.pt | t }}</span>
+          <span data-i18n="en">{{ c.safe_environments_band.learn_more.en | t }}</span>
+        </a>
+        <a href="safe-environments.html#report" class="btn btn-outline-red">
+          <span data-i18n="pt">{{ c.safe_environments_band.how_to_report.pt | t }}</span>
+          <span data-i18n="en">{{ c.safe_environments_band.how_to_report.en | t }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT & MAP
+     ============================================ -->
+<section class="section section-light" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">
+        <span data-i18n="pt">{{ c.contact_map.get_in_touch.pt | t }}</span>
+        <span data-i18n="en">{{ c.contact_map.get_in_touch.en | t }}</span>
+      </p>
+      <h2 class="section-title">
+        <span data-i18n="pt">{{ c.contact_map.contact_us.pt | t }}</span>
+        <span data-i18n="en">{{ c.contact_map.contact_us.en | t }}</span>
+      </h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>
+          <span data-i18n="pt">{{ c.contact_map.parish_information.pt | t }}</span>
+          <span data-i18n="en">{{ c.contact_map.parish_information.en | t }}</span>
+        </h3>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">{{ c.contact_map.address.pt | t }}</span>
+              <span data-i18n="en">{{ c.contact_map.address.en | t }}</span>
+            </div>
+            <div class="contact-value">{{ contact.street }}, {{ contact.city }}, {{ contact.state }} {{ contact.zip }}</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">{{ c.contact_map.phone.pt | t }}</span>
+              <span data-i18n="en">{{ c.contact_map.phone.en | t }}</span>
+            </div>
+            <div class="contact-value">{{ contact.phone }}</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">{{ c.contact_map.email | t }}</div>
+            <div class="contact-value">{{ contact.email }}</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">👤</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">{{ c.contact_map.pastor.pt | t }}</span>
+              <span data-i18n="en">{{ c.contact_map.pastor.en | t }}</span>
+            </div>
+            <div class="contact-value">{{ c.contact_map.rev_leonel_s_medeiros | t }}</div>
+            <div class="contact-value" style="font-style: italic;">
+              <span data-i18n="pt">{{ c.contact_map.episcopal_vicar_for_brazilian_catholics.pt | t }}</span>
+              <span data-i18n="en">{{ c.contact_map.episcopal_vicar_for_brazilian_catholics.en | t }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">
+              <span data-i18n="pt">{{ c.contact_map.office_hours.pt | t }}</span>
+              <span data-i18n="en">{{ c.contact_map.office_hours.en | t }}</span>
+            </div>
+            <div class="contact-value">
+              <span data-i18n="pt">{{ c.contact_map.monday_friday_9_00_am.pt | t }}</span>
+              <span data-i18n="en">{{ c.contact_map.monday_friday_9_00_am.en | t }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.7!2d-73.397!3d41.371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIyJzE2LjAiTiA3M8KwMjMnNTAuMCJX!5e0!3m2!1sen!2sus!4v1234567890" 
+          width="100%" height="100%" style="border:0; border-radius: 12px;" 
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+/* Scroll reveal — fade-and-rise on enter using IntersectionObserver.
+   Respects prefers-reduced-motion and falls back gracefully without IO. */
+(function () {
+  var targets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (!targets.length) return;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  targets.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+{% endblock %}

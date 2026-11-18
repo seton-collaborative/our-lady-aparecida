@@ -1,0 +1,28 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Filhos de Maria
+  en: Sons of Mary
+coordinators:
+- - Luana Pitol
+  - Conceicao Rodrigues
+icon: 🧒
+icon_style: circle
+callout:
+  pt: 2ª sexta-feira de cada mês
+  en: Every Second Friday of Each Month
+description:
+  pt: Acolhe todos os adolescentes de 13 a 17 anos. Também conhecido como EAC - Encontro de Adolescentes com Cristo.
+  en: Welcomes all youth ages 13–17. Also known as EAC - Encontro de Adolescentes com Cristo (Youth Encounter with Christ).
+tight_spacing: true
+buttons:
+- label: Facebook
+  link: https://www.facebook.com/profile.php?id=100077730851786
+  style: outline
+  new_tab: true
+- label: Instagram
+  link: https://www.instagram.com/eacbethel/
+  style: outline
+  new_tab: true

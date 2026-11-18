@@ -1,0 +1,17 @@
+<ul class="events-list">
+{%- for e in parish.events %}
+          <li class="events-list-item"{% if e.hide_after %} data-hide-after="{{ e.hide_after | isodate }}"{% endif %}>
+            <span class="event-date">
+              <span data-i18n="pt">{{ e.date_label.pt | t }}</span>
+              <span data-i18n="en">{{ e.date_label.en | t }}</span>
+            </span>
+            <span class="event-name">
+              <span data-i18n="pt">{{ e.title.pt | t }}</span>
+              <span data-i18n="en">{{ e.title.en | t }}</span>
+{%- if e.venue %}
+              <span class="event-venue">· {{ e.venue }}</span>
+{%- endif %}
+            </span>
+          </li>
+{%- endfor %}
+        </ul>

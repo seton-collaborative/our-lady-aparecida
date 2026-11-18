@@ -1,0 +1,26 @@
+# Written text on ministries.html, grouped by section of the page, top to bottom.
+# Each pt/en pair is one piece of text in Portuguese and English. A plain value shows in both languages.
+# Text may contain simple HTML such as <br>, <em> and <strong>.
+meta:
+  title: Ministérios | Our Ministries - Our Lady of Aparecida, Bethel CT
+  description: Encontre o seu lugar na comunidade. Find your place in the community. With a variety of active ministries, there are opportunities for everyone.
+page_header:
+  pastoral_groups_movements:
+    pt: Grupos e Movimentos Pastorais
+    en: Pastoral Groups & Movements
+  our_ministries:
+    pt: Nossos Ministérios
+    en: Our Ministries
+  find_your_place_in_the:
+    pt: Encontre o seu lugar na comunidade. Com uma variedade de ministérios ativos, há oportunidades para todos.
+    en: Find your place in the community. With a variety of active ministries, there are opportunities for everyone.
+cta_band:
+  ready_to_serve:
+    pt: Pronto para Servir?
+    en: Ready to Serve?
+  contact_the_parish_office_to:
+    pt: Entre em contato com o escritório paroquial para conversar com um coordenador de ministério e encontrar o seu lugar.
+    en: Contact the parish office to speak with a ministry coordinator and find your place.
+  get_in_touch:
+    pt: Fale Conosco
+    en: Get In Touch

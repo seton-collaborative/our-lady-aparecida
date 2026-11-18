@@ -1,0 +1,8 @@
+{#- Prints a value that is either one text for both languages or a pt/en pair. -#}
+{%- macro both(v) -%}
+{%- if v.pt is defined or v.en is defined -%}
+<span data-i18n="pt">{{ v.pt | t }}</span><span data-i18n="en">{{ v.en | t }}</span>
+{%- else -%}
+{{ v | t }}
+{%- endif -%}
+{%- endmacro %}

@@ -1,0 +1,5 @@
+{%- for p in gallery.photos %}
+      <figure class="gallery-photo" data-category="{{ p.category }}" data-large="images/photos/{{ p.photo }}-large.jpg" data-alt-pt="{{ p.alt.pt }}" data-alt-en="{{ p.alt.en }}">
+        <img src="images/photos/{{ p.photo }}-medium.jpg" loading="lazy" alt="{{ p.alt.en }}">
+      </figure>
+{%- endfor %}

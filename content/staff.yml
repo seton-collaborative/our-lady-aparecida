@@ -1,0 +1,36 @@
+# Pastoral staff on the About page, in the order shown.
+# name and role are either one text for both languages or a pt/en pair. featured: the larger first card.
+people:
+- featured: true
+  initials: LM
+  name: Rev. Leonel S. Medeiros
+  role:
+    pt: Vigário Episcopal para Brasileiros · Administrador
+    en: Episcopal Vicar for Brazilians · Administrator
+  bio:
+    pt: Pe. Leonel é o Vigário Episcopal nomeado para os Católicos Brasileiros na Diocese de Bridgeport. Ele é diretamente responsável pela vida sacramental e ministerial de Nossa Senhora Aparecida e supervisiona o atendimento pastoral à comunidade católica brasileira em toda a diocese. Também dirige o Centro Comunitário.
+    en: Fr. Leonel is the appointed Episcopal Vicar for Brazilian Catholics in the Diocese of Bridgeport. He is directly responsible for the sacramental life and ministry of Our Lady of Aparecida and oversees pastoral care for the Brazilian Catholic community throughout the diocese. He also serves as Community Center Director.
+  email: frmedeiros@diobpt.org
+- featured: false
+  initials: M
+  name: Ms. Maruska
+  role:
+    pt: Secretária
+    en: Parish Secretary
+  email: office@ourladyofaparecida.org
+- featured: false
+  initials: SD
+  name: Sandro Doblins
+  role:
+    pt: Coordenador de Educação Religiosa
+    en: Coordinator of Religious Education
+  email: Sandro.Doblins@ourladyofaparecida.org
+- featured: false
+  initials: PC
+  name:
+    pt: Equipe de Comunicações · PASCOM
+    en: Communications Team · PASCOM
+  role: Jamir Costa · Gabriela Pereira
+  bio:
+    pt: Responsáveis pelas comunicações paroquiais, redes sociais e cobertura de eventos.
+    en: Responsible for parish communications, social media, and event coverage.

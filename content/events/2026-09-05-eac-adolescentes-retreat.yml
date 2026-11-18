@@ -1,0 +1,13 @@
+# One event on the homepage Upcoming Events list.
+# show_from / hide_after: dates (YYYY-MM-DD). Empty means no limit.
+# This event is carried over from the old site with no end date on purpose.
+title:
+  pt: Retiro EAC Adolescentes
+  en: EAC Adolescentes Retreat
+date_label:
+  pt: 5–6 de setembro de 2026
+  en: September 5–6, 2026
+start_date: '2026-09-05'
+end_date: '2026-09-06'
+show_from: null
+hide_after: null

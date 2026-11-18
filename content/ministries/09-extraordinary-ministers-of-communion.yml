@@ -1,0 +1,31 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Ministros Extraordinários da Comunhão
+  en: Extraordinary Ministers of Communion
+coordinators:
+- - Fr. Leonel
+  - pt: Coordenador
+    en: Coordinator
+icon: 🍷
+icon_style: blue
+callout: null
+description:
+  pt: Os Ministros Extraordinários da Sagrada Eucaristia (MESC) são um grupo de leigos convidados pelo pároco para fazer parte do serviço no altar - distribuindo a Sagrada Comunhão nas missas, levando a Comunhão aos enfermos e aos que não podem sair de casa. Os MESC também participam de todos os eventos paroquiais como dever e testemunho de amor pela comunidade.
+  en: Extraordinary Ministers of the Holy Eucharist (EMHE) are a group of lay people invited by the parish priest to be part of the service at the altar. To distribute Holy Communion at masses, to bring Holy Communion to the sick, and the home bound. EMHE also participate in all Parish events as a duty and testimony of love for the community.
+tight_spacing: true
+buttons:
+- label:
+    pt: Vídeo no YouTube
+    en: YouTube Video
+  link: '#'
+  style: gold
+  new_tab: false
+- label:
+    pt: Links
+    en: Links
+  link: '#'
+  style: outline
+  new_tab: false

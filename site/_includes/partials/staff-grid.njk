@@ -1,0 +1,29 @@
+{%- from "partials/bilingual.njk" import both -%}
+<div class="staff-grid">
+{% for p in parish.staff.people %}
+      <div class="staff-card{{ ' featured' if p.featured }}">
+        <div class="staff-avatar">{{ p.initials }}</div>
+{%- if p.featured %}
+        <div>
+{%- endif %}
+        <div class="staff-name">
+          {{ both(p.name) }}
+        </div>
+        <div class="staff-role">
+          {{ both(p.role) }}
+        </div>
+{%- if p.bio %}
+        <p class="staff-bio">
+          <span data-i18n="pt">{{ p.bio.pt | t }}</span>
+          <span data-i18n="en">{{ p.bio.en | t }}</span>
+        </p>
+{%- endif %}
+{%- if p.email %}
+        <a href="mailto:{{ p.email }}" class="staff-contact">{{ p.email }}</a>
+{%- endif %}
+{%- if p.featured %}
+        </div>
+{%- endif %}
+      </div>
+{% endfor %}
+    </div>

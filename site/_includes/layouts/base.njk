@@ -1,0 +1,41 @@
+{%- set c = parish.pages[content_page] if content_page else null -%}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ c.meta.title if c else title }}</title>
+<meta name="description" content="{{ c.meta.description if c else description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="{{ theme.fonts.stylesheet }}" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES (from design/theme.yml)
+   ============================================ */
+:root {
+{%- for name, color in theme.colors %}
+  --{{ name }}: {{ color }};
+{%- endfor %}
+
+  --font-display: {{ theme.fonts.display | safe }};
+  --font-body: {{ theme.fonts.body | safe }};
+{% for name, v in theme.layout %}
+  --{{ name }}: {{ v }};
+{%- endfor %}
+}
+{% include "styles/" + styles + ".css" %}</style>
+</head>
+<body>
+
+{% include "partials/top-bar.njk" %}
+
+{% include "partials/header.njk" %}
+
+{% block main %}{% endblock %}
+{% include "partials/footer.njk" %}
+
+{% include "partials/scripts.njk" %}
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

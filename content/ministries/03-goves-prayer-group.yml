@@ -1,0 +1,35 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- GOVES -
+- pt: Grupo de Oração
+  en: Prayer Group
+coordinators:
+- - Jamir Costa
+  - pt: Coordenador
+    en: Coordinator
+icon: 🔥
+icon_style: terra
+callout:
+  pt: Grupo de Oração Semanal · Terças às 20h00
+  en: Weekly Prayer Group · Tuesdays at 8:00 PM
+description:
+  pt: 'O propósito do Grupo de Oração é conduzir os participantes a viver um Pentecostes pessoal, a crescer e alcançar a maturidade da vida cristã cheia do Espírito, segundo o desejo de Jesus: <em>"Eu vim para que tenham vida e a tenham em abundância."</em> (Jo 10,10b)'
+  en: 'The purpose of the Prayer Group is to lead participants to experience personal Pentecost, to grow and reach the maturity of the Spirit-filled Christian life, according to Jesus'' wishes: <em>"I have come so that the sheep may have life and have it in abundance."</em> (Jn 10,10b)'
+buttons:
+- label:
+    pt: Vídeos no YouTube
+    en: YouTube Videos
+  link: '#'
+  style: gold
+  new_tab: false
+- label: Facebook
+  link: '#'
+  style: outline
+  new_tab: false
+- label: Instagram
+  link: https://www.instagram.com/grupodeoracaogoves/
+  style: outline
+  new_tab: true

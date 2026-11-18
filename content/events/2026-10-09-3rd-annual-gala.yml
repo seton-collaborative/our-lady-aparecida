@@ -1,0 +1,14 @@
+# One event on the homepage Upcoming Events list.
+# show_from / hide_after: dates (YYYY-MM-DD). Empty means no limit.
+# This event is carried over from the old site with no end date on purpose.
+title:
+  pt: 3º Gala Anual
+  en: 3rd Annual Gala
+date_label:
+  pt: 9 de outubro de 2026
+  en: October 9, 2026
+start_date: '2026-10-09'
+end_date: '2026-10-09'
+venue: The Amber Room Colonnade
+show_from: null
+hide_after: null

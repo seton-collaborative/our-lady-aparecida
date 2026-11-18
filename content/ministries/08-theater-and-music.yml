@@ -1,0 +1,38 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Teatro e Música
+  en: Theater and Music
+coordinators:
+- - Washington Arpini
+  - pt: Teatro
+    en: Theater
+- - Priscilla Gomes
+  - pt: Música
+    en: Music
+icon: 🎵
+icon_style: circle
+callout: null
+description:
+  pt: A música é uma parte importante da liturgia e oferecemos muitas oportunidades para os apaixonados pela música. O Grupo de Música Carismática (GOVES Choir), o Coro Totus Tuus e o Coro Filhos de Maria - um deles é certo para você. Considere unir sua voz à nossa em canto, adoração e louvor.
+  en: Music is a big part of worship and we have many opportunities for the musically inclined. The Charismatic Music Group (GOVES Choir), Totus Tuus Choir, and Sons of Mary (Children of Mary) Choir. One of these is right for you. Consider joining our voices in song, worship and praise.
+tight_spacing: true
+buttons:
+- label:
+    pt: Vídeos no YouTube
+    en: YouTube Videos
+  link: '#'
+  style: gold
+  new_tab: false
+- label:
+    pt: Fotos
+    en: Photos
+  link: '#'
+  style: outline
+  new_tab: false
+- label: Instagram
+  link: https://www.instagram.com/pastoral_de_teatro_sao_genesio/
+  style: outline
+  new_tab: true

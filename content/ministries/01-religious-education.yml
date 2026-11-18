@@ -1,0 +1,24 @@
+# One ministry card on the Ministries page. Cards show in file-name order.
+# name: parts of the title (plain text or pt/en pairs).
+# coordinators: one line per person; each line lists name, role (pt/en) and phone, shown with | between.
+# callout: the gold line under the title (optional). buttons: link buttons at the bottom (style gold or outline).
+name:
+- pt: Educação Religiosa
+  en: Religious Education
+coordinators:
+- - Sandro Doblins
+  - pt: Coordenador
+    en: Coordinator
+  - 203-942-8882
+- - Fr. Leonel
+  - pt: Diretor de RCIA
+    en: Director of RCIA
+icon: 📖
+icon_style: circle
+callout:
+  pt: Inscrições para Formação na Fé Estão Abertas
+  en: Registration for Faith Formation Is Now Open
+description:
+  pt: Temos inscrições abertas para aulas de Catequese todas as quartas-feiras às 8h00 e às 20h00. Por favor, traga sua identificação e Certificado de Batismo (caso tenha um). Se você não tiver o certificado, podemos ajudá-lo a obtê-lo.
+  en: We have open registration for Catechesis classes every Wednesday at 8:00am and 8:00pm. Please provide your identification and Baptism Certificate (if you have one). If you do not have the certificate, we can help you obtain it.
+buttons: []

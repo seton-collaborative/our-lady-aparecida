@@ -1,0 +1,9 @@
+# Parish contact details, used in the top bar, the footer and the homepage contact section.
+# phone_link: the phone number as digits only, used for tap-to-call.
+street: 42 Vail Road
+city: Bethel
+state: CT
+zip: '06801'
+phone: (203) 730-9071
+phone_link: '2037309071'
+email: office@ourladyofaparecida.org
